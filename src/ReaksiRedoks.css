@@ -1,0 +1,38 @@
+.reaksi-redoks-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  h3 {
+    color: #34495e;
+    margin-top: 20px;
+  }
+  
+  ul {
+    margin-top: 10px;
+  }
+  
+  .redox-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }
+  
+  .contoh-soal p {
+    font-family: 'Courier New', monospace;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 1.5;
+  }
+  

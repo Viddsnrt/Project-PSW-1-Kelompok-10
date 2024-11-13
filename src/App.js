@@ -25,6 +25,7 @@ function App() {
         <Route path="/program-pembelajaran/kimia-unsur" element={<KimiaUnsur />} />
         <Route path="/program-pembelajaran/senyawa-karbon" element={<SenyawaKarbon />} />
         <Route path="/program-pembelajaran/benzena" element={<Benzena />} />
+     
       </Routes>
     </Router>
   );
