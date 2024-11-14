@@ -1,10 +1,14 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .home-container {
-  background: linear-gradient(135deg, rgba(255, 165, 0, 0.9), rgba(0, 128, 0, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.9),
+    rgba(0, 128, 0, 0.9)
+  );
   padding: 50px;
   text-align: center;
   color: #ffffff;
@@ -15,9 +19,9 @@ body {
 
 .home-container::before,
 .home-container::after {
-  content: '';
+  content: "";
   position: absolute;
-  background-image: url('/kimi.jpg'); /* Adjust this path if necessary */
+  background-image: url("/kimi.jpg"); /* Adjust this path if necessary */
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -40,7 +44,8 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -79,7 +84,7 @@ body {
   margin-bottom: 40px;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .slide-item {
