@@ -10,8 +10,11 @@ import ReaksiRedoks from './ReaksiRedoks';
 import KimiaUnsur from './KimiaUnsur';
 import SenyawaKarbon from './SenyawaKarbon';
 import Benzena from './Benzena';
-
-
+import Login from './Login';
+import ForgotPassword from './ForgotPassword';
+import ResetPassword from './ResetPassword';
+import Register from './Register';
+import Quiz from './Quiz';
 
 function App() {
   return (
@@ -27,7 +30,11 @@ function App() {
         <Route path="/program-pembelajaran/kimia-unsur" element={<KimiaUnsur />} />
         <Route path="/program-pembelajaran/senyawa-karbon" element={<SenyawaKarbon />} />
         <Route path="/program-pembelajaran/benzena" element={<Benzena />} />
-     
+        <Route path="/program-pembelajaran/quiz" element={<Quiz />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );
