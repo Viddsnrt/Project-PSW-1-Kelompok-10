@@ -1,61 +1,116 @@
 /* InfoLayanan.css */
 
 .info-layanan-container {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7fafc;
-    border-radius: 10px;
-    padding: 30px;
-    max-width: 600px;
-    margin: 40px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7fafc;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-layanan-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-header h2 {
+  color: #3498db;
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.info-header p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.info-item {
+  font-size: 18px;
+  color: #555;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.info-item:hover {
+  background-color: #ecf1f8;
+  border-radius: 5px;
+}
+
+.icon {
+  color: #3498db;
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.info-footer {
+  font-size: 14px;
+  color: #555;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.info-footer-additional {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.resource-link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-layanan-container {
+      padding: 20px;
+      max-width: 90%;
+      margin: 20px auto;
   }
-  
+
   .info-header h2 {
-    color: #3498db;
-    font-size: 28px;
-    margin-bottom: 10px;
+      font-size: 24px;
   }
-  
-  .info-header p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .info-list {
-    list-style: none;
-    padding: 0;
-  }
-  
+
   .info-item {
-    font-size: 18px;
-    color: #555;
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+      font-size: 16px;
   }
-  
+
   .icon {
-    color: #3498db;
-    font-size: 20px;
-    margin-right: 10px;
+      font-size: 18px;
   }
-  
-  .info-footer {
-    font-size: 14px;
-    color: #555;
-    margin-top: 30px;
+
+  .info-footer, .info-footer-additional {
+      font-size: 12px;
   }
-  
-  .contact-link {
-    color: #3498db;
-    text-decoration: none;
-  }
-  
-  .contact-link:hover {
-    text-decoration: underline;
-  }
-  
+}
