@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css'; 
 
 function Home() {
@@ -7,24 +8,12 @@ function Home() {
       <div className="header">
         <h1 className="home-title">Selamat Datang di Website Materi Kimia Kelas 12</h1>
         <p className="home-description">Pelajari berbagai konsep Kimia dengan mudah di sini.</p>
-        <button className="explore-button">Explore</button>
+        <Link to="menu">
+            <button className="explore-button">Explore</button>
+          </Link>
       </div>
       
       
-      <div className="slider-container">
-        <div className="slide-item">
-          <img src="/kimia 1.jpg" alt="Materi Kimia 1" className="slider-image" />
-          <div className="slider-caption">Materi Kimia Dasar</div>
-        </div>
-        <div className="slide-item">
-          <img src="/kimia 2.jpg" alt="Materi Kimia 2" className="slider-image" />
-          <div className="slider-caption">Reaksi Kimia</div>
-        </div>
-        <div className="slide-item">
-          <img src="/kimia 3.jpg" alt="Materi Kimia 3" className="slider-image" />
-          <div className="slider-caption">Kimia Organik</div>
-        </div>
-      </div>
 
       <div className="features">
         <div className="feature">
