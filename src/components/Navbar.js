@@ -26,7 +26,7 @@ function Navbar() {
       <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Menu</Link></li>
-        <li><Link to="/info-layanan">Info Layanan</Link></li>
+        <li><Link to="/ourservices">Our Services</Link></li>
        
 
         <li className="dropdown">

@@ -1,116 +1,248 @@
-
-
-.info-layanan-container {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7fafc;
-  border-radius: 10px;
-  padding: 30px;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  color: #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    font-family: 'raleway';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+}
+.wrapper h1 {
+    font-size: 3em;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(255, 128, 0);
+}
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card {
+    min-height: 220px;
+    width: 320px;*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    font-family: 'raleway';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+}
+.wrapper h1 {
+    font-size: 3em;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(255, 128, 0);
+}
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card {
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.card i {
+    margin: 20px;
+    color: #ff5724;
+}
+.card h2 {
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p {
+    color: #6c757d;
+    text-align: center;
+}
+.card:hover i,
+.card:hover p {
+    color: #fff;
+}
+.card:hover h2 {
+    font-weight: 600;
+    color: #f2f2f2;
+}
+.card:nth-child(1):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(2):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(3):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(4):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(5):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(6):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
 }
 
-.info-layanan-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+@media(max-width: 991px)
+{
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
+}
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.card i {
+    margin: 20px;
+    color: #ff5724;
+}
+.card h2 {
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p {
+    color: #6c757d;
+    text-align: center;
+}
+.card:hover {
+
+}
+.card:hover i
+.card:hover p {
+    color: #fff;
+}
+.card:hover h2 {
+    font-weight: 600;
+    color: #f2f2f2;
+}
+.card:nth-child(1):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(2):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(3):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(4):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(5):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
+}
+.card:nth-child(6):hover {
+    background: linear-gradient(45deg,
+                                rgba(255,28,8,0.7) 0%,
+                                rgba(255, 0, 82, 0.7) 100%),
+                                url(https://pin.it/7MgocEJ7t);
+    background-size: cover;
 }
 
-.info-header h2 {
-  color: #3498db;
-  font-size: 32px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.info-header p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.info-list {
-  list-style: none;
-  padding: 0;
-}
-
-.info-item {
-  font-size: 18px;
-  color: #555;
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding-left: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.info-item:hover {
-  background-color: #ecf1f8;
-  border-radius: 5px;
-}
-
-.icon {
-  color: #3498db;
-  font-size: 22px;
-  margin-right: 15px;
-}
-
-.info-footer {
-  font-size: 14px;
-  color: #555;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.contact-link {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-.info-footer-additional {
-  font-size: 14px;
-  color: #666;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.resource-link {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.resource-link:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .info-layanan-container {
-      padding: 20px;
-      max-width: 90%;
-      margin: 20px auto;
-  }
-
-  .info-header h2 {
-      font-size: 24px;
-  }
-
-  .info-item {
-      font-size: 16px;
-  }
-
-  .icon {
-      font-size: 18px;
-  }
-
-  .info-footer, .info-footer-additional {
-      font-size: 12px;
-  }
+@media(max-width: 991px)
+{
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
 }
