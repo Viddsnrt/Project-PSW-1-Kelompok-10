@@ -9,7 +9,7 @@ function Home() {
       {/* Header */}
       <header className="header">
         <h1 className="home-title">Selamat Datang di Website Materi Kimia Kelas 12</h1>
-        <p className="home-description">Pelajari berbagai konsep Kimia dengan mudah di sini.</p>
+        <p className="home-description">Pelajari berbagai konsep Kimia dengan mudah disini.</p>
         <Link to="/menu">
           <button className="explore-button">Explore</button>
         </Link>
