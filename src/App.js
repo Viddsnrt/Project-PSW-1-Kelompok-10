@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Home from './element/Home';
 import OurServices from './element/OurServices';
 import KirimPesan from './element/KirimPesan';
@@ -13,15 +14,13 @@ import ForgotPassword from './element/ForgotPassword';
 import ResetPassword from './element/ResetPassword';
 import Register from './element/Register';
 import Quiz from './materi/Quiz';
-import Navbar from './component/Navbar';
 
 function App() {
   return (
     <Router>
-      <Navbar>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/navbar" element={<Navbar />}/>
         <Route path="/ourservices" element={<OurServices/>} />
         <Route path="/kirim-pesan" element={<KirimPesan />} />
         <Route path="/program-pembelajaran/sifat-koligatif" element={<SifatKoligatif />} />
@@ -36,9 +35,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/quiz" element={<Quiz />} />
       </Routes>
-      </Navbar>
     </Router>
   );
-};
+}
 
 export default App;

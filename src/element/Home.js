@@ -22,7 +22,8 @@ function App() {
 
 
   return (
-    <nav className="menu">
+    <div>
+      <nav className="menu">
         <h3>Kimia</h3>
         <ul>
           <li>
@@ -44,8 +45,25 @@ function App() {
         <li><Link to="/AboutUS" onClick={handleLinkClick}>About Us </Link> </li>
         </ul>
       </nav>
-  )
-}
+      {/* End menu */}
 
+      {/* Start main */}
+      <main className="main">
+        <div>
+          <h1>Chemical Reactions <br /> Every Day</h1>
+          <p>Explore the world of chemistry <br /> and enhance your understanding tomorrow</p>
+          <button className="submit-btn">View Experiments</button>
+          <button className="submit-btn">Book a Lab Session</button>
+          <h3>Stoichiometry & Chemical Equations</h3>
+          <h5>9:00 am - 11:00 am →</h5>
+        </div>
+        <figure>
+          <img src="https://png.pngtree.com/background/20230616/original/pngtree-atomic-level-molecular-structure-in-3d-rendering-ideal-for-medical-backgrounds-picture-image_3666984.jpg" alt="stoichiometry reactions" />
+        </figure>
+      </main>
+      {/* End main */}
+    </div>
+  );
+}
 
 export default App;
