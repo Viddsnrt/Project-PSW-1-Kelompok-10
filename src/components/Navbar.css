@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   background: rgba(102, 51, 0, 0.863); 
   padding: 1rem;
   position: relative;
@@ -20,33 +21,69 @@
   color: #f0efee; 
   margin-right: auto;
   font-size: 1.8rem;
+=======
+  justify-content: space-between;
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #ecf0f1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+>>>>>>> fe874d9234d741335238ff1a1fa572ecea940c46
 }
 
 .navbar-menu {
   display: flex;
+<<<<<<< HEAD
+=======
+  align-items: center;
+>>>>>>> fe874d9234d741335238ff1a1fa572ecea940c46
   list-style: none;
 }
 
 .navbar-menu li {
+<<<<<<< HEAD
   margin: 0 1rem;
 }
 
 .navbar-menu li a {
   color: #ecf0f1; 
+=======
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.navbar-menu li a {
+  color: #ecf0f1;
+  font-size: 1rem;
+>>>>>>> fe874d9234d741335238ff1a1fa572ecea940c46
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .navbar-menu li a:hover {
+<<<<<<< HEAD
   color: #f39c12; 
 }
 
 
+=======
+  color: #3498db;
+}
+
+>>>>>>> fe874d9234d741335238ff1a1fa572ecea940c46
 .dropdown {
   position: relative;
 }
 
 .dropdown-content {
+<<<<<<< HEAD
   display: none; 
   position: absolute;
   background-color: rgba(52, 152, 219, 0.9); 
@@ -89,3 +126,54 @@
      max-height:none; 
      opacity:1; 
  }
+=======
+  display: none;
+  position: absolute;
+  background-color: #34495e;
+  min-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 0.8rem 1.2rem;
+}
+
+.dropdown-content li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: #2c3e50;
+  color: #3498db;
+  border-radius: 3px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-menu li {
+    margin: 0.5rem 0;
+  }
+}
+>>>>>>> fe874d9234d741335238ff1a1fa572ecea940c46
