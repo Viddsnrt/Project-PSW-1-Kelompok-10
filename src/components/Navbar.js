@@ -18,7 +18,8 @@ function Navbar() {
             <li><zLink to="/program-pembelajaran/kimia-unsur">Kimia Unsur</zLink></li>
             <li><Link to="/program-pembelajaran/senyawa-karbon">Senyawa Karbon</Link></li>
             <li><Link to="/program-pembelajaran/benzena">Benzena dan Turunannya</Link></li>
-            <li><Link to="/Quiz">Quiz</Link></li> {/* New Quiz Link */}
+            <li><Link to="/Quiz">Quiz</Link></li> 
+            <li><Link to ="/Login">Login</Link></li>
           </ul>
         </li>
         <li><Link to="/kirim-pesan">Kirim Pesan</Link></li>
