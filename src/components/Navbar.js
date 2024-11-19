@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from 'https://i.pinimg.com/736x/2b/9b/61/2b9b619d413dfc275c98cabb3c47001f.jpg'; 
+import logo from  '../kimia2.jpg';
+
 
 function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);

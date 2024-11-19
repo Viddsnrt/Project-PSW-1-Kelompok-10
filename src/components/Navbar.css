@@ -1,14 +1,14 @@
 .navbar {
   display: flex;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7); 
+  background: rgba(102, 51, 0, 0.863); 
   padding: 1rem;
   position: relative;
   transition: background-color 0.3s ease;
 }
 
 .navbar:hover {
-  background: rgba(0, 0, 0, 0.9); 
+  background:  rgba(203, 179, 128, 0.9); 
 }
 
 .navbar-logo{ 
@@ -17,7 +17,7 @@
   margin-right: 1rem; 
 }
 .navbar-brand {
-  color: #f39c12; 
+  color: #f0efee; 
   margin-right: auto;
   font-size: 1.8rem;
 }
