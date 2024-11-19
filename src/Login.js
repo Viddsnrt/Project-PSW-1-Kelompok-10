@@ -12,6 +12,8 @@ const Login = () => {
         e.preventDefault();
         setError('');
 
+        
+
         // Basic validation
         if (!email) {
             return setError('Email tidak boleh kosong');
@@ -25,7 +27,7 @@ const Login = () => {
             return setError('Password harus terdiri dari minimal 6 karakter');
         }
 
-        navigate('/dashboard'); 
+        navigate('/'); 
     };
 
     return (

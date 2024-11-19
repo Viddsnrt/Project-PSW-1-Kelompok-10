@@ -10,17 +10,7 @@ import gambar6 from './kimia6.jpg';
 function Home() {
   return (
     <div>
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="logo">Kimia12</div>
-        <ul className="nav-links">
-         
-          <li><a href="#features">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      {/* Main Container */}
+      
       <div className="home-container">
         {/* Header */}
         <header className="header">
