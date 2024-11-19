@@ -93,8 +93,14 @@ a {
 }
 
 .slide {
-  flex: 1 0 100%; /* Each slide takes full width */
+  flex: 1 0 100%; 
+  opacity: 0;
+  min-width: 100%;
   transition: transform 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 .slide img {
@@ -147,7 +153,8 @@ a {
 
 .feature {
   background: #ffffff;
-  padding: 20px;
+  padding: 10px;
+  margin: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 280px;

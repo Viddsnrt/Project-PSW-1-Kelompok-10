@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Home.css';
 import gambar1 from './kimia1.jpg';
 import gambar2 from './kimia2.jpg';
@@ -8,9 +8,24 @@ import gambar5 from './kimia5.jpg';
 import gambar6 from './kimia6.jpg';
 
 function Home() {
+  const sliderRef = useRef(null);
+  const slideIndex = useRef(0);
+
+  useEffect(() => {
+    const slides = sliderRef.current.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    const interval = setInterval(() => {
+      slides[slideIndex.current].classList.remove('active');
+      slideIndex.current = (slideIndex.current + 1) % totalSlides;
+      slides[slideIndex.current].classList.add('active');
+    }, 3000); // Ganti slide setiap 3 detik
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
-      
       <div className="home-container">
         {/* Header */}
         <header className="header">
@@ -20,8 +35,8 @@ function Home() {
 
         {/* Slider */}
         <div className="slider-container">
-          <div className="slider">
-            <img src={gambar1} alt="Materi Kimia 1" className="slide" />
+          <div className="slider" ref={sliderRef}>
+            <img src={gambar1} alt="Materi Kimia 1" className="slide active" />
             <img src={gambar2} alt="Materi Kimia 2" className="slide" />
             <img src={gambar3} alt="Materi Kimia 3" className="slide" />
             <img src={gambar4} alt="Materi Kimia 4" className="slide" />
