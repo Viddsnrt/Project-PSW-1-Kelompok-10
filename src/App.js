@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './element/Home';
-import Menu from './element/Menu';
 import OurServices from './element/OurServices';
 import KirimPesan from './element/KirimPesan';
 import SifatKoligatif from './materi/SifatKoligatif';
@@ -22,7 +21,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
         <Route path="/ourservices" element={<OurServices/>} />
         <Route path="/kirim-pesan" element={<KirimPesan />} />
         <Route path="/program-pembelajaran/sifat-koligatif" element={<SifatKoligatif />} />

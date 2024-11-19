@@ -25,10 +25,6 @@ function Navbar() {
       </button>
       <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Menu</Link></li>
-        <li><Link to="/ourservices">Our Services</Link></li>
-       
-
         <li className="dropdown">
           <span>Program Pembelajaran</span>
           <ul className="dropdown-content">
@@ -39,10 +35,12 @@ function Navbar() {
             <li><Link to="/program-pembelajaran/benzena">Benzena dan Turunannya</Link></li>
           </ul>
         </li>
-            <li><Link to="/Quiz">Quiz</Link></li> 
+        <li><Link to="/Quiz">Quiz</Link></li> 
+        <li><Link to="/ourservices">Our Services</Link></li>
         <li><Link to="/kirim-pesan">Kirim Pesan</Link></li>
             <li><Link to ="/Register">Register</Link></li>
             <li><Link to ="/Login">Login</Link></li>
+        
         
 
       </ul>
