@@ -1,42 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-image: url('../source/kimia5.jpg');
+  font-family: 'Roboto', sans-serif;
+}
+
 .sifat-koligatif-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #2c3e50;
-  }
-  
-  h3 {
-    color: #34495e;
-    margin-top: 20px;
-  }
-  
-  .materi p, .contoh-soal p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  ul {
-    margin-top: 10px;
-  }
-  
-  .colligative-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-  }
-  
-  .contoh-soal p {
-    font-family: 'Courier New', monospace;
-    background-color: #ecf0f1;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sifat-koligatif-container:hover {
+  transform: scale(1.02);
+}
+
+h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.materi, .contoh-soal {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.materi p, .contoh-soal p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.colligative-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contoh-soal p {
+  font-family: 'Courier New', monospace;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.toggle-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.osmotik-detail {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  border-left: 5px solid #28a745;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0,)
+}

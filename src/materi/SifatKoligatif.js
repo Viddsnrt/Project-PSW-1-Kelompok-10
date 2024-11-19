@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SifatKoligatif.css';
 
 function SifatKoligatif() {
+  const [showOsmoticPressure, setShowOsmoticPressure] = useState(false);
+
+  const toggleOsmoticPressure = () => {
+    setShowOsmoticPressure(!showOsmoticPressure);
+  };
+
   return (
     <div className="sifat-koligatif-container">
       <h2>Bab 1: Sifat Koligatif Larutan</h2>
@@ -84,6 +90,17 @@ function SifatKoligatif() {
           <li>R = Konstanta gas ideal (0.0821 L·atm/K·mol)</li>
           <li>T = Temperatur dalam Kelvin</li>
         </ul>
+        <button className="toggle-button" onClick={toggleOsmoticPressure}>
+          {showOsmoticPressure ? 'Sembunyikan Penjelasan' : 'Tampilkan Penjelasan'}
+        </button>
+        {showOsmoticPressure && (
+          <div className="osmotik-detail">
+            <p>
+              Tekanan osmotik adalah tekanan yang diperlukan untuk menghentikan aliran pelarut melalui membran semi-permeabel. 
+              Ini sangat penting dalam proses biologis dan industri.
+            </p>
+          </div>
+        )}
       </section>
 
       <section className="contoh-soal">
