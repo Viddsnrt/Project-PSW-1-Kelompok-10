@@ -1,5 +1,5 @@
 import React from "react";
-import "./KimiaUnsur.css";
+import './KimiaUnsur.css';
 
 function KimiaUnsur() {
   return (

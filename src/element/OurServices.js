@@ -1,5 +1,5 @@
 import React from 'react';
-import './InfoLayanan.css'; // Ensure this CSS file is present
+import './layanan.css'; 
 
 function InfoLayanan() {
   return (

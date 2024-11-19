@@ -1,5 +1,5 @@
 import React from "react";
-import "./SenyawaKarbon.css";
+import './SenyawaKarbon.css';
 
 function SenyawaKarbon() {
   return (

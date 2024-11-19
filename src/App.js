@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './element/Home';
 import Menu from './element/Menu';
-import InfoLayanan from './element/InfoLayanan';
+import OurServices from './element/OurServices';
 import KirimPesan from './element/KirimPesan';
 import SifatKoligatif from './materi/SifatKoligatif';
 import ReaksiRedoks from './materi/Benzena';
@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/info-layanan" element={<InfoLayanan />} />
+        <Route path="/ourservices" element={<OurServices/>} />
         <Route path="/kirim-pesan" element={<KirimPesan />} />
         <Route path="/program-pembelajaran/sifat-koligatif" element={<SifatKoligatif />} />
         <Route path="/program-pembelajaran/reaksi-redoks" element={<ReaksiRedoks />} />
