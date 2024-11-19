@@ -1,76 +1,69 @@
-import React, { useEffect, useRef } from 'react';
-import './Home.css';
-import gambar1 from '../source/kimia1.jpg';
-import gambar2 from '../source/kimia2.jpg';
-import gambar3 from '../source/kimia3.jpg';
-import gambar4 from '../source/kimia4.jpg';
-import gambar5 from '../source/kimia5.jpg';
-import gambar6 from '../source/kimia6.jpg';
+import React, { useState } from 'react';
+import './Materi.css';
+import { Link } from 'react-router-dom';
 
-function Home() {
-  const sliderRef = useRef(null);
-  const slideIndex = useRef(0);
+function App() {
 
-  useEffect(() => {
-    const slides = sliderRef.current.querySelectorAll('.slide');
-    const totalSlides = slides.length;
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-    const interval = setInterval(() => {
-      slides[slideIndex.current].classList.remove('active');
-      slideIndex.current = (slideIndex.current + 1) % totalSlides;
-      slides[slideIndex.current].classList.add('active');
-    }, 3000); // Ganti slide setiap 3 detik
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setDropdownOpen(false); 
+    setMenuOpen(false); 
+  };
+
 
   return (
     <div>
-      <div className="home-container">
-        {/* Header */}
-        <header className="header">
-          <h1 className="home-title">Belajar Kimia Lebih Mudah</h1>
-          <p className="home-description">Materi lengkap, latihan soal, dan video interaktif untuk kelas 12.</p>
-        </header>
+      <nav className="menu">
+        <h3>Kimia</h3>
+        <ul>
+          <li>
+            <a href="#">Materi</a>
+            <ul>
+            <li><Link to="/program-pembelajaran/sifat-koligatif" onClick={handleLinkClick}>Sifat Koligatif Larutan</Link></li>
+            <li><Link to="/program-pembelajaran/reaksi-redoks" onClick={handleLinkClick}>Reaksi Redoks dan Elektrokimia</Link></li>
+            <li><Link to="/program-pembelajaran/kimia-unsur" onClick={handleLinkClick}>Kimia Unsur</Link></li>
+            <li><Link to="/program-pembelajaran/senyawa-karbon" onClick={handleLinkClick}>Senyawa Karbon</Link></li>
+            <li><Link to="/program-pembelajaran/benzena" onClick={handleLinkClick}>Benzena dan Turunannya</Link></li>
+            </ul>
+          </li>
+        <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+        <li><Link to="/Quiz" onClick={handleLinkClick}>Quiz</Link></li>
+        <li><Link to="/ourservices" onClick={handleLinkClick}>Our Services</Link></li>
+        <li><Link to="/kirim-pesan" onClick={handleLinkClick}>Kirim Pesan</Link></li>
+        <li><Link to="/Register" onClick={handleLinkClick}>Register</Link></li>
+        <li><Link to="/Login" onClick={handleLinkClick}>Login</Link></li>
+        <li><Link to="/AboutUS" onClick={handleLinkClick}>About Us </Link> </li>
+        </ul>
+      </nav>
+      {/* End menu */}
 
-        {/* Slider */}
-        <div className="slider-container">
-          <div className="slider" ref={sliderRef}>
-            <img src={gambar1} alt="Materi Kimia 1" className="slide active" />
-            <img src={gambar2} alt="Materi Kimia 2" className="slide" />
-            <img src={gambar3} alt="Materi Kimia 3" className="slide" />
-            <img src={gambar4} alt="Materi Kimia 4" className="slide" />
-            <img src={gambar5} alt="Materi Kimia 5" className="slide" />
-            <img src={gambar6} alt="Materi Kimia 6" className="slide" />
-          </div>
+      {/* Start main */}
+      <main className="main">
+        <div>
+          <h1>Chemical Reactions <br /> Every Day</h1>
+          <p>Explore the world of chemistry <br /> and enhance your understanding tomorrow</p>
+          <button className="submit-btn">View Experiments</button>
+          <button className="submit-btn">Book a Lab Session</button>
+          <h3>Stoichiometry & Chemical Equations</h3>
+          <h5>9:00 am - 11:00 am →</h5>
         </div>
-
-        {/* Features */}
-        <div id="features" className="features">
-          <div className="feature">
-            <h3>Materi Lengkap</h3>
-            <p>Belajar berbagai topik Kimia yang mencakup konsep dasar hingga lanjutan.</p>
-            <button className="button">Pelajari Selengkapnya</button>
-          </div>
-          <div className="feature">
-            <h3>Soal Latihan</h3>
-            <p>Latihan soal untuk menguji pemahamanmu tentang materi yang telah dipelajari.</p>
-            <button className="button">Coba Sekarang</button>
-          </div>
-          <div className="feature">
-            <h3>Video Pembelajaran</h3>
-            <p>Tonton video pembelajaran untuk penjelasan yang lebih interaktif.</p>
-            <button className="button">Tonton Video</button>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer id="contact" className="footer">
-        <p>© 2024 Kimia12. Kelompok 10 Project.</p>
-      </footer>
+        <figure>
+          <img src="https://png.pngtree.com/background/20230616/original/pngtree-atomic-level-molecular-structure-in-3d-rendering-ideal-for-medical-backgrounds-picture-image_3666984.jpg" alt="stoichiometry reactions" />
+        </figure>
+      </main>
+      {/* End main */}
     </div>
   );
 }
 
-export default Home;
+export default App;
