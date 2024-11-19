@@ -22,15 +22,6 @@
   font-size: 1.8rem;
 }
 
-.menu-toggle {
-  display: none; 
-  background: none;
-  border: none;
-  color: #f39c12;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -78,16 +69,8 @@
   display: block; 
 }
 
-
-@media (max-width: 768px) {
-  .menu-toggle {
-      display: block; 
-      margin-left: auto; 
-      z-index: 1001; 
-  }
-
-  .navbar-menu {
-      flex-direction: column; 
+.navbar-menu {
+  flex-direction: column; 
       display: none; 
       position: absolute; 
       top: 100%; 
@@ -106,4 +89,3 @@
      max-height:none; 
      opacity:1; 
  }
-}

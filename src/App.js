@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './Home';
-import Menu from './Menu';
-import InfoLayanan from './InfoLayanan';
-import KirimPesan from './KirimPesan';
-import SifatKoligatif from './SifatKoligatif';
-import ReaksiRedoks from './ReaksiRedoks';
-import KimiaUnsur from './KimiaUnsur';
-import SenyawaKarbon from './SenyawaKarbon';
-import Benzena from './Benzena';
-import Login from './Login';
-import ForgotPassword from './ForgotPassword';
-import ResetPassword from './ResetPassword';
-import Register from './Register';
-import Quiz from './Quiz';
+import Home from './element/Home';
+import Menu from './element/Menu';
+import InfoLayanan from './element/InfoLayanan';
+import KirimPesan from './element/KirimPesan';
+import SifatKoligatif from './materi/SifatKoligatif';
+import ReaksiRedoks from './materi/Benzena';
+import KimiaUnsur from './materi/KimiaUnsur';
+import SenyawaKarbon from './materi/SenyawaKarbon';
+import Benzena from './materi/ReaksiRedoks';
+import Login from './element/Login';
+import ForgotPassword from './element/ForgotPassword';
+import ResetPassword from './element/ResetPassword';
+import Register from './element/Register';
+import Quiz from './materi/Quiz';
 
 function App() {
   return (
