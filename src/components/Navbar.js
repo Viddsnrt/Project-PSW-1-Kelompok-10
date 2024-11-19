@@ -15,7 +15,7 @@ function Navbar() {
           <ul className="dropdown-content">
             <li><Link to="/program-pembelajaran/sifat-koligatif">Sifat Koligatif Larutan</Link></li>
             <li><Link to="/program-pembelajaran/reaksi-redoks">Reaksi Redoks dan Elektrokimia</Link></li>
-            <li><zLink to="/program-pembelajaran/kimia-unsur">Kimia Unsur</zLink></li>
+            <li><Link to="/program-pembelajaran/kimia-unsur">Kimia Unsur</Link></li>
             <li><Link to="/program-pembelajaran/senyawa-karbon">Senyawa Karbon</Link></li>
             <li><Link to="/program-pembelajaran/benzena">Benzena dan Turunannya</Link></li>
           </ul>
