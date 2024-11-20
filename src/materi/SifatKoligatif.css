@@ -60,6 +60,13 @@ ul li {
   border-radius: 4px;
 }
 
+.contoh-soal-ionisasi{
+  font-family: 'Courier New', monospace;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .toggle-button {
   background-color: #28a745;
   color: white;
@@ -85,3 +92,18 @@ ul li {
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0,)
 }
+
+.image-container {
+  text-align: center;  
+  margin-bottom: 20px;  
+}
+
+.colligative-img {
+  max-width: 100%;  
+  height: auto;
+}
+
+.penurunan-tekanan-uap h4 {
+  color: maroon;
+}
+
