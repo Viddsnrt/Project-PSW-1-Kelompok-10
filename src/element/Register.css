@@ -10,20 +10,20 @@
 
 .register-container h2 {
     margin-bottom: 20px;
-    color: #0056b3;
+    color: #894400;
 }
 
 .register-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #007bff;
+    border: 1px solid #ffae00;
     border-radius: 5px;
 }
 
 .register-container button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #713901;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -31,7 +31,7 @@
 }
 
 .register-container button:hover {
-    background-color: #0056b3;
+    background-color: #7d5324;
 }
 
 .register-container p {
@@ -39,7 +39,7 @@
 }
 
 .register-container a {
-    color: #007bff;
+    color: #4b2c05;
     text-decoration: none;
 }
 
