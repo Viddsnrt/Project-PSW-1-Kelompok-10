@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../source/kimia1.jpg';
 
 function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -11,9 +10,6 @@ function Navbar() {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
 
   const handleLinkClick = () => {
     setDropdownOpen(false); 
@@ -22,11 +18,7 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
-      <img src={logo} alt="Logo" className="navbar-logo" />
-      <h2 className="navbar-brand">Kimia Kelas 12</h2>
-      <button className="menu-toggle" onClick={toggleMenu}>
-        {isMenuOpen ? '✖' : '☰'}
-      </button>
+      <h2 className="navbar-brand">chimiLearn</h2>
       <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
         <li className="dropdown">
