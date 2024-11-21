@@ -41,7 +41,6 @@ function Navbar() {
         <li><Link to="/Quiz" onClick={handleLinkClick}>Quiz</Link></li>
         <li><Link to="/ourservices" onClick={handleLinkClick}>Our Services</Link></li>
         <li><Link to="/kirim-pesan" onClick={handleLinkClick}>Kirim Pesan</Link></li>
-        <li><Link to="/Register" onClick={handleLinkClick}>Register</Link></li>
         <li><Link to="/Login" onClick={handleLinkClick}>Login</Link></li>
       </ul>
     </nav>

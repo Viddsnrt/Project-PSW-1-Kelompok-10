@@ -1,8 +1,8 @@
 import React from 'react';
 import './Home.css';
+import Footer from './Footer'; // Import Footer
 
 function Home() {
- 
   return (
     <div>
       <div className="menu">
@@ -16,10 +16,16 @@ function Home() {
           <p>Explore the world of chemistry <br /> and enhance your understanding tomorrow with chimiLearn</p>
         </div>
         <figure>
-          <img src="https://png.pngtree.com/background/20230616/original/pngtree-atomic-level-molecular-structure-in-3d-rendering-ideal-for-medical-backgrounds-picture-image_3666984.jpg" alt="stoichiometry reactions" />
+          <img
+            src="https://png.pngtree.com/background/20230616/original/pngtree-atomic-level-molecular-structure-in-3d-rendering-ideal-for-medical-backgrounds-picture-image_3666984.jpg"
+            alt="stoichiometry reactions"
+          />
         </figure>
       </main>
       {/* End main */}
+
+      {/* Add Footer */}
+      <Footer />
     </div>
   );
 }
