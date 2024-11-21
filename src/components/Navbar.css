@@ -3,10 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between; /* Rata kiri dan kanan */
-  background: rgba(102, 51, 0, 0.863); /* Warna latar */
+  background: rgba(0, 48, 102, 0.863); /* Warna latar */
   padding: 1rem;
-  position: relative;
+  position: sticky; /* Menjadikan navbar tetap di bagian atas saat scroll */
+  top: 0; /* Posisikan navbar di atas */
+  width: 100%; /* Pastikan navbar lebar penuh */
+  z-index: 1000; /* Pastikan navbar di atas elemen lain */
   transition: background-color 0.3s ease;
+}
+
+.navbar.sticky {
+  background: rgba(203, 179, 128, 0.9); /* Perubahan warna saat scroll */
 }
 
 .navbar:hover {

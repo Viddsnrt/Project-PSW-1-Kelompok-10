@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isSticky, setSticky] = useState(false);
 
   const handleLinkClick = () => {
     setDropdownOpen(false); 
@@ -19,8 +20,27 @@ function Navbar() {
     setDropdownOpen(false);
   };
 
+  // Scroll event handler to toggle sticky class
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setSticky(true);  // Add sticky effect when scrolled
+    } else {
+      setSticky(false);  // Remove sticky effect when on top
+    }
+  };
+
+  useEffect(() => {
+    // Add scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+    
+    // Cleanup event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+    <nav className={`navbar ${isMenuOpen ? 'open' : ''} ${isSticky ? 'sticky' : ''}`}>
       <h2 className="navbar-brand">chimiLearn</h2>
       <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
