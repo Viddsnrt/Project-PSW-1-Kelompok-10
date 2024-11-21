@@ -12,6 +12,7 @@ function Quiz() {
         "Reaksi yang melibatkan gas",
       ],
       answer: "Reaksi yang melibatkan perpindahan elektron",
+      explanation: "Reaksi redoks adalah reaksi yang melibatkan transfer elektron antara dua zat.",
     },
     {
       question: "Apa yang dimaksud dengan elektrolisis?",
@@ -22,6 +23,7 @@ function Quiz() {
         "Proses oksidasi tanpa reduksi",
       ],
       answer: "Proses pemisahan senyawa dengan listrik",
+      explanation: "Elektrolisis adalah proses pemisahan senyawa menjadi komponen-komponennya dengan menggunakan arus listrik.",
     },
     {
       question: "Apakah fungsi dari anoda dalam sel galvani?",
@@ -32,6 +34,7 @@ function Quiz() {
         "Sebagai pelarut",
       ],
       answer: "Sebagai tempat terjadinya oksidasi",
+      explanation: "Anoda adalah elektroda tempat terjadinya reaksi oksidasi dalam sel galvani.",
     },
   ];
 
@@ -39,9 +42,15 @@ function Quiz() {
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showScore, setShowScore] = useState(false);
+  const [feedback, setFeedback] = useState('');
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    if (option === questions[currentQuestion].answer) {
+      setFeedback('Benar!');
+    } else {
+      setFeedback('Salah! ' + questions[currentQuestion].explanation);
+    }
   };
 
   const handleNextQuestion = () => {
@@ -49,6 +58,7 @@ function Quiz() {
       setScore(score + 1);
     }
     setSelectedOption(null);
+    setFeedback('');
 
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -62,6 +72,7 @@ function Quiz() {
     setScore(0);
     setSelectedOption(null);
     setShowScore(false);
+    setFeedback('');
   };
 
   return (
@@ -82,25 +93,27 @@ function Quiz() {
               <button
                 key={option}
                 className={`option-button ${
-                  selectedOption === option ? "selected" : ""
+                  selectedOption === option ? (option === questions[currentQuestion].answer ? "correct" : "incorrect") : ""
                 }`}
                 onClick={() => handleOptionClick(option)}
+                disabled={selectedOption !== null} // Nonaktifkan tombol setelah memilih
               >
                 {option}
               </button>
             ))}
           </div>
+          {feedback && <p className="feedback">{feedback}</p>}
           <button
             onClick={handleNextQuestion}
             className="next-button"
-            disabled={!selectedOption}
+            // disabled={selectedOption === null} // Tombol hanya aktif jika ada pilihan yang dipilih
           >
-            {currentQuestion < questions.length - 1 ? "Pertanyaan Selanjutnya" : "Lihat Skor"}
+           
           </button>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Quiz;
