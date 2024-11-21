@@ -38,7 +38,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 ChimiLearn | Designed with ❤️ by Your Team</p>
+        <p>&copy; 2024 ChimiLearn | Designed with DAVID❤️ by Your Team</p>
       </div>
     </footer>
   );
