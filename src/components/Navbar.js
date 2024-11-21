@@ -6,14 +6,17 @@ function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
-
   const handleLinkClick = () => {
     setDropdownOpen(false); 
     setMenuOpen(false); 
+  };
+
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
   };
 
   return (
@@ -21,8 +24,12 @@ function Navbar() {
       <h2 className="navbar-brand">chimiLearn</h2>
       <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-        <li className="dropdown">
-          <span onClick={toggleDropdown}>Program Pembelajaran</span>
+        <li 
+          className="dropdown" 
+          onMouseEnter={handleMouseEnter} 
+          onMouseLeave={handleMouseLeave}
+        >
+          <span>Program Pembelajaran</span>
           <ul className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
             <li><Link to="/program-pembelajaran/sifat-koligatif" onClick={handleLinkClick}>Sifat Koligatif Larutan</Link></li>
             <li><Link to="/program-pembelajaran/reaksi-redoks" onClick={handleLinkClick}>Reaksi Redoks dan Elektrokimia</Link></li>

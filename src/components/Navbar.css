@@ -1,14 +1,16 @@
+/* Navbar Styles */
 .navbar {
   display: flex;
   align-items: center;
-  background: rgba(102, 51, 0, 0.863);
+  justify-content: space-between; /* Rata kiri dan kanan */
+  background: rgba(102, 51, 0, 0.863); /* Warna latar */
   padding: 1rem;
   position: relative;
   transition: background-color 0.3s ease;
 }
 
 .navbar:hover {
-  background: rgba(203, 179, 128, 0.9);
+  background: rgba(203, 179, 128, 0.9); /* Perubahan warna saat hover */
 }
 
 .navbar-logo {
@@ -19,84 +21,104 @@
 
 .navbar-brand {
   color: #f0efee;
-  margin-right: auto;
-  font-size: 1.8rem;
-  justify-content: space-between;
   font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 1px;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0; /* Hilangkan margin default */
+  padding: 0; /* Hilangkan padding default */
+}
+
+.navbar-menu li {
+  margin: 0 1rem; /* Spasi antar item */
+}
+
+.navbar-menu li a {
+  color: #ecf0f1;
+  text-decoration: none; /* Hilangkan garis bawah */
+  font-size: 1rem; /* Ukuran font */
+  position: relative;
+  transition: color 0.3s ease; /* Efek perubahan warna */
+}
+
+.navbar-menu li a:hover {
+  color: #f39c12; /* Warna saat hover */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; /* Sembunyikan secara default */
+  position: absolute;
+  top: 100%; /* Letakkan di bawah elemen dropdown */
+  left: 0; /* Mulai dari kiri */
+  background-color: rgba(110, 79, 45, 0.9); /* Warna latar dropdown */
+  min-width: 200px; /* Lebar minimum dropdown */
+  list-style: none;
+  padding: 0; /* Hilangkan padding default */
+  margin: 0; /* Hilangkan margin default */
+  border-radius: 4px; /* Membuat sudut dropdown membulat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  z-index: 1000; /* Pastikan dropdown di atas elemen lain */
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-content li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Garis pemisah antar item */
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none; /* Hilangkan garis di item terakhir */
+}
+
+.dropdown-content li a {
+  color: #ecf0f1;
+  text-decoration: none; /* Hilangkan garis bawah */
+  font-size: 0.95rem;
+  transition: color 0.3s ease; /* Efek perubahan warna */
+}
+
+.dropdown-content li a:hover {
+  color: #f39c12; /* Warna saat hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Tampilkan dropdown saat hover */
+  opacity: 1;
+}
+
+/* Responsiveness for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Ubah arah elemen menjadi kolom */
+    align-items: flex-start; /* Elemen rata kiri */
   }
-  
+
   .navbar-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
+    flex-direction: column; /* Menu menjadi vertikal */
+    width: 100%;
+    margin-top: 1rem; /* Spasi atas */
   }
-  
+
   .navbar-menu li {
-    margin: 0 1rem;
+    margin: 0.5rem 0; /* Spasi antar item */
   }
-  
-  .navbar-menu li a {
-    color: #ecf0f1;
-    margin: 0 1.5rem;
-    position: relative;
-  }
-  
-  .navbar-menu li a:hover {
-    color: #f39c12;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
+
   .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(110, 79, 45, 0.9);
-    min-width: 200px;
-    list-style: none;
-    padding: 0;
-    transition: opacity 0.3s ease;
+    position: relative; /* Ubah posisi dropdown agar sesuai di layar kecil */
+    top: 0;
+    left: 0;
+    width: 100%; /* Penuhi lebar menu */
+    box-shadow: none; /* Hilangkan bayangan untuk desain sederhana */
   }
-  
-  .dropdown-content li {
-    padding: 10px;
-  }
-  
-  .dropdown-content li a {
-    color: #ecf0f1;
-  }
-  
-  .dropdown:hover .dropdown-content,
-  .dropdown-content.show {
-    display: block;
-    opacity: 1;
-  }
-  
-  .navbar-menu.active {
-    display: flex;
-    max-height: none;
-    opacity: 1;
-  }
-  
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar-menu {
-      flex-direction: column;
-      width: 100%;
-      margin-top: 1rem;
-    }
-  
-    .navbar-menu li {
-      margin: 0.5rem 0;
-    }
-  }
+}
