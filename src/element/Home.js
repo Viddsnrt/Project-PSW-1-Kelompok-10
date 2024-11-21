@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Footer from './Footer'; // Import Footer
+import Footer from './Footer' 
 
 function Home() {
   return (
@@ -23,10 +23,9 @@ function Home() {
         </figure>
       </main>
       {/* End main */}
-
-      {/* Add Footer */}
       <Footer />
     </div>
+    
   );
 }
 

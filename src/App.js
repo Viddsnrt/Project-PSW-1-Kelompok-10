@@ -14,6 +14,7 @@ import ForgotPassword from './element/ForgotPassword';
 import ResetPassword from './element/ResetPassword';
 import Register from './element/Register';
 import Quiz from './materi/Quiz';
+import Footer from './element/Footer';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/footer" element={<Footer/>} />
       </Routes>
     </Router>
   );
