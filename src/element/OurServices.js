@@ -1,12 +1,10 @@
 import React from 'react';
-import './layanan.css'; 
-
-
+import './OurServices.css'; 
 
 const servicesData = [
     {
         icon: 'bx-bar-chart-alt',
-        title: 'Marketing services',
+        title: 'Marketing Services',
         description: 'Menggunakan pendekatan kimia dalam marketing services, kami menciptakan reaksi yang tepat untuk memikat pelanggan. Seperti dalam reaksi kimia, kami memastikan setiap langkah pemasaran terorganisir dengan baik untuk menghasilkan hasil yang optimal, sama seperti produk kimia yang sukses melalui proses yang teliti.',
     },
     {
@@ -16,7 +14,7 @@ const servicesData = [
     },
     {
         icon: 'bx-line-chart',
-        title: '24/7 Cell Center Services',
+        title: '24/7 Call Center Services',
         description: 'Layanan pusat panggilan 24/7 kami bekerja seperti reaksi kimia yang tak terhenti, selalu siap memberikan solusi kapan saja, di mana saja. Seperti sel-sel dalam tubuh manusia yang bekerja sepanjang waktu, kami memastikan komunikasi dengan pelanggan berjalan tanpa henti.',
     },
     {
@@ -33,6 +31,26 @@ const servicesData = [
         icon: 'bx-paint',
         title: 'Creative Consultant',
         description: 'Sebagai konsultan kreatif, kami menerapkan prinsip-prinsip kimia dalam memformulasikan ide-ide baru. Seperti ilmuwan yang menciptakan senyawa inovatif, kami menyatukan kreativitas dan strategi untuk menghasilkan solusi bisnis yang benar-benar menyentuh pelanggan.',
+    },
+    {
+        icon: 'bx-atom',
+        title: 'Reaksi Kimia',
+        description: 'Materi tentang reaksi kimia meliputi berbagai jenis reaksi, termasuk reaksi redoks, reaksi asam-basa, dan reaksi endothermic serta exothermic. Kami akan membahas mekanisme reaksi dan cara pengukuran laju reaksi.',
+    },
+    {
+        icon: 'bx-flask',
+        title: 'Stoikiometri',
+        description: 'Stoikiometri adalah cabang kimia yang melibatkan perhitungan kuantitatif dari reaktan dan produk dalam reaksi kimia. Pelajari cara menghitung massa, volume, dan molaritas dalam berbagai situasi.',
+    },
+    {
+        icon: 'bx-vial',
+        title: 'Termokimia',
+        description: 'Termokimia mempelajari perubahan energi yang terjadi selama reaksi kimia. Kami akan membahas tentang entalpi, entropi, dan energi bebas Gibbs serta aplikasi praktisnya.',
+    },
+    {
+        icon: 'bx-beaker',
+        title: 'Kinetika Kimia',
+        description: 'Kinetika kimia mempelajari laju reaksi dan faktor-faktor yang mempengaruhi laju reaksi. Pelajari bagaimana konsentrasi, suhu, dan katalis mempengaruhi kecepatan reaksi.',
     },
 ];
 
