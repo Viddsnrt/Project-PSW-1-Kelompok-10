@@ -5,11 +5,6 @@ import Footer from './Footer';
 function Home() {
   return (
     <div className="home-container">
-      {/* Navbar or Header */}
-      <header className="menu">
-        <h3>Kimia</h3>
-      </header>
-
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">

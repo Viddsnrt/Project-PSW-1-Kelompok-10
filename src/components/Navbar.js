@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State untuk login status
+  const [userName, setUserName] = useState(''); // State untuk nama pengguna
+  const navigate = useNavigate(); // Untuk mengarahkan pengguna setelah logout
 
   const handleLinkClick = () => {
     setDropdownOpen(false); 
@@ -29,7 +32,16 @@ function Navbar() {
     }
   };
 
+  // Mengatur status login dan nama pengguna dari localStorage
   useEffect(() => {
+    const loggedIn = localStorage.getItem('isLoggedIn');
+    const storedUserName = localStorage.getItem('userName');
+    
+    if (loggedIn && storedUserName) {
+      setIsLoggedIn(true);
+      setUserName(storedUserName);
+    }
+
     // Add scroll event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
     
@@ -38,6 +50,15 @@ function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Fungsi untuk logout
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userName');
+    setIsLoggedIn(false);
+    setUserName('');
+    navigate('/Login'); // Arahkan pengguna ke halaman Login setelah logout
+  };
 
   return (
     <nav className={`navbar ${isMenuOpen ? 'open' : ''} ${isSticky ? 'sticky' : ''}`}>
@@ -61,7 +82,16 @@ function Navbar() {
         <li><Link to="/Quiz" onClick={handleLinkClick}>Quiz</Link></li>
         <li><Link to="/ourservices" onClick={handleLinkClick}>Our Services</Link></li>
         <li><Link to="/kirim-pesan" onClick={handleLinkClick}>Kirim Pesan</Link></li>
-        <li><Link to="/Login" onClick={handleLinkClick}>Login</Link></li>
+
+        {/* Kondisional untuk menampilkan Login/Logout */}
+        {!isLoggedIn ? (
+          <li><Link to="/Login" onClick={handleLinkClick}>Login</Link></li>
+        ) : (
+          <>
+            <li className="user-name">{userName}</li>
+            <li className="logout-button" onClick={handleLogout}>Logout</li>
+          </>
+        )}
       </ul>
     </nav>
   );
