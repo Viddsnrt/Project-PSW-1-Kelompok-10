@@ -1,82 +1,114 @@
+/* General Styles */
 .quiz-container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f4f6f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  width: 70%;
+  margin: 40px auto;
   text-align: center;
-  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-h2 {
-  color: #34495e;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.question-text {
-  font-size: 1.2rem;
-  color: #2c3e50;
-  margin-bottom: 15px;
+.question {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.options-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.options {
+  margin-bottom: 20px;
 }
 
-.option-button {
-  background-color: #e0e4e8;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1rem;
+.options button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  width: 80%;
+  background-color: #f0f0f0;
+  border: 2px solid #007bff;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.option-button:hover {
-  background-color: #b0c4de;
+.options button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
 }
 
-.correct {
-  background-color: #28a745; /* Hijau untuk jawaban benar */
-  color: #fff;
+.options button.selected {
+  background-color: #d1e7dd;
+  border-color: #28a745;
 }
 
-.incorrect {
-  background-color: #dc3545; /* Merah untuk jawaban salah */
-  color: #fff;
+.explanation {
+  margin-top: 20px;
+  background-color: #f8d7da;
+  padding: 15px;
+  border-radius: 5px;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
 
-.next-button {
-  margin-top: 15px;
-  background-color: #2980b9;
-  color: #fff;
+.navigation button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: white;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 20px;
+  animation: bounceIn 0.8s ease-in-out;
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.start-button {
+  margin-top: 20px;
+}
+
+.start-button button {
   padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: white;
+  border: none;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.next-button:hover {
-  background-color: #1c5980;
-}
-
-.score-section {
-  font-size: 1.2rem;
-  color: #2c3e50;
-}
-
-.feedback {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #2c3e50;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
 }

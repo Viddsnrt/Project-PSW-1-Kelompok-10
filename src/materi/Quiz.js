@@ -12,7 +12,7 @@ function Quiz() {
         "Reaksi yang melibatkan gas",
       ],
       answer: "Reaksi yang melibatkan perpindahan elektron",
-      explanation: "Reaksi redoks adalah reaksi yang melibatkan transfer elektron antara dua zat.",
+      explanation: "Reaksi redoks melibatkan perpindahan elektron antara dua zat, satu teroksidasi dan satu lagi tereduksi.",
     },
     {
       question: "Apa yang dimaksud dengan elektrolisis?",
@@ -23,97 +23,252 @@ function Quiz() {
         "Proses oksidasi tanpa reduksi",
       ],
       answer: "Proses pemisahan senyawa dengan listrik",
-      explanation: "Elektrolisis adalah proses pemisahan senyawa menjadi komponen-komponennya dengan menggunakan arus listrik.",
+      explanation: "Elektrolisis adalah proses pemisahan senyawa kimia dengan menggunakan arus listrik.",
     },
     {
-      question: "Apakah fungsi dari anoda dalam sel galvani?",
+      question: "Apa itu entalpi?",
       options: [
-        "Sebagai tempat terjadinya oksidasi",
-        "Sebagai tempat terjadinya reduksi",
-        "Menghasilkan listrik",
-        "Sebagai pelarut",
+        "Jumlah panas dalam reaksi kimia pada tekanan tetap",
+        "Jumlah panas dalam reaksi kimia pada volume tetap",
+        "Jumlah energi kinetik dalam reaksi kimia",
+        "Jumlah energi potensial dalam reaksi kimia",
       ],
-      answer: "Sebagai tempat terjadinya oksidasi",
-      explanation: "Anoda adalah elektroda tempat terjadinya reaksi oksidasi dalam sel galvani.",
+      answer: "Jumlah panas dalam reaksi kimia pada tekanan tetap",
+      explanation: "Entalpi adalah jumlah panas yang ada dalam suatu sistem pada tekanan tetap.",
+    },
+    {
+      question: "Apa itu katalis?",
+      options: [
+        "Zat yang memperlambat reaksi kimia",
+        "Zat yang mempercepat reaksi kimia tanpa habis bereaksi",
+        "Zat yang mengubah hasil reaksi kimia",
+        "Zat yang hanya bereaksi dengan air",
+      ],
+      answer: "Zat yang mempercepat reaksi kimia tanpa habis bereaksi",
+      explanation: "Katalis adalah zat yang mempercepat reaksi kimia tanpa habis dalam reaksi tersebut.",
+    },
+    {
+      question: "Apa yang dimaksud dengan hukum kekekalan massa?",
+      options: [
+        "Jumlah massa sebelum dan sesudah reaksi adalah sama",
+        "Jumlah energi sebelum dan sesudah reaksi adalah sama",
+        "Jumlah zat sebelum dan sesudah reaksi adalah sama",
+        "Jumlah volume sebelum dan sesudah reaksi adalah sama",
+      ],
+      answer: "Jumlah massa sebelum dan sesudah reaksi adalah sama",
+      explanation: "Hukum kekekalan massa menyatakan bahwa massa zat sebelum dan sesudah reaksi kimia adalah tetap.",
+    },
+    {
+      question: "Apa itu larutan elektrolit?",
+      options: [
+        "Larutan yang dapat menghantarkan listrik",
+        "Larutan yang tidak dapat menghantarkan listrik",
+        "Larutan yang mengandung alkohol",
+        "Larutan yang mengandung protein",
+      ],
+      answer: "Larutan yang dapat menghantarkan listrik",
+      explanation: "Larutan elektrolit adalah larutan yang dapat menghantarkan listrik karena adanya ion-ion yang bergerak bebas.",
+    },
+    {
+      question: "Apa yang dimaksud dengan pH larutan?",
+      options: [
+        "Tingkat keasaman atau kebasaan larutan",
+        "Konsentrasi ion hidrogen dalam larutan",
+        "Jumlah ion dalam larutan",
+        "Tingkat oksidasi dalam larutan",
+      ],
+      answer: "Tingkat keasaman atau kebasaan larutan",
+      explanation: "pH adalah ukuran konsentrasi ion hidrogen dalam larutan, menunjukkan tingkat keasaman atau kebasaan larutan.",
+    },
+    {
+      question: "Apa itu isotop?",
+      options: [
+        "Atom yang memiliki jumlah neutron berbeda tetapi proton sama",
+        "Atom yang memiliki jumlah elektron berbeda tetapi neutron sama",
+        "Atom yang memiliki jumlah proton berbeda tetapi elektron sama",
+        "Atom yang memiliki jumlah proton dan neutron berbeda",
+      ],
+      answer: "Atom yang memiliki jumlah neutron berbeda tetapi proton sama",
+      explanation: "Isotop adalah atom dari unsur yang sama yang memiliki jumlah neutron berbeda tetapi jumlah proton yang sama.",
+    },
+    {
+      question: "Apa yang dimaksud dengan reaksi eksoterm?",
+      options: [
+        "Reaksi yang melepaskan panas",
+        "Reaksi yang menyerap panas",
+        "Reaksi yang terjadi pada suhu rendah",
+        "Reaksi yang menghasilkan cahaya",
+      ],
+      answer: "Reaksi yang melepaskan panas",
+      explanation: "Reaksi eksoterm adalah reaksi yang melepaskan panas ke lingkungan.",
+    },
+    {
+      question: "Apa itu molekul?",
+      options: [
+        "Gabungan dua atau lebih atom yang terikat secara kimia",
+        "Atom tunggal yang memiliki muatan",
+        "Zat yang tidak bisa dipecah menjadi zat yang lebih sederhana",
+        "Unit terkecil dari unsur yang tidak bisa bereaksi",
+      ],
+      answer: "Gabungan dua atau lebih atom yang terikat secara kimia",
+      explanation: "Molekul adalah gabungan dua atau lebih atom yang terikat secara kimia.",
+    },
+    {
+      question: "Apa yang dimaksud dengan larutan hipotonik?",
+      options: [
+        "Larutan dengan konsentrasi zat terlarut lebih rendah daripada larutan lain",
+        "Larutan dengan konsentrasi zat terlarut lebih tinggi daripada larutan lain",
+        "Larutan yang memiliki tekanan osmosis lebih tinggi",
+        "Larutan yang mengandung protein",
+      ],
+      answer: "Larutan dengan konsentrasi zat terlarut lebih rendah daripada larutan lain",
+      explanation: "Larutan hipotonik adalah larutan dengan konsentrasi zat terlarut lebih rendah dibandingkan larutan lainnya.",
+    },
+    {
+      question: "Apa yang dimaksud dengan hukum gas ideal?",
+      options: [
+        "Hubungan antara tekanan, volume, dan suhu gas ideal",
+        "Hubungan antara tekanan dan volume gas pada suhu tetap",
+        "Hubungan antara volume dan suhu gas pada tekanan tetap",
+        "Hubungan antara tekanan dan suhu gas pada volume tetap",
+      ],
+      answer: "Hubungan antara tekanan, volume, dan suhu gas ideal",
+      explanation: "Hukum gas ideal adalah persamaan yang menghubungkan tekanan, volume, dan suhu gas ideal.",
+    },
+    {
+      question: "Apa itu oksidasi?",
+      options: [
+        "Proses kehilangan elektron oleh zat",
+        "Proses penambahan elektron oleh zat",
+        "Proses penghilangan air dari senyawa",
+        "Proses pembentukan senyawa baru",
+      ],
+      answer: "Proses kehilangan elektron oleh zat",
+      explanation: "Oksidasi adalah proses kehilangan elektron oleh suatu zat.",
+    },
+    {
+      question: "Apa yang dimaksud dengan katalisis heterogen?",
+      options: [
+        "Katalisis yang melibatkan katalis dalam fase berbeda dengan reaktan",
+        "Katalisis yang melibatkan katalis dalam fase yang sama dengan reaktan",
+        "Katalisis yang menghasilkan produk yang sama",
+        "Katalisis yang tidak melibatkan katalis",
+      ],
+      answer: "Katalisis yang melibatkan katalis dalam fase berbeda dengan reaktan",
+      explanation: "Katalisis heterogen melibatkan katalis yang berada dalam fase berbeda dengan reaktan.",
+    },
+    {
+      question: "Apa itu gas mulia?",
+      options: [
+        "Unsur yang sangat reaktif",
+        "Unsur yang memiliki tingkat reaktivitas sangat rendah",
+        "Unsur yang hanya bereaksi dengan oksigen",
+        "Unsur yang selalu berbentuk padat",
+      ],
+      answer: "Unsur yang memiliki tingkat reaktivitas sangat rendah",
+      explanation: "Gas mulia adalah unsur yang memiliki tingkat reaktivitas kimia sangat rendah.",
+    },
+    {
+      question: "Apa yang dimaksud dengan penyangga asam?",
+      options: [
+        "Larutan yang menjaga pH tetap asam",
+        "Larutan yang menjaga pH tetap netral",
+        "Larutan yang menjaga pH tetap basa",
+        "Larutan yang tidak mempengaruhi pH",
+      ],
+      answer: "Larutan yang menjaga pH tetap asam",
+      explanation: "Penyangga asam adalah larutan yang mempertahankan pH tetap asam.",
+    },
+    {
+      question: "Apa yang dimaksud dengan titik leleh?",
+      options: [
+        "Suhu di mana zat berubah dari padat ke cair",
+        "Suhu di mana zat berubah dari cair ke padat",
+        "Suhu di mana zat berubah dari cair ke gas",
+        "Suhu di mana zat berubah dari gas ke cair",
+      ],
+      answer: "Suhu di mana zat berubah dari padat ke cair",
+      explanation: "Titik leleh adalah suhu di mana zat berubah dari padat menjadi cair.",
     },
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState('');
   const [score, setScore] = useState(0);
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [showScore, setShowScore] = useState(false);
-  const [feedback, setFeedback] = useState('');
+  const [showExplanation, setShowExplanation] = useState(false);
+  const [quizStarted, setQuizStarted] = useState(false); // State untuk melacak apakah quiz sudah dimulai
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    if (option === questions[currentQuestion].answer) {
-      setFeedback('Benar!');
-    } else {
-      setFeedback('Salah! ' + questions[currentQuestion].explanation);
-    }
-  };
+  const handleAnswerClick = (answer) => {
+    setSelectedAnswer(answer);
+    setShowExplanation(true);
 
-  const handleNextQuestion = () => {
-    if (selectedOption === questions[currentQuestion].answer) {
+    if (answer === questions[currentQuestion].answer) {
       setScore(score + 1);
     }
-    setSelectedOption(null);
-    setFeedback('');
+  };
 
+  const handleNextClick = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
+      setSelectedAnswer('');
+      setShowExplanation(false);
     } else {
-      setShowScore(true);
+      alert(`Quiz selesai! Skor kamu: ${score}/${questions.length}`);
     }
   };
 
-  const handleRestartQuiz = () => {
-    setCurrentQuestion(0);
-    setScore(0);
-    setSelectedOption(null);
-    setShowScore(false);
-    setFeedback('');
+  const handleStartClick = () => {
+    setQuizStarted(true); // Mengubah quizStarted menjadi true ketika tombol mulai diklik
   };
 
   return (
     <div className="quiz-container">
-      <h2>Latihan Soal: Quiz Kimia Kelas 12</h2>
-      {showScore ? (
-        <div className="score-section">
-          <p>Skor Anda: {score} dari {questions.length}</p>
-          <button onClick={handleRestartQuiz}>Mulai Ulang Quiz</button>
+      <h2>Quiz Kimia</h2>
+
+      {/* Menampilkan tombol Mulai jika quiz belum dimulai */}
+      {!quizStarted ? (
+        <div className="start-button">
+          <button onClick={handleStartClick}>Mulai Quiz</button>
         </div>
       ) : (
-        <div className="question-section">
-          <p className="question-text">
-            {currentQuestion + 1}. {questions[currentQuestion].question}
-          </p>
-          <div className="options-section">
-            {questions[currentQuestion].options.map((option) => (
+        <>
+          {/* Menampilkan soal setelah quiz dimulai */}
+          <div className="question">
+            <p>{questions[currentQuestion].question}</p>
+          </div>
+
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
               <button
-                key={option}
-                className={`option-button ${
-                  selectedOption === option ? (option === questions[currentQuestion].answer ? "correct" : "incorrect") : ""
-                }`}
-                onClick={() => handleOptionClick(option)}
-                disabled={selectedOption !== null} // Nonaktifkan tombol setelah memilih
+                key={index}
+                className={`option-button ${selectedAnswer === option ? 'selected' : ''}`}
+                onClick={() => handleAnswerClick(option)}
               >
                 {option}
               </button>
             ))}
           </div>
-          {feedback && <p className="feedback">{feedback}</p>}
-          <button
-            onClick={handleNextQuestion}
-            className="next-button"
-            // disabled={selectedOption === null} // Tombol hanya aktif jika ada pilihan yang dipilih
-          >
-           
-          </button>
-        </div>
+
+          {showExplanation && (
+            <div className="explanation">
+              <p>{selectedAnswer === questions[currentQuestion].answer ? 'Jawaban kamu benar!' : 'Jawaban kamu salah!'}</p>
+              <p><strong>Penjelasan:</strong> {questions[currentQuestion].explanation}</p>
+            </div>
+          )}
+
+          <div className="navigation">
+            <button onClick={handleNextClick}>
+              {currentQuestion < questions.length - 1 ? 'Next' : 'Finish'}
+            </button>
+          </div>
+
+          <div className="score">
+            <p>Skor: {score}</p>
+          </div>
+        </>
       )}
     </div>
   );
-};
+}
 
 export default Quiz;

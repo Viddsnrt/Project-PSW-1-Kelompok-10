@@ -3,10 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between; /* Rata kiri dan kanan */
-  background: rgba(102, 51, 0, 0.863); /* Warna latar */
+  background: rgba(0, 48, 102, 0.863); /* Warna latar */
   padding: 1rem;
-  position: relative;
+  position: sticky; /* Menjadikan navbar tetap di bagian atas saat scroll */
+  top: 0; /* Posisikan navbar di atas */
+  width: 100%; /* Pastikan navbar lebar penuh */
+  z-index: 1000; /* Pastikan navbar di atas elemen lain */
   transition: background-color 0.3s ease;
+}
+
+.navbar.sticky {
+  background: rgba(203, 179, 128, 0.9); /* Perubahan warna saat scroll */
 }
 
 .navbar:hover {
@@ -95,6 +102,29 @@
 .dropdown:hover .dropdown-content {
   display: block; /* Tampilkan dropdown saat hover */
   opacity: 1;
+}
+
+/* Styling untuk nama pengguna dan tombol logout */
+.navbar-menu li.user-name {
+  color: #ecf0f1;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.navbar-menu li.logout-button {
+  background-color: #ff4500;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navbar-menu li.logout-button:hover {
+  background-color: #e74c3c;
+  transition: background-color 0.3s ease;
 }
 
 /* Responsiveness for Mobile */

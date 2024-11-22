@@ -12,8 +12,6 @@ const Login = () => {
         e.preventDefault();
         setError('');
 
-        
-
         // Basic validation
         if (!email) {
             return setError('Email tidak boleh kosong');
@@ -27,7 +25,12 @@ const Login = () => {
             return setError('Password harus terdiri dari minimal 6 karakter');
         }
 
-        navigate('/'); 
+        // Simulating a successful login
+        const userName = email.split('@')[0]; // Taking the part before '@' as the username
+        localStorage.setItem('isLoggedIn', 'true'); // Mark the user as logged in
+        localStorage.setItem('userName', userName); // Store the username in localStorage
+
+        navigate('/'); // Navigate to home after successful login
     };
 
     return (
