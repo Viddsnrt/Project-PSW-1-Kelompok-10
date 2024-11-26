@@ -15,6 +15,7 @@ import ForgotPassword from './element/ForgotPassword';
 import ResetPassword from './element/ResetPassword';
 import Register from './element/Register';
 import Quiz from './materi/Quiz';
+import SimulasiLaboratorium from './SimulasiLaboratorium'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path ="/Footer" element={<Footer />} />
+        <Route path="/simulasi-laboratorium" element={<SimulasiLaboratorium />} />
       </Routes>
     </Router>
   );

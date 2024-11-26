@@ -104,6 +104,7 @@ function Navbar({ triggerUpdate }) {
               </Link>
             </li>
             <li>
+              
               <Link
                 to="/program-pembelajaran/reaksi-redoks"
                 onClick={handleLinkClick}
@@ -148,6 +149,13 @@ function Navbar({ triggerUpdate }) {
           </Link>
         </li>
         <li>
+
+          <Link to ="/SimulasiLaboratorium" onClick={handleLinkClick}>
+          Simulasi Laboratorium
+          </Link>
+          </li> 
+          <li> 
+            
           <Link to="/kirim-pesan" onClick={handleLinkClick}>
             Kirim Pesan
           </Link>
