@@ -81,7 +81,7 @@ function Navbar({ triggerUpdate }) {
         isSticky ? "sticky" : ""
       }`}
     >
-      <h2 className="navbar-brand">chimiLearn</h2>
+      <h2 className="navbar-brand">ChimiLearn</h2>
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
           <Link to="/" onClick={handleLinkClick}>

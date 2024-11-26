@@ -59,148 +59,131 @@ function Quiz() {
       explanation: "Hukum kekekalan massa menyatakan bahwa massa zat sebelum dan sesudah reaksi kimia adalah tetap.",
     },
     {
-      question: "Apa itu larutan elektrolit?",
+      question: "Apa itu energi aktivasi?",
       options: [
-        "Larutan yang dapat menghantarkan listrik",
-        "Larutan yang tidak dapat menghantarkan listrik",
-        "Larutan yang mengandung alkohol",
-        "Larutan yang mengandung protein",
+        "Energi minimum untuk memulai reaksi kimia",
+        "Energi maksimum dalam reaksi kimia",
+        "Energi yang dilepaskan selama reaksi kimia",
+        "Energi kinetik dari molekul gas",
       ],
-      answer: "Larutan yang dapat menghantarkan listrik",
-      explanation: "Larutan elektrolit adalah larutan yang dapat menghantarkan listrik karena adanya ion-ion yang bergerak bebas.",
+      answer: "Energi minimum untuk memulai reaksi kimia",
+      explanation: "Energi aktivasi adalah energi minimum yang dibutuhkan agar reaksi kimia dapat berlangsung.",
     },
     {
-      question: "Apa yang dimaksud dengan pH larutan?",
+      question: "Apa itu reaksi endoterm?",
       options: [
-        "Tingkat keasaman atau kebasaan larutan",
-        "Konsentrasi ion hidrogen dalam larutan",
-        "Jumlah ion dalam larutan",
-        "Tingkat oksidasi dalam larutan",
+        "Reaksi yang menyerap energi dari lingkungan",
+        "Reaksi yang melepaskan energi ke lingkungan",
+        "Reaksi yang tidak melibatkan perpindahan energi",
+        "Reaksi yang menghasilkan gas",
       ],
-      answer: "Tingkat keasaman atau kebasaan larutan",
-      explanation: "pH adalah ukuran konsentrasi ion hidrogen dalam larutan, menunjukkan tingkat keasaman atau kebasaan larutan.",
+      answer: "Reaksi yang menyerap energi dari lingkungan",
+      explanation: "Reaksi endoterm adalah reaksi yang menyerap energi dalam bentuk panas dari lingkungan.",
+    },
+    {
+      question: "Apa itu pH?",
+      options: [
+        "Ukuran konsentrasi ion H+ dalam larutan",
+        "Ukuran suhu larutan",
+        "Ukuran konsentrasi ion OH- dalam larutan",
+        "Ukuran massa larutan",
+      ],
+      answer: "Ukuran konsentrasi ion H+ dalam larutan",
+      explanation: "pH mengukur konsentrasi ion H+ dalam larutan, menunjukkan sifat asam atau basa larutan tersebut.",
+    },
+    {
+      question: "Apa itu buffer?",
+      options: [
+        "Larutan yang dapat mempertahankan pH terhadap penambahan asam atau basa",
+        "Larutan yang selalu bersifat asam",
+        "Larutan yang tidak bereaksi dengan apapun",
+        "Larutan yang hanya terdiri dari basa",
+      ],
+      answer: "Larutan yang dapat mempertahankan pH terhadap penambahan asam atau basa",
+      explanation: "Buffer adalah larutan yang mampu mempertahankan kestabilan pH meskipun ditambahkan sedikit asam atau basa.",
+    },
+    {
+      question: "Apa itu reaksi eksoterm?",
+      options: [
+        "Reaksi yang melepaskan energi ke lingkungan",
+        "Reaksi yang menyerap energi dari lingkungan",
+        "Reaksi yang membutuhkan energi aktivasi tinggi",
+        "Reaksi yang tidak menghasilkan perubahan energi",
+      ],
+      answer: "Reaksi yang melepaskan energi ke lingkungan",
+      explanation: "Reaksi eksoterm adalah reaksi yang menghasilkan energi, biasanya dalam bentuk panas.",
+    },
+    {
+      question: "Apa yang dimaksud dengan katalisator enzim?",
+      options: [
+        "Protein yang mempercepat reaksi biokimia",
+        "Karbohidrat yang memperlambat reaksi",
+        "Asam nukleat yang mengontrol metabolisme",
+        "Lipid yang menghasilkan energi",
+      ],
+      answer: "Protein yang mempercepat reaksi biokimia",
+      explanation: "Katalisator enzim adalah protein khusus yang mempercepat reaksi kimia di dalam tubuh makhluk hidup.",
+    },
+    {
+      question: "Apa itu reaksi pengendapan?",
+      options: [
+        "Reaksi yang menghasilkan zat padat dalam larutan",
+        "Reaksi yang menghasilkan gas dalam larutan",
+        "Reaksi yang hanya terjadi pada suhu tinggi",
+        "Reaksi yang menghasilkan larutan jenuh",
+      ],
+      answer: "Reaksi yang menghasilkan zat padat dalam larutan",
+      explanation: "Reaksi pengendapan adalah reaksi kimia di mana terbentuk zat padat yang tidak larut dalam larutan.",
     },
     {
       question: "Apa itu isotop?",
       options: [
-        "Atom yang memiliki jumlah neutron berbeda tetapi proton sama",
-        "Atom yang memiliki jumlah elektron berbeda tetapi neutron sama",
-        "Atom yang memiliki jumlah proton berbeda tetapi elektron sama",
-        "Atom yang memiliki jumlah proton dan neutron berbeda",
+        "Atom dengan jumlah proton yang sama tetapi neutron berbeda",
+        "Atom dengan jumlah proton dan elektron berbeda",
+        "Atom yang hanya memiliki satu jenis neutron",
+        "Atom yang selalu bersifat radioaktif",
       ],
-      answer: "Atom yang memiliki jumlah neutron berbeda tetapi proton sama",
-      explanation: "Isotop adalah atom dari unsur yang sama yang memiliki jumlah neutron berbeda tetapi jumlah proton yang sama.",
+      answer: "Atom dengan jumlah proton yang sama tetapi neutron berbeda",
+      explanation: "Isotop adalah atom dari unsur yang sama dengan jumlah proton sama tetapi jumlah neutron berbeda.",
     },
     {
-      question: "Apa yang dimaksud dengan reaksi eksoterm?",
+      question: "Apa itu hukum Boyle?",
       options: [
-        "Reaksi yang melepaskan panas",
-        "Reaksi yang menyerap panas",
-        "Reaksi yang terjadi pada suhu rendah",
-        "Reaksi yang menghasilkan cahaya",
+        "Tekanan gas berbanding terbalik dengan volumenya pada suhu tetap",
+        "Tekanan gas berbanding lurus dengan volumenya pada suhu tetap",
+        "Tekanan gas tidak berubah meski volumenya berubah",
+        "Tekanan gas hanya berlaku dalam sistem tertutup",
       ],
-      answer: "Reaksi yang melepaskan panas",
-      explanation: "Reaksi eksoterm adalah reaksi yang melepaskan panas ke lingkungan.",
+      answer: "Tekanan gas berbanding terbalik dengan volumenya pada suhu tetap",
+      explanation: "Hukum Boyle menyatakan bahwa tekanan gas akan meningkat jika volumenya berkurang pada suhu tetap.",
     },
     {
-      question: "Apa itu molekul?",
+      question: "Apa fungsi utama dari sel elektrokimia?",
       options: [
-        "Gabungan dua atau lebih atom yang terikat secara kimia",
-        "Atom tunggal yang memiliki muatan",
-        "Zat yang tidak bisa dipecah menjadi zat yang lebih sederhana",
-        "Unit terkecil dari unsur yang tidak bisa bereaksi",
+        "Menghasilkan listrik dari reaksi kimia",
+        "Menghasilkan gas dari reaksi kimia",
+        "Mengontrol pH larutan",
+        "Menghasilkan katalis untuk reaksi kimia",
       ],
-      answer: "Gabungan dua atau lebih atom yang terikat secara kimia",
-      explanation: "Molekul adalah gabungan dua atau lebih atom yang terikat secara kimia.",
-    },
-    {
-      question: "Apa yang dimaksud dengan larutan hipotonik?",
-      options: [
-        "Larutan dengan konsentrasi zat terlarut lebih rendah daripada larutan lain",
-        "Larutan dengan konsentrasi zat terlarut lebih tinggi daripada larutan lain",
-        "Larutan yang memiliki tekanan osmosis lebih tinggi",
-        "Larutan yang mengandung protein",
-      ],
-      answer: "Larutan dengan konsentrasi zat terlarut lebih rendah daripada larutan lain",
-      explanation: "Larutan hipotonik adalah larutan dengan konsentrasi zat terlarut lebih rendah dibandingkan larutan lainnya.",
-    },
-    {
-      question: "Apa yang dimaksud dengan hukum gas ideal?",
-      options: [
-        "Hubungan antara tekanan, volume, dan suhu gas ideal",
-        "Hubungan antara tekanan dan volume gas pada suhu tetap",
-        "Hubungan antara volume dan suhu gas pada tekanan tetap",
-        "Hubungan antara tekanan dan suhu gas pada volume tetap",
-      ],
-      answer: "Hubungan antara tekanan, volume, dan suhu gas ideal",
-      explanation: "Hukum gas ideal adalah persamaan yang menghubungkan tekanan, volume, dan suhu gas ideal.",
-    },
-    {
-      question: "Apa itu oksidasi?",
-      options: [
-        "Proses kehilangan elektron oleh zat",
-        "Proses penambahan elektron oleh zat",
-        "Proses penghilangan air dari senyawa",
-        "Proses pembentukan senyawa baru",
-      ],
-      answer: "Proses kehilangan elektron oleh zat",
-      explanation: "Oksidasi adalah proses kehilangan elektron oleh suatu zat.",
-    },
-    {
-      question: "Apa yang dimaksud dengan katalisis heterogen?",
-      options: [
-        "Katalisis yang melibatkan katalis dalam fase berbeda dengan reaktan",
-        "Katalisis yang melibatkan katalis dalam fase yang sama dengan reaktan",
-        "Katalisis yang menghasilkan produk yang sama",
-        "Katalisis yang tidak melibatkan katalis",
-      ],
-      answer: "Katalisis yang melibatkan katalis dalam fase berbeda dengan reaktan",
-      explanation: "Katalisis heterogen melibatkan katalis yang berada dalam fase berbeda dengan reaktan.",
-    },
-    {
-      question: "Apa itu gas mulia?",
-      options: [
-        "Unsur yang sangat reaktif",
-        "Unsur yang memiliki tingkat reaktivitas sangat rendah",
-        "Unsur yang hanya bereaksi dengan oksigen",
-        "Unsur yang selalu berbentuk padat",
-      ],
-      answer: "Unsur yang memiliki tingkat reaktivitas sangat rendah",
-      explanation: "Gas mulia adalah unsur yang memiliki tingkat reaktivitas kimia sangat rendah.",
-    },
-    {
-      question: "Apa yang dimaksud dengan penyangga asam?",
-      options: [
-        "Larutan yang menjaga pH tetap asam",
-        "Larutan yang menjaga pH tetap netral",
-        "Larutan yang menjaga pH tetap basa",
-        "Larutan yang tidak mempengaruhi pH",
-      ],
-      answer: "Larutan yang menjaga pH tetap asam",
-      explanation: "Penyangga asam adalah larutan yang mempertahankan pH tetap asam.",
-    },
-    {
-      question: "Apa yang dimaksud dengan titik leleh?",
-      options: [
-        "Suhu di mana zat berubah dari padat ke cair",
-        "Suhu di mana zat berubah dari cair ke padat",
-        "Suhu di mana zat berubah dari cair ke gas",
-        "Suhu di mana zat berubah dari gas ke cair",
-      ],
-      answer: "Suhu di mana zat berubah dari padat ke cair",
-      explanation: "Titik leleh adalah suhu di mana zat berubah dari padat menjadi cair.",
+      answer: "Menghasilkan listrik dari reaksi kimia",
+      explanation: "Sel elektrokimia berfungsi untuk menghasilkan arus listrik melalui reaksi redoks.",
     },
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [score, setScore] = useState(0);
-  const [showExplanation, setShowExplanation] = useState(false);
-  const [quizStarted, setQuizStarted] = useState(false); // State untuk melacak apakah quiz sudah dimulai
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [quizStarted, setQuizStarted] = useState(false);
+
+  const handleStartQuiz = () => {
+    setQuizStarted(true);
+  };
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
-    setShowExplanation(true);
+    setShowFeedback(true);
 
     if (answer === questions[currentQuestion].answer) {
       setScore(score + 1);
@@ -211,28 +194,37 @@ function Quiz() {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer('');
-      setShowExplanation(false);
+      setShowFeedback(false);
     } else {
-      alert(`Quiz selesai! Skor kamu: ${score}/${questions.length}`);
+      setQuizCompleted(true);
     }
   };
 
-  const handleStartClick = () => {
-    setQuizStarted(true); // Mengubah quizStarted menjadi true ketika tombol mulai diklik
+  const handleRestartQuiz = () => {
+    setCurrentQuestion(0);
+    setSelectedAnswer('');
+    setScore(0);
+    setShowFeedback(false);
+    setQuizCompleted(false);
+    setQuizStarted(false);
   };
 
   return (
     <div className="quiz-container">
-      <h2>Quiz Kimia</h2>
+      <h2>Quiz Interaktif Kimia</h2>
 
-      {/* Menampilkan tombol Mulai jika quiz belum dimulai */}
       {!quizStarted ? (
-        <div className="start-button">
-          <button onClick={handleStartClick}>Mulai Quiz</button>
+        <div className="start-container">
+          <p>Selamat datang di Quiz Interaktif Kimia!</p>
+          <button onClick={handleStartQuiz}>Mulai Quiz</button>
+        </div>
+      ) : quizCompleted ? (
+        <div className="quiz-complete">
+          <p>Quiz selesai! Skor kamu: <strong>{score}/{questions.length}</strong></p>
+          <button onClick={handleRestartQuiz}>Coba Lagi</button>
         </div>
       ) : (
         <>
-          {/* Menampilkan soal setelah quiz dimulai */}
           <div className="question">
             <p>{questions[currentQuestion].question}</p>
           </div>
@@ -243,21 +235,26 @@ function Quiz() {
                 key={index}
                 className={`option-button ${selectedAnswer === option ? 'selected' : ''}`}
                 onClick={() => handleAnswerClick(option)}
+                disabled={showFeedback}
               >
                 {option}
               </button>
             ))}
           </div>
 
-          {showExplanation && (
-            <div className="explanation">
-              <p>{selectedAnswer === questions[currentQuestion].answer ? 'Jawaban kamu benar!' : 'Jawaban kamu salah!'}</p>
+          {showFeedback && (
+            <div className={`feedback ${selectedAnswer === questions[currentQuestion].answer ? 'correct' : 'incorrect'}`}>
+              <p>
+                {selectedAnswer === questions[currentQuestion].answer
+                  ? 'Jawaban kamu benar!'
+                  : `Jawaban salah. Jawaban yang benar: "${questions[currentQuestion].answer}".`}
+              </p>
               <p><strong>Penjelasan:</strong> {questions[currentQuestion].explanation}</p>
             </div>
           )}
 
           <div className="navigation">
-            <button onClick={handleNextClick}>
+            <button onClick={handleNextClick} disabled={!showFeedback}>
               {currentQuestion < questions.length - 1 ? 'Next' : 'Finish'}
             </button>
           </div>
