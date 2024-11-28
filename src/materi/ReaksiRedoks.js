@@ -126,6 +126,44 @@ function ReaksiRedoks() {
         </ul>
       </section>
 
+      <section className="reaksi-redoks">
+        <h3>Jenis Reaksi Redoks : </h3>
+        <p>Reaksi redoks memiliki beberapa jenis yaitu : </p>
+        <h4>Berdasarkan Jenis Reaksi</h4>
+        <ul>
+          <li>Reaksi Kombinasi : Dua atau lebih zat bergabung membentuk satu senyawa baru.</li>
+          <li>Reaksi Penguraian : Satu senyawa diuraikan menjadi dua atau lebih zat.</li>
+          <li>Reaksi Disproporsionasi : Satu unsur dalam suatu senyawa mengalami oksidasi dan reduksi sekaligus.</li>
+          <li>Reaksi Pemindahan Elektron : Elektron berpindah dari reduktor ke oksidator.</li>
+        </ul>
+        <h4>Berdasarkan Medium Reaksi</h4>
+        <ul>
+          <li> Medium Asam </li>
+          <li> Medium Basa </li>
+        </ul>
+      </section>
+
+      <section className='langkah'>
+        <h3>Langkah Menyetarakan Reaksi Redoks</h3>
+        <h4>Metode Bilangan Oksidasi</h4>
+        <p> Berikut adalah langkah-langkah untuk menyetarakan rekasi redoks menggunakan metode bilangan oksidasi:</p>
+        <ul>
+          <li>Tentukan biloks semua unsur</li>
+          <li>Identifikasi zat yang mengalami oksidasi dan reduksi</li>
+          <li>Setarakan jumlah elektron yang dilepas dan diterima</li>
+          <li>Lengkapi reaksi dengan ion-ion atau molekul lain yang diperlukan</li>
+        </ul>
+        <h4>Metode Setengah Reaksi</h4>
+        <p>Berikut adalah langkah-langkah untuk menyetarakan rekasi redoks menggunakan metode setengah reaksi:</p>
+        <ul>
+          <li>Pisahkan reaksi menjadi setengah reaksi oksidasi dan reduksi</li>
+          <li>Setarakan atom-atom selain H dan O</li>
+          <li>Setarakan O dengan menambahkan H20 dan H dengan H (di medium asam)</li>
+          <li>Setarakan muatan dengan menambahkan elektron</li>
+          <li>Gabungkan kedua setengah reaksi</li>
+        </ul>
+      </section>
+
       <section className="contoh-soal">
         <h3>Contoh Soal</h3>
         <p><strong>Soal:</strong> Pada reaksi redoks berikut, mana yang mengalami oksidasi?</p>

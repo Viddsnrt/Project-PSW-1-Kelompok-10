@@ -4,6 +4,8 @@ import PersamaanDeltaTb from './PersamaanDeltaTb';
 import RumusEncer from './RumusEncer';
 import RumusKenaikan from './RumusKenaikan';
 import TabelPelarut from './TabelPelarut';
+import RumusHubungan from './RumusHubungan';
+import TabelPelarut2 from './TabelPelarut2';
 
 function SifatKoligatif() {
   const [showOsmoticPressure, setShowOsmoticPressure] = useState(false);
@@ -240,7 +242,7 @@ function SifatKoligatif() {
           Berarti, kalau kita larutin gula sebanyak itu ke dalam air, titik didih larutannya akan naik sebesar 0,104°C. Jadi, kalau air murni mendidih di 100°C, maka larutan gula kita akan mendidih di suhu 100,104°C.
           </p><br/>
         </section>
-        </section>
+      </section>
 
       <section className="penurunan-titik-beku">
         <h3>3. Penurunan Titik Beku</h3>
@@ -251,7 +253,7 @@ function SifatKoligatif() {
         <p><strong>Rumus:</strong> ΔTf = Kf * m</p>
         <p><em>Dimana:</em></p>
         <ul>
-          <li>ΔTf = Penurunan titik beku</li>
+          <li>ΔTf = penurunan titik beku larutan</li>
           <li>Kf = Konstanta pembekuan molal</li>
           <li>m = Molalitas larutan</li>
         </ul>
@@ -297,7 +299,11 @@ function SifatKoligatif() {
         <br/>
         <p>Titik beku tidak bergantung pada jenis zat terlarut, tetapi tergantung pada konsentrasi atau jumlah partikel zat terlarut dalam larutan. Semakin besar konsentrasi larutan, maka semakin besar penurunan titik bekunya. Coba perhatikan diagram berikut ini. </p>
         <br/>
-        poto
+        <img 
+          src="https://cdn.utakatikotak.com/20170422/20170422_092354diagram-fase-penurunan-titik-beku.jpg" 
+          alt="Penurunan Titik Beku" 
+          className="colligative-img" 
+        />
         <p><b><br/>
         Keterangan :
         </b></p>
@@ -311,14 +317,102 @@ function SifatKoligatif() {
         <br/>
         <p>Jika dijabarkan, maka rumus hubungan antara titik beku larutan dan kemolalan ini akan terlihat seperti berikut ini. </p>
         <br/>
+        <RumusHubungan />
+        <p><b><br/>
+        Keterangan :
+        </b></p>
+        <p>Tf = titik beku larutan</p>
+        <br/>
+        <p>Mr = massa molekul relatif zat terlarut </p>
+        <br/>
+        <p>P = massa pelarut (gram)</p>
+        <br/>
+        <p>Kf = tetapan penurunan titik beku molal (℃ m-1)</p>
+        <br/>
+        <p>m = molalitas larutan (m)</p>
+        <br/>
+        <p>Beberapa pelarut ada yang sudah ditentukan harga tetapan penurunan titik bekunya (Kf). Berikut daftar pelarutnya. </p>
+        <br/>
+        <TabelPelarut2 />
 
-        <h4>D. </h4>
-        <p></p>
+        <h4>D. Penerapan Penurunan Titik Beku</h4>
+        <p>Penurunan titik beku ini cukup sering digunakan dalam kehidupan sehari-hari. Mulai dari pembuatan makanan hingga kendaraan. </p>
         <br/>
-        <p></p>
+        <p>Berikut adalah beberapa contoh penerapan penurunan titik beku dalam kehidupan sehari-hari. </p>
         <br/>
-        <p></p>
+        <p><b>
+        1. Pembuatan es krim
+        </b></p>
+        <p>Selain es puter, penurunan titik beku juga diterapkan dalam pembuatan es krim. Caranya sama, yaitu dengan menambahkan garam pada es agar suhu menjadi turun. </p>
         <br/>
+        <p>Jika suhu tidak diturunkan atau tetap pada besaran 0℃, maka air yang terdapat dalam adonan es krim akan lebih cepat membeku. Alhasil, tekstur es krim pun menjadi keras. </p>
+        <br/>
+        <p>Namun, jika suhu diturunkan di bawah titik beku air dengan cara menambahkan garam pada es, lalu ditambahkan pengemulsi es krim (whipping cream atau SP) ke dalam adonan, maka akan menghasilkan es krim yang lembut. </p>
+
+        <p><b><br/>
+        2. Mencairkan salju di jalanan
+        </b></p>
+        <p>Musim dingin selalu identik dengan salju dan udara dingin. Salju yang turun terlalu lebat ini dapat menyebabkan jalanan tertutup es sehingga membuat kendaraan tidak dapat melintasi jalanan tersebut. </p>
+        <br/>
+        <p>Salah satu cara mengatasinya adalah dengan mencairkan salju di jalanan tersebut menggunakan garam. Hal ini akan membuat larutan air pada es dan garam memiliki titik beku yang lebih rendah daripada air murni karena penurunan titik beku larutan. </p>
+        <br/>
+        <p>Air biasanya akan membeku pada suhu 0°C, tetapi ketika ditambahkan garam, suhunya akan turun. Semakin tinggi konsentrasi garam, maka semakin rendah titik beku air. </p>
+        
+        <p><b><br/>
+        3. Antibeku pada radiator mobil
+        </b></p>
+        <p>Musim dingin tidak hanya membuat udara menjadi dingin dan jalanan ditutupi salju saja, tapi juga dapat menyebabkan air radiator mobil menjadi lebih cepat beku. Jika dibiarkan saja, maka radiator mobil akan cepat rusak. </p>
+        <br/>
+        <p>Sebagai tindakan pencegahan, biasanya ditambahkan etilen glikol ke dalam air radiator sehingga titik beku air dalam radiator menurun. Dengan kata lain, air jadi tidak mudah membeku. </p>
+
+        <p><b><br/>
+        4. Air laut
+        </b></p>
+        <p>Ketika musim dingin, air laut tidak membeku secara menyeluruh. Hal ini dikarenakan kandungan garam yang terdapat di dalam air laut sehingga membuat suhu air laut berada di bawah titik beku air murni. </p>
+        <br/>
+
+        <section className="contoh-soal-ionisasi">
+          <h3>Contoh Soal Penurunan Titik Beku</h3><br/>
+          <p><strong>Soal:</strong> Suatu larutan dibuat dengan cara melarutkan 3 gram urea CO(NH2)2 dalam 100 gram air. (Kf air = 1,86 °C/m Ar C = 12, O = 16, N = 14, H = 1). Tentukan penurunan titik bekunya. </p><br/>
+          <p><strong>Apa yang diketahui dari soal?</strong></p>
+          <div className="keterangan">
+            <ul>
+              <li>Kita punya urea (bayangin aja kayak pupuk tanaman) yang dilarutkan dalam air.</li>
+              <li>Jumlah urea-nya 3 gram, dan airnya 100 gram.</li>
+              <li>Kita juga dikasih tahu nilai Kf air (konstanta penurunan titik beku) yang nilainya 1,86 °C/m. Kf ini kayak semacam angka ajaib yang udah ditentukan untuk setiap pelarut.</li>
+            </ul>
+          </div>
+          <p><strong>Apa yang mau kita cari?</strong></p>
+          <p>
+          Kita mau tahu berapa derajat penurunan titik beku larutan urea kita.
+          </p><br/>
+          <p><strong>Cara ngerjainnya:</strong></p><br/>
+          <p><b>
+          1. Hitung Mr urea:
+          </b></p>
+          <p>Mr itu kayak berat molekul dari suatu zat. Jadi, kita hitung dulu berapa berat molekul urea. Caranya tinggal jumlahkan aja massa atom dari semua unsur yang ada di urea. Udah dihitung di soal, ternyata Mr urea itu 60.</p>
+          <p><b><br/>
+          2. Hitung penurunan titik beku (ΔTf):
+          </b></p>
+          <p>Kita punya rumus: ΔTf = Kf x (massa zat terlarut / Mr zat terlarut) x (1000 / massa pelarut)</p>
+          <div className="keterangan">
+            <ul>
+              <li>Kf: Udah dikasih di soal, yaitu 1,86 °C/m.</li>
+              <li>massa zat terlarut: Ini adalah massa urea yang kita larutkan, yaitu 3 gram.</li>
+              <li>Mr zat terlarut: Ini yang tadi udah kita hitung, yaitu 60.</li>
+              <li>massa pelarut: Ini adalah massa airnya, yaitu 100 gram.</li>
+            </ul>
+          </div>
+          <p>Kalau kita masukin semua angka ke rumus, kita dapat hasil ΔTf = 0,93 °C. Artinya, titik beku larutan urea kita turun sebesar 0,93 derajat Celcius dibandingkan dengan titik beku air murni (yang biasanya 0°C).</p>
+          <p><b><br/>
+          3. Hitung titik beku larutan:
+          </b></p>
+          <p>Karena titik beku turun 0,93 °C, berarti titik beku larutan urea kita adalah 0°C - 0,93°C = -0,93°C.</p><br/>
+          <p><strong>Jadi kesimpulannya:</strong></p>
+          <p>
+          Kalau kita larutkan 3 gram urea dalam 100 gram air, titik beku larutannya akan menjadi -0,93°C. Artinya, kita perlu suhu yang lebih dingin dari 0°C untuk membekukan larutan ini.
+          </p><br/>
+        </section>
       </section>
 
       <section className="tekanan-osmotik">
@@ -346,6 +440,90 @@ function SifatKoligatif() {
             </p>
           </div>
         )}
+          <img 
+            src="https://cdn.utakatikotak.com/20200504/20200504_041741tekanan_osmosis.png" 
+            alt="Penurunan Titik Beku" 
+            className="colligative-img" 
+          />
+
+        <h4>A. Apa yang Dimaksud dengan Tekanan Osmotik?</h4>
+        <p>Tekanan osmotik adalah sifat ‘koligatif’, seperti penurunan titik beku, yang berarti bergantung pada jumlah partikel dalam larutan tetapi tidak bergantung pada identitas kimianya. </p>
+        <br/>
+        <p>Tekanan osmotik secara sederhana dapat dijelaskan sebagai tekanan minimum pada larutan untuk mencegah aliran molekul pelarut melalui membran semipermeabel.</p>
+        <br/>
+        <p>Membran semipermeabel memiliki pori-pori kecil yang memungkinkan pergerakan pelarut antara dua larutan yang berbeda. </p>
+        <br/>
+        <p>Setiap larutan secara alami akan memiliki tingkat konsentrasi yang berbeda, dan tekanan osmotik yang diperlukan untuk mencegah aliran pelarut akan berbeda pula</p>
+        <br/>
+        <p>Tekanan osmotik tidak diciptakan oleh larutan tetapi muncul ketika larutan dipisahkan dari pelarut oleh membran semipermeabel.</p>
+        <br/>
+        <p>Jika tekanan yang diterapkan pada larutan lebih besar dari tekanan osmotik larutan, maka pelarut mulai berpindah dari larutan ke pelarut. Fenomena ini disebut reverse osmosis. Proses ini digunakan untuk pemurnian air laut dan air keras.</p>
+        <br/>
+        <p>Cara kerja tekanan osmotik dapat digambarkan dengan mudah melalui gambaran dari tiga taabung di bawah ini.</p>
+        <br/>
+        <p><b>
+        1. Bagian kiri tabung U berisi larutan berair, dan bagian kanan terdiri dari air murni. 
+        </b></p>
+        <p><b><br/>
+        2. Di sini, air murni mencoba mengencerkan larutan dengan menembus membran semipermeabel tetapi berat yang ditambahkan oleh air pada tabung kiri menimbulkan tekanan untuk menahan osmosis.
+        </b></p>
+        <p><b><br/>
+        3. Ini berlangsung sampai keseimbangan dipertahankan.
+        </b></p>
+        <p><b><br/>
+        4. Sekarang untuk mencapai tekanan osmotik, tingkatkan tekanan hidrostatik pada sisi larutan membran. Ini kemudian menekan molekul pelarut lebih dekat, meningkatkan kecenderungan untuk melarikan diri.
+        </b></p>
+        <p><b><br/>
+        5. Kecenderungan keluarnya larutan ini dapat ditingkatkan sampai menjadi sama dengan molekul dalam pelarut murni.
+        </b></p>
+        <p><b><br/>
+        6. Dan pada titik ini, osmosis akan berhenti. Tekanan osmotik adalah tekanan yang diperlukan untuk mencapai keseimbangan osmotik.
+        </b></p><br/>
+        
+        <h4>B. Apa Manfaat dari Tekanan Osmotik?</h4>
+        <p>Tekanan osmotik memiliki keuntungan untuk mengetahui massa molar dibandingkan sifat koligatif lainnya.</p>
+        <br/>
+        <p>Hal ini  dikarenakan pengukuran tekanan berada di sekitar suhu kamar dan molaritas digunakan sebagai pengganti molalitas</p>
+        <br/>
+        <p>Dibandingkan dengan sifat koligatif lainnya, besarnya tekanan osmotik cukup besar bahkan untuk larutan encer.</p>
+        <br/>
+        <p>Teknik tekanan osmotik untuk penentuan massa molar zat terlarut sangat berguna untuk biomolekul karena umumnya tidak stabil pada suhu yang lebih tinggi dan polimer memiliki kelarutan yang buruk.</p>
+        <br/>
+
+        <h4>C. Apa Faktor yang Mempengaruhi Tekanan Osmotik?</h4>
+        <p>Faktor-faktor yang mempengaruhi tekanan osmotik adalah konsentrasi dan suhu zat terlarut.</p>
+        <br/>
+        <p>Konsentrasi zat terlarut adalah jumlah partikel zat terlarut dalam satuan volume larutan yang secara langsung menentukan tekanan osmotik potensialnya.</p>
+        <br/>
+        <p>Sedangkan pada suhu, tekanan osmotik akan meningkat apabila suhunya juga ikut meningkat</p>
+        <br/>
+
+        <h4>D. Seberapa Penting Tekanan Osmotik dalam Tubuh?</h4>
+        <p>Tekanan osmotik penting dalam tubuh manusia untuk menjaga cairan dalam tubuh. Ketika kita memiliki asupan air yang cukup, air mengalir melalui aliran darah dan berdifusi ke dalam sel melalui osmosis. </p>
+        <br/>
+        <p>Namun, jika asupan air kurang, maka air di dalam tubuh kita akan berpindah ke dalam darah sehingga meningkatkan konsentrasi garam dalam tubuh kita. Kondisi ini secara langsung dapat mempengaruhi fungsi sel sehingga menyebabkan dehidrasi. </p>
+        <br/>
+        <p>Jumlah tekanan osmotik yang tepat terjadi ketika ada asupan air yang cukup, sehingga menghasilkan gaya hidup sehat.</p>
+        <br/>
+        <p>Contoh lain tekanan osmotik dalam tubuh adalah di tubulus ginjal, penurunan/penurunan tekanan osmotik menyebabkan penurunan produksi hormon antidiuretik (ADH)/Vasopressin. </p>
+        <br/>
+        <p>Hal ini menurunkan permeabilitas tubulus kontortus distal dan saluran pengumpul terhadap air. Lebih sedikit air yang diserap kembali menghasilkan ekskresi urin encer dalam jumlah besar. </p>
+        <br/>
+        <p>Penurunan tekanan osmotik seperti itu dapat terjadi karena penyerapan air dalam jumlah besar atau dalam cuaca dingin saat keringat tidak terjadi.</p>
+        <br/>
+
+        <h4>E. Contoh Tekanan Osmotik dalam Kehidupan Sehari-hari</h4>
+        <p>Apa saja contoh penerapan tekanan osmotik di kehidupan sehari-hari? Berikut ini beberapa contoh yang ada atau sering kamu alami, seperti:</p>
+        <br/>
+        <p><b>
+        1. Terlalu lama berendam di bak mandi menyebabkan jari-jari mengkerut atau disebut  pruning
+        </b></p>
+        <p><b><br/>
+        2. Percikan garam pada cacing tanah menyebabkan sel-selnya mengalami dehidrasi sehingga membuat cacing terdesak dan muncul ke permukaan.
+        </b></p>
+        <p><b><br/>
+        3. Proses pengawetan selai dan jeli yang menggunakan gula dalam jumlah banyak akan membantu membunuh bakteri. Hal ini dikarenakan larutan gula memiliki konsentrasi tinggi. 
+        </b></p>
       </section>
 
       <section className="efek-ionisasi">

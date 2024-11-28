@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.css';
-import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -58,9 +57,6 @@ function Home() {
         <h2>Join the ChimiLearn Community!</h2>
         <p>Start your journey into the fascinating world of chemistry today.</p>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
