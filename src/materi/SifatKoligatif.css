@@ -107,3 +107,20 @@ ul li {
   color: maroon;
 }
 
+.peningkatan-titik-didih h4{
+  color: maroon;
+}
+
+.keterangan {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.keterangan ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.penurunan-titik-beku h4{
+  color: maroon;
+}

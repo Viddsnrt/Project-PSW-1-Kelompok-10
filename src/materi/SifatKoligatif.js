@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './SifatKoligatif.css';
+import PersamaanDeltaTb from './PersamaanDeltaTb';
+import RumusEncer from './RumusEncer';
+import RumusKenaikan from './RumusKenaikan';
+import TabelPelarut from './TabelPelarut';
 
 function SifatKoligatif() {
   const [showOsmoticPressure, setShowOsmoticPressure] = useState(false);
@@ -47,7 +51,7 @@ function SifatKoligatif() {
         <p>
           Ketika kamu mengisi botol minum dengan air panas, botol tersebut juga terisi uap. Tapi, kejadian itu tidak berlangsung lama. RG Squad tahu kenapa? Kejadian itu akibat dari adanya proses penguapan dan penurunan tekanan uap. Untuk memahami fenomenanya, lebih baik kamu simak terlebih dahulu pengertian tekanan uap pada pelarut murni. Selain itu juga pelajari besarnya tekanan uap yang dipengaruhi oleh penambahan zat terlarut ke dalam pelarut murni. Simak terus!
         </p><br/>
-        <h4>1. Tekanan uap Pelarut Murni (Po)</h4>
+        <h4>A. Tekanan uap Pelarut Murni (Po)</h4>
         <br/>
         <div className="image-container">
           <img 
@@ -60,7 +64,7 @@ function SifatKoligatif() {
         <p>
         Coba kamu perhatikan, boleh juga sambil memperagakan ya. Jika pelarut murni dimasukkan ke dalam suatu tempat tertutup, maka akan terjadi perpindahan partikel dari fase cair ke fase gas, dan juga sebaliknya. Jumlah partikel pelarut murni pada fase gas memberikan suatu tekanan yang disebut tekanan uap. Setelah beberapa waktu, jumlah partikel pelarut murni yang melepaskan diri dari fase cair ke fase gas, sama dengan jumlah partikel pelarut murni di fase gas yang terperangkap di permukaan fase cair. Di saat keadaan seperti ini, dapat dikatakan bahwa kesetimbangan dinamis telah tercapai. Secara umum, tekanan uap dapat didefinisikan sebagai berikut:
         </p><br/>
-        <h4>2. Tekanan uap larutan</h4>
+        <h4>B. Tekanan uap larutan</h4>
         <p>Apabila ke dalam pelarut murni di atas ditambahkan sejumlah zat terlarut, apa yang akan terjadi pada nilai tekanan uap larutan?</p>
         <br/>
         <div className="image-container">
@@ -80,7 +84,7 @@ function SifatKoligatif() {
             alt="Proses Terjadinya Penurunan Tekanan Uap" 
             className="colligative-img1" 
           />
-          <p><b>Sekarang Kimia Squad sudah paham ‘kan kenapa botol yang diisi air panas bisa menguap dan tidak lama kemudian uapnya hilang? Mau memahami konsep kimia lainnya? Nonton video di Kimia yuk dan jadikan #BelajarJadiMudah!</b></p>
+          <p><b>Sekarang chimiLearn Squad sudah paham kan kenapa botol yang diisi air panas bisa menguap dan tidak lama kemudian uapnya hilang? Mau memahami konsep kimia lainnya? Nonton video di chimiLearn yuk dan jadikan #BelajarJadiMudah!</b></p>
       </section>
 
       <section className="peningkatan-titik-didih">
@@ -96,7 +100,147 @@ function SifatKoligatif() {
           <li>Kb = Konstanta pendidihan molal</li>
           <li>m = Molalitas larutan</li>
         </ul>
-      </section>
+        <img 
+          src="https://cdn-web.ruangguru.com/landing-pages/assets/hs/kenaikan%20titik%20didih-1.png" 
+          alt="Diagram Sifat Koligatif" 
+          className="colligative-img" 
+        />
+        <h4>A. Pengertian Kenaikan Titik Didih</h4>
+        <p>
+          <b>Titik didih adalah suhu pada saat tekanan uap jenuh suatu cairan sama dengan tekanan udara di sekitarnya.</b> Titik didih ini dapat mengalami kenaikan bila ditambahkan zat terlarut ke dalam larutan yang kemudian dikenal dengan istilah kenaikan titik didih.
+          Jadi, kenaikan titik didih adalah selisih antara titik didih larutan dengan titik didih pelarut. Dalam kimia, kenaikan titik didih ini dinyatakan dengan simbol ΔTb (Tb berasal dari kata boiling).
+        </p><br/>
+
+        <h4>B. Proses Kenaikan Titik Didih</h4>
+        <p>Titik didih suatu zat cair akan tercapai jika tekanan uap jenuh zat cair tersebut sama dengan tekanan udara di sekitarnya. Jika air murni dipanaskan pada tekanan 1 atm (760 mmHg), maka air tersebut akan mendidih pada suhu 100°C.</p>
+        <br/>
+        <p>Lalu, bagaimana jika pada suhu yang sama dilarutkan gula? Apakah titik didihnya masih sama? Tentu berbeda, ya.</p>
+        <br/>
+        <p>Hal ini dikarenakan, pada suhu yang sama dilarutkan gula akan membuat tekanan uap air menurun atau belum mencapai 760 mmHg. Itu artinya, semakin banyak gula yang dilarutkan, maka semakin banyak penurunan tekanan uapnya.</p>
+        <br/>
+        <p>Akibatnya, larutan gula belum mendidih pada suhu 100°C. Bagaimana agar larutan gula dapat mendidih?</p>
+        <br/>
+        <p>Agar larutan gula cepat mendidih, diperlukan suhu yang cukup tinggi sehingga tekanan uap jenuhnya sama dengan tekanan uap di sekitarnya. Sebab, pada kondisi tersebut, tekanan uap telah mencapai 760 mmHg.</p>
+        <br/>
+        <p>Ini artinya, titik didih larutan lebih tinggi daripada titik didih pelarut murninya. Selisih antara titik didih larutan dengan titik didih pelarut murni disebut kenaikan titik didih ΔTb.</p>
+        <br/>
+
+        <h4>C. Rumus Kenaikan Titik Didih</h4>
+        <p>Adapun rumus kenaikan titik didih larutan adalah sebagai berikut.</p>
+        <PersamaanDeltaTb />
+        <p><b><br/>
+        Keterangan :
+        </b></p><br/>
+        <p>
+        ΔTb = kenaikan titik didih larutan
+        </p><br/>
+        <p>
+        Tb° = titik didih pelarut murni (air)
+        </p><br/>
+        <p>
+        Tb = titik didih larutan
+        </p><br/>
+        <p>
+        Kenaikan titik didih hanya tergantung pada jenis pelarut dan molaritas larutan, tidak tergantung pada jenis zat terlarut.
+        </p><br/>
+        <p>
+        Jika ditambahkan zat terlarut yang tidak mudah menguap, misalnya gula, maka dibutuhkan kenaikan titik didih yang cukup besar agar dapat mendidih. Sebaliknya, jika ditambahkan zat terlarut yang mudah menguap, misalnya etanol, maka kenaikan titik didihnya lebih rendah karena larutan dapat mendidih di bawah titik didih air.
+        </p><br/>
+        <p>
+        Untuk larutan encer, hubungan antara kenaikan titik didih dengan molaritas larutan dinyatakan dengan rumus sebagai berikut.
+        </p>
+        <RumusEncer />
+        <p><br/>
+        Jika dijabarkan, maka rumus hubungan antara kenaikan titik didih dengan molaritas larutan ini akan terlihat seperti berikut ini.
+        </p>
+        <RumusKenaikan />
+        <p><b><br/>
+        Keterangan :
+        </b></p>
+        <div>
+        <div className="keterangan">
+          <ul>
+            <li>massa = massa zat terlarut (gram)</li>
+            <li>Mr = massa molekul relatif zat terlarut</li>
+            <li>P = massa pelarut (gram)</li>
+            <li>Kb = tetapan kenaikan titik didih molal (°C m-1)</li>
+            <li>m = molalitas larutan (m)</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+      Perlu diketahui, bahwa pada beberapa jenis pelarut, kenaikan titik didihnya sudah ditetapkan. Dengan begitu, kamu dapat menentukan titik didih suatu larutan, konsentrasi larutan, dan massa molekul relatif dengan lebih mudah. Berikut daftar pelarutnya.
+      </p><br/>
+      <TabelPelarut /><br/>
+      <h4>D. Penerapan Kenaikan Titik Didih</h4>
+      <p>
+        Berikut adalah beberapa contoh penerapan kenaikan titik didih dalam kehidupan sehari-hari
+      </p>
+      <p><b><br/>
+      Memasak menggunakan garam
+      </b></p>
+      <p>
+      Menambahkan garam ke dalam masakan ternyata tidak hanya menambah cita rasa masakan saja, Quipperian, tetapi juga dapat meningkatkan titik didih air. Hal ini dikarenakan, garam yang ditambahkan ke dalam air akan terdisosiasi menjadi ion natrium dan klorida. Semakin banyak garam yang ditambahkan, maka semakin tinggi kenaikan titik didih air.
+      </p><br/>
+      <p>
+      Penambahan garam ini akan membuat air mendidih dalam waktu yang cukup lama. Cara ini bermanfaat saat kamu memasak makanan yang membutuhkan waktu lama untuk matang seperti daging. Dengan begitu, air tidak lebih dulu mendidih.
+      </p><br/>
+
+      <p><b>
+      Susu yang Didihkan
+      </b></p>
+      <p>
+      Pernahkah kamu bertanya-tanya mengapa susu dengan suhu rendah lebih lama mendidih dibandingkan air? Hal ini disebabkan, susu mengandung lemak, protein, dan bahan lainnya yang tidak mudah meluap sehingga dibutuhkan suhu yang tinggi untuk mendidihkan susu. Ingat, semakin sulit zat terlarut menguap, maka semakin tinggi kenaikan didih yang dibutuhkan.
+      </p><br/>
+
+      <p><b>
+      Mendidihkan air di Pegunungan
+      </b></p>
+      <p>
+      Tahukah kamu, kalau mendidihkan air di pegunungan lebih cepat daripada di dataran rendah? Hal ini dikarenakan, pegunungan termasuk dataran tinggi di mana pada kondisi ini uap air akan lebih cepat menguap karena tekanan udara di pegunungan yang rendah.
+      </p><br/>
+      <p>
+      Alhasil, ketika dididihkan, molekul air akan lebih mudah terlepas ke udara menjadi uap. Itulah mengapa, air lebih cepat mendidih ketika dididihkan di dataran tinggi seperti pegunungan ini.
+      </p><br/>
+      <p>
+      Dengan kata lain, titik didih air di pegunungan lebih rendah daripada di dataran rendah.
+      </p><br/>
+
+      <section className="contoh-soal-ionisasi">
+          <h3>Contoh Soal Kenaikan Titik Didih dan Pembahasannya</h3><br/>
+          <p><strong>Soal:</strong> Tentukan kenaikan titik didih larutan gula 0,2 molal jika Kb air = 0,52 °C molal-1</p><br/>
+          <p><strong>Penyelesaian:</strong></p><br/>
+          <p>
+          Bayangin kita lagi bikin teh manis. Kita tahu kalau air murni mendidih di suhu 100°C. Tapi, kalau kita tambahin gula, ternyata airnya jadi lebih lama mendidih. Nah, inilah yang disebut kenaikan titik didih.
+          </p><br/>
+          <p>
+          Kenapa bisa gitu?
+          Karena adanya partikel gula yang ngeganggu molekul-molekul air buat menguap. Jadi, buat bikin air gula mendidih, kita butuh suhu yang lebih tinggi dibanding air murni.
+          </p><br/>
+          <p><strong>Sekarang, kita kembali ke soal:</strong></p><br/>
+          <p>
+            Kita punya larutan gula dengan konsentrasi 0,2 molal. Artinya, dalam 1 kg air, ada 0,2 mol gula. Kita juga udah dikasih tahu nilai Kb air, yaitu 0,52 °C/molal. Kb ini kayak semacam "konstanta" yang nunjukin seberapa besar kenaikan titik didih suatu pelarut kalau kita larutin 1 mol zat terlarut di dalamnya.
+          </p><br/>
+          <p><strong>Rumus yang kita pakai:</strong></p><br/>
+          <p>
+          ΔTb = Kb . m
+          </p><br/>
+          <p><strong>Yuk kita hitung:</strong></p><br/>
+          <p>
+          ΔTb = 0,52 °C/molal x 0,2 molal
+          </p><br/>
+          <p>
+          Nah, molal sama molal bisa kita coret, jadi tinggal:
+          </p><br/>
+          <p>
+          ΔTb = 0,104 °C
+          </p><br/>
+          <p><strong>Artinya apa nih?</strong></p><br/>
+          <p>
+          Berarti, kalau kita larutin gula sebanyak itu ke dalam air, titik didih larutannya akan naik sebesar 0,104°C. Jadi, kalau air murni mendidih di 100°C, maka larutan gula kita akan mendidih di suhu 100,104°C.
+          </p><br/>
+        </section>
+        </section>
 
       <section className="penurunan-titik-beku">
         <h3>3. Penurunan Titik Beku</h3>
@@ -111,6 +255,70 @@ function SifatKoligatif() {
           <li>Kf = Konstanta pembekuan molal</li>
           <li>m = Molalitas larutan</li>
         </ul>
+        <img 
+          src="https://www.quipper.com/id/blog/wp-content/uploads/2023/03/ice-cubes-table_144627-8764.webp" 
+          alt="Penurunan Titik Beku" 
+          className="colligative-img" 
+        />
+        
+        <h4>A. Pengertian Penurunan Titik Beku</h4>
+        <p>Titik beku adalah suhu dari tekanan tertentu saat terjadi perubahan wujud zat dari cair menjadi padat. Titik beku ini bisa mengalami penurunan atau disebut dengan penurunan titik beku ketika adanya penambahan zat terlarut ke dalam sebuah larutan</p>
+        <br/>
+        <p>Penurunan titik beku adalah selisih antara titik beku pelarut dengan titik beku larutan. Penurunan titik beku ini termasuk salah satu sifat koligatif larutan. </p>
+        <br/>
+        <p>Dalam perhitungan kimia, penurunan titik beku disimbolkan dengan ΔTf (f berasal dari kata freeze) atau ΔTb . Peristiwa penurunan titik beku ini sering diterapkan pada negara-negara yang memiliki musim dingin. </p>
+        <br/>
+
+        <h4>B. Proses Penurunan Titik Beku</h4>
+        <p>Agar lebih mudah memahami proses penurunan titik beku, coba perhatikan saat orang membuat es puter. </p>
+        <br/>
+        <p>Pada pembuatan es puter, adonan es puter akan ditempatkan pada sebuah wadah yang terendam es batu dan air yang telah diberi garam dapur sambil diputar-putar. Tujuannya adalah agar adonan es puter bisa membeku. </p>
+        <br/>
+        <p>Proses pembuatan es puter ini sebenarnya sama dengan proses penurunan titik beku. Perlu diketahui, titik beku air murni pada tekanan 760 mmHg adalah 0℃. </p>
+        <br/>
+        <p>Berhubung, adonan es puter ini bukan lagi berbentuk air murni karena sudah ditambahkan berbagai bahan pembuatan es puter sehingga diperlukan suhu yang lebih dingin untuk membekukannya. </p>
+        <br/>
+        <p>Dengan kata lain, titik bekunya harus diturunkan lagi. Sebab, jika tekanan uap larutan yang dalam hal ini adalah bahan-bahan pembuat es puter lebih rendah dibandingkan tekanan uap pelarut (air), maka larutan tidak akan membeku pada suhu 0℃. Adonan es puter akan membeku ketika berada pada suhu di bawah 0℃.</p>
+        <br/>
+        <p>Jadi, intinya proses penurunan titik beku ini terjadi apabila suhu berada di bawah 0℃ untuk air murni, tetapi jika dalam bentuk larutan, contohnya seperti adonan es puter ini, suhu harus berada di bawah 0℃ agar adonan es bisa membeku. </p>
+        <br/>
+
+        <h4>C. Rumus Penurunan Titik Beku</h4>
+        <p>Untuk mengetahui penurunan titik beku larutan, kamu dapat menghitungnya dengan rumus penurunan titik beku berikut ini. </p>
+        <br/>
+        <p><b><br/>
+        Keterangan :
+        </b></p>
+        <p>ΔTf = penurunan titik beku larutan</p>
+        <br/>
+        <p>Tf° = titik beku pelarut murni (air)</p>
+        <br/>
+        <p>Tf = titik beku larutan</p>
+        <br/>
+        <p>Titik beku tidak bergantung pada jenis zat terlarut, tetapi tergantung pada konsentrasi atau jumlah partikel zat terlarut dalam larutan. Semakin besar konsentrasi larutan, maka semakin besar penurunan titik bekunya. Coba perhatikan diagram berikut ini. </p>
+        <br/>
+        poto
+        <p><b><br/>
+        Keterangan :
+        </b></p>
+        <p>Tf° = titik beku pelarut murni (air)</p>
+        <br/>
+        <p>Tf = titik beku larutan</p>
+        <br/>
+        <p>ΔTf = Tf° – Tf = penurunan titik beku larutan</p>
+        <br/>
+        <p>Dari diagram di atas, dapat diketahui bahwa penurunan titik beku berbanding lurus dengan kemolalan larutan. Hubungan antara titik beku larutan dan kemolalan ini dapat dituliskan pada rumus berikut ini. </p>
+        <br/>
+        <p>Jika dijabarkan, maka rumus hubungan antara titik beku larutan dan kemolalan ini akan terlihat seperti berikut ini. </p>
+        <br/>
+
+        <h4>D. </h4>
+        <p></p>
+        <br/>
+        <p></p>
+        <br/>
+        <p></p>
+        <br/>
       </section>
 
       <section className="tekanan-osmotik">

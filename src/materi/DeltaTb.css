@@ -1,0 +1,18 @@
+.persamaan-container {
+    display: flex; /* Memastikan elemen diatur dalam fleksibel */
+    justify-content: flex-start; /* Mengarahkan elemen ke kiri */
+    align-items: center; /* Memastikan teks vertikal sejajar */
+    background-color: #4e34b5; /* Warna latar belakang ungu */
+    color: #e3f529; /* Warna teks kuning */
+    border-radius: 12px; /* Membuat sudut membulat */
+    padding: 10px 20px; /* Memberikan jarak di dalam elemen */
+    font-size: 1.5rem; /* Ukuran teks */
+    font-weight: bold; /* Ketebalan teks */
+    width: fit-content; /* Ukuran sesuai konten */
+    margin: 0; /* Menghapus margin agar tidak memengaruhi tata letak */
+  }
+  
+  .persamaan {
+    margin: 0; /* Menghapus margin default */
+  }
+  
