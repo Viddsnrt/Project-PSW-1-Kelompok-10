@@ -4,6 +4,9 @@ import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 function Home() {
+  // Check login status from localStorage
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
   return (
     <div className="home-container">
       {/* Hero Section */}
@@ -15,9 +18,10 @@ function Home() {
           <p className="hero-text">
             Explore the world of chemistry <br /> and enhance your understanding tomorrow with <span>chimiLearn</span>
           </p>
-          <Link to="/register">
-          <button className="cta-button">Get Started</button>
-      </Link>
+          {/* Conditional Navigation for Get Started Button */}
+          <Link to={isLoggedIn ? "/dashboard" : "/register"}>
+            <button className="cta-button">Get Started</button>
+          </Link>
         </div>
         <figure className="hero-image">
           <img

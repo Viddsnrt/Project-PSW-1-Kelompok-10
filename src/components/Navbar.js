@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import ProgramPembelajaran from "../element/ProgramPembelajaran";  
 
-function Navbar({ triggerUpdate }) { 
+function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
@@ -23,50 +24,29 @@ function Navbar({ triggerUpdate }) {
     setDropdownOpen(false);
   };
 
-  // Scroll event handler
   const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
+    setSticky(window.scrollY > 0);
   };
 
-  // Sinkronisasi data login dari localStorage ke state
   const syncLoginState = () => {
-    const loggedIn = localStorage.getItem("isLoggedIn");
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
     const storedUserName = localStorage.getItem("userName");
 
-    if (loggedIn === "true" && storedUserName) {
-      setIsLoggedIn(true);
-      setUserName(storedUserName);
-    } else {
-      setIsLoggedIn(false);
-      setUserName("");
-    }
+    setIsLoggedIn(loggedIn);
+    setUserName(loggedIn ? storedUserName : "");
   };
 
-  // useEffect untuk inisialisasi dan sinkronisasi state
   useEffect(() => {
-    syncLoginState(); // Sinkronisasi saat pertama kali render
-
-    // Tambahkan listener untuk perubahan localStorage
-    const handleStorageChange = () => {
-      syncLoginState();
-    };
-    window.addEventListener("storage", handleStorageChange);
-
-    // Tambahkan listener untuk scroll
+    syncLoginState();
+    window.addEventListener("storage", syncLoginState);
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup listeners
     return () => {
-      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("storage", syncLoginState);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Fungsi untuk logout
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userName");
@@ -76,11 +56,7 @@ function Navbar({ triggerUpdate }) {
   };
 
   return (
-    <nav
-      className={`navbar ${isMenuOpen ? "open" : ""} ${
-        isSticky ? "sticky" : ""
-      }`}
-    >
+    <nav className={`navbar ${isMenuOpen ? "open" : ""} ${isSticky ? "sticky" : ""}`}>
       <h2 className="navbar-brand">ChimiLearn</h2>
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
@@ -93,50 +69,14 @@ function Navbar({ triggerUpdate }) {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <span>Program Pembelajaran</span>
-          <ul className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}>
-            <li>
-              <Link
-                to="/program-pembelajaran/sifat-koligatif"
-                onClick={handleLinkClick}
-              >
-                Sifat Koligatif Larutan
-              </Link>
-            </li>
-            <li>
-              
-              <Link
-                to="/program-pembelajaran/reaksi-redoks"
-                onClick={handleLinkClick}
-              >
-                Reaksi Redoks dan Elektrokimia
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/program-pembelajaran/kimia-unsur"
-                onClick={handleLinkClick}
-              >
-                Kimia Unsur
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/program-pembelajaran/senyawa-karbon"
-                onClick={handleLinkClick}
-              >
-                Senyawa Karbon
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/program-pembelajaran/benzena"
-                onClick={handleLinkClick}
-              >
-                Benzena dan Turunannya
-              </Link>
-            </li>
-          </ul>
+          <Link to="/program-pembelajaran" className="dropdown-trigger">
+            Program Pembelajaran
+          </Link>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <ProgramPembelajaran onLinkClick={handleLinkClick} />
+            </div>
+          )}
         </li>
         <li>
           <Link to="/Quiz" onClick={handleLinkClick}>
@@ -144,23 +84,15 @@ function Navbar({ triggerUpdate }) {
           </Link>
         </li>
         <li>
-          <Link to="/ourservices" onClick={handleLinkClick}>
-            Our Services
+          <Link to="/SimulasiLaboratorium" onClick={handleLinkClick}>
+            Simulasi Laboratorium
           </Link>
         </li>
         <li>
-
-          <Link to ="/SimulasiLaboratorium" onClick={handleLinkClick}>
-          Simulasi Laboratorium
-          </Link>
-          </li> 
-          <li> 
-            
           <Link to="/kirim-pesan" onClick={handleLinkClick}>
             Kirim Pesan
           </Link>
         </li>
-
         {!isLoggedIn ? (
           <li>
             <Link to="/Login" onClick={handleLinkClick}>

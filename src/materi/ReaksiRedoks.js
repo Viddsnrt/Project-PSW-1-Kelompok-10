@@ -1,22 +1,12 @@
-import React, {useState} from 'react';
-import './ReaksiRedoks.css';
+import React, { useState } from "react";
+import "./ReaksiRedoks.css";
 
 function ReaksiRedoks() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedOption, setSelectedOption] = useState('');
-  const [feedback, setFeedback] = useState('');
+  const [selectedOption, setSelectedOption] = useState("");
+  const [feedback, setFeedback] = useState("");
   const [isAnswered, setIsAnswered] = useState(false);
 
-  const handleQuizSubmit = (event) => {
-    event.preventDefault();
-
-    if (selectedOption === 'a') {
-      setFeedback('Jawaban Anda benar!');
-    } else {
-      setFeedback('Jawaban Anda salah.');
-    }
-
-  
   const questions = [
     {
       question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
@@ -34,8 +24,27 @@ function ReaksiRedoks() {
       correctAnswer: "-2",
     },
   ];
+
+  const handleQuizSubmit = (event) => {
+    event.preventDefault();
+
+    if (isAnswered) return; // Mencegah jawaban ganda pada pertanyaan yang sama.
+
+    if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
+      setFeedback("Jawaban Anda benar!");
+    } else {
+      setFeedback("Jawaban Anda salah.");
+    }
+
+    setIsAnswered(true);
   };
 
+  const handleNextQuestion = () => {
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    setSelectedOption("");
+    setFeedback("");
+    setIsAnswered(false);
+  };
 
   return (
     <div className="reaksi-redoks-container">
@@ -108,128 +117,59 @@ function ReaksiRedoks() {
       <section className="bilangan-oksidasi">
         <h3>Aturan Penentuan Bilangan Oksidasi</h3>
         <p>Bilangan oksidasi (biloks) digunakan untuk menentukan unsur yang teroksidasi dan tereduksi.</p>
-        <h4><strong> Aturan penentuan biloks: </strong></h4>
         <ul>
-          <li>Unsur bebas (unsur murni) memiliki biloks 0. </li>
-          <li>Ion monoatomik memiliki biloks sesuai muatannya. </li>
-          <li>Biloks oksigen dalam senyawa biasanya -2, kecuali pada peroksida (-1) dan senyawa dengan fluor</li>
-          <li>Biloks hidorgen dalam senyawa baisanya +1, kecuali dalam hidrida logam (-1)</li>
+          <li>Unsur bebas (unsur murni) memiliki biloks 0.</li>
+          <li>Ion monoatomik memiliki biloks sesuai muatannya.</li>
+          <li>Biloks oksigen dalam senyawa biasanya -2, kecuali pada peroksida (-1) dan senyawa dengan fluor.</li>
+          <li>Biloks hidrogen dalam senyawa biasanya +1, kecuali dalam hidrida logam (-1).</li>
           <li>Jumlah biloks dalam senyawa netral adalah 0, dan pada ion sama dengan muatannya.</li>
-        </ul>
-      </section>
-
-      <section className="reaksi-redoks">
-        <h3>Jenis Reaksi Redoks : </h3>
-        <p>Reaksi redoks memiliki beberapa jenis yaitu : </p>
-        <h4>Berdasarkan Jenis Reaksi</h4>
-        <ul>
-          <li>Reaksi Kombinasi : Dua atau lebih zat bergabung membentuk satu senyawa baru.</li>
-          <li>Reaksi Penguraian : Satu senyawa diuraikan menjadi dua atau lebih zat.</li>
-          <li>Reaksi Disproporsionasi : Satu unsur dalam suatu senyawa mengalami oksidasi dan reduksi sekaligus.</li>
-          <li>Reaksi Pemindahan Elektron : Elektron berpindah dari reduktor ke oksidator.</li>
-        </ul>
-        <h4>Berdasarkan Medium Reaksi</h4>
-        <ul>
-          <li> Medium Asam </li>
-          <li> Medium Basa </li>
-        </ul>
-      </section>
-
-      <section className='langkah'>
-        <h3>Langkah Menyetarakan Reaksi Redoks</h3>
-        <h4>Metode Bilangan Oksidasi</h4>
-        <p> Berikut adalah langkah-langkah untuk menyetarakan rekasi redoks menggunakan metode bilangan oksidasi:</p>
-        <ul>
-          <li>Tentukan biloks semua unsur</li>
-          <li>Identifikasi zat yang mengalami oksidasi dan reduksi</li>
-          <li>Setarakan jumlah elektron yang dilepas dan diterima</li>
-          <li>Lengkapi reaksi dengan ion-ion atau molekul lain yang diperlukan</li>
-        </ul>
-        <h4>Metode Setengah Reaksi</h4>
-        <p>Berikut adalah langkah-langkah untuk menyetarakan rekasi redoks menggunakan metode setengah reaksi:</p>
-        <ul>
-          <li>Pisahkan reaksi menjadi setengah reaksi oksidasi dan reduksi</li>
-          <li>Setarakan atom-atom selain H dan O</li>
-          <li>Setarakan O dengan menambahkan H20 dan H dengan H (di medium asam)</li>
-          <li>Setarakan muatan dengan menambahkan elektron</li>
-          <li>Gabungkan kedua setengah reaksi</li>
         </ul>
       </section>
 
       <section className="contoh-soal">
         <h3>Contoh Soal</h3>
-        <p><strong>Soal 1:</strong> Hitung potensial sel untuk sel galvani yang terdiri dari elektroda Zn/Zn²⁺ (E° = -0,76 V) dan elektroda Cu/Cu²⁺ (E° = +0,34 V).</p>
-        <p><strong>Penyelesaian:</strong></p>
-        <p>
-          E°<sub>sel</sub> = E°<sub>katoda</sub> - E°<sub>anoda</sub><br />
-          = (+0,34 V) - (-0,76 V)<br />
-          = +1,10 V
-        </p>
-        <p><strong>Jawaban:</strong> Potensial sel adalah +1,10 V.</p>
-
-        <p><strong>Soal 2:</strong> Pada reaksi redoks, mana yang mengalami oksidasi dan reduksi dalam reaksi berikut?<br />
-        Zn + Cu²⁺ → Zn²⁺ + Cu</p>
-        <p><strong>Penyelesaian:</strong></p>
-        <p>
-          - Zn mengalami oksidasi menjadi Zn²⁺.<br />
-          - Cu²⁺ mengalami reduksi menjadi Cu.
-        </p>
-        <p><strong>Jawaban:</strong> Zn teroksidasi dan Cu²⁺ tereduksi.</p>
+        <p><strong>Soal:</strong> Pada reaksi redoks berikut, mana yang mengalami oksidasi?</p>
+        <p><em>Reaksi:</em> Zn + Cu²⁺ → Zn²⁺ + Cu</p>
+        <p><strong>Jawaban:</strong> Zn teroksidasi menjadi Zn²⁺.</p>
       </section>
-
 
       <section className="kuis-pilihan-ganda">
         <h3>Mini Quiz</h3>
-        <p><strong>Soal:</strong> Pada reaksi redoks berikut, mana yang mengalami oksidasi?<br />
-        Zn + Cu²⁺ → Zn²⁺ + Cu</p>
-        
-        <form onSubmit={handleQuizSubmit} className="quiz-form">
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="a"
-                checked={selectedOption === 'a'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              a. Zn
-            </label>
-          </div>
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="b"
-                checked={selectedOption === 'b'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              b. Cu
-            </label>
-          </div>
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="c"
-                checked={selectedOption === 'c'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              c. Cu²⁺
-            </label>
-          </div>
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="d"
-                checked={selectedOption === 'd'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              d. Zn²⁺
-            </label>
-          </div>
+        <p>
+          <strong>Soal {currentQuestionIndex + 1}:</strong> {questions[currentQuestionIndex].question}
+        </p>
 
-          <button type="submit" className="quiz-button">Submit</button>
+        <form onSubmit={handleQuizSubmit} className="quiz-form">
+          {questions[currentQuestionIndex].options.map((option, index) => (
+            <div key={index} className="quiz-option">
+              <label>
+                <input
+                  type="radio"
+                  value={option}
+                  checked={selectedOption === option}
+                  onChange={(e) => setSelectedOption(e.target.value)}
+                  disabled={isAnswered}
+                />
+                {String.fromCharCode(97 + index)}. {option}
+              </label>
+            </div>
+          ))}
+
+          {!isAnswered ? (
+            <button type="submit" className="quiz-button">
+              Submit
+            </button>
+          ) : (
+            currentQuestionIndex < questions.length - 1 && (
+              <button
+                type="button"
+                className="quiz-button"
+                onClick={handleNextQuestion}
+              >
+                Next Question
+              </button>
+            )
+          )}
         </form>
 
         {feedback && <p className="quiz-feedback">{feedback}</p>}

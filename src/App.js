@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './element/Home';
+import ProgramPembelajaran from "./element/ProgramPembelajaran";
 import Footer from './element/Footer';
 import OurServices from './element/OurServices';
 import KirimPesan from './element/KirimPesan';
@@ -32,6 +33,7 @@ function App() {
         <Route path="/program-pembelajaran/benzena" element={<Benzena />} />
         <Route path="/program-pembelajaran/quiz" element={<Quiz />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/ProgramPembelajaran" element={<ProgramPembelajaran />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
