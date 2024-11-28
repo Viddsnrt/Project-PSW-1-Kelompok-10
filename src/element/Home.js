@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -14,7 +15,9 @@ function Home() {
           <p className="hero-text">
             Explore the world of chemistry <br /> and enhance your understanding tomorrow with <span>chimiLearn</span>
           </p>
-          <button className="cta-button">Start Learning</button>
+          <Link to="/register">
+          <button className="cta-button">Get Started</button>
+      </Link>
         </div>
         <figure className="hero-image">
           <img
@@ -50,7 +53,6 @@ function Home() {
       <section className="cta-section">
         <h2>Join the ChimiLearn Community!</h2>
         <p>Start your journey into the fascinating world of chemistry today.</p>
-        <button className="cta-button">Get Started</button>
       </section>
 
       {/* Footer */}
