@@ -52,6 +52,7 @@ p{
 /* quiz */
 .kuis-pilihan-ganda {
   margin-top: 30px;
+  text-align: left;
 }
 
 .quiz-option {

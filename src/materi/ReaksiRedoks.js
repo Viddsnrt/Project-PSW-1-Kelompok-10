@@ -156,6 +156,31 @@ function ReaksiRedoks() {
         </ul>
       </section>
 
+      <section classname="aplikasi">
+        <h3>Aplikasi Reaksi Redoks</h3>
+        <p>Apliksi reaksi redoks dapat ditemui dalam beberapa bidang antara lain sebagai berikut :</p>
+        <h4>1. Industri</h4>
+        <ul>
+          <li>Pemurnian logam (elektrolisis) </li>
+          <li>Produksi bahan kimia seperti amonia (reaksi Haber-Bosch)</li>
+        </ul>
+        <h4>2. Biologi</h4>
+        <ul>
+          <li>Respirasi seluler (reaksi glukosa dan oksigen menghasilkan energi)</li>
+          <li>Fotosintesis</li>
+        </ul>
+        <h4>3. Lingkungan</h4>
+        <ul>
+          <li>Proses pengolahan limbah</li>
+          <li>Pengendalian polusi udara</li>
+        </ul>
+        <h4>4. Kehidupan Sehari-hari</h4>
+        <ul>
+          <li>Baterai dan aki</li>
+          <li>Proses karat pada logam</li>
+        </ul>
+      </section>
+
       <section className="contoh-soal">
         <h3>Contoh Soal</h3>
         <p><strong>Soal 1:</strong> Hitung potensial sel untuk sel galvani yang terdiri dari elektroda Zn/Zn²⁺ (E° = -0,76 V) dan elektroda Cu/Cu²⁺ (E° = +0,34 V).</p>
