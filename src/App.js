@@ -39,6 +39,7 @@ function App() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path ="/Footer" element={<Footer />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

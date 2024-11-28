@@ -1,38 +1,95 @@
 .reaksi-redoks-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #2c3e50;
-  }
-  
-  h3 {
-    color: #34495e;
-    margin-top: 20px;
-  }
-  
-  ul {
-    margin-top: 10px;
-  }
-  
-  .redox-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-  }
-  
-  .contoh-soal p {
-    font-family: 'Courier New', monospace;
-    background-color: #ecf0f1;
-    padding: 10px;
-    border-radius: 4px;
-    line-height: 1.5;
-  }
-  
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: left;
+  color: #2c3e50;
+}
+
+h3 {
+  text-align: left; 
+  color: #34495e;
+  margin-top: 20px;
+  font-size:25px;
+}
+
+.reaksi-redoks-container h4{
+  text-align: left;
+  color:rgb(116, 14, 14);
+}
+
+ul {
+  margin-top: 10px;
+}
+
+.redox-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.contoh-soal p {
+  font-family: 'Courier New', monospace;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+p{
+  font-size:medium;
+}
+
+
+
+/* quiz */
+.kuis-pilihan-ganda {
+  margin-top: 30px;
+}
+
+.quiz-option {
+  margin: 10px 0;
+}
+
+.quiz-button, .next-button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-button:hover, .next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Gaya untuk feedback */
+.quiz-feedback {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.quiz-feedback.correct {
+  color: green; /* Warna hijau untuk jawaban benar */
+}
+
+.quiz-feedback.incorrect {
+  color: red; /* Warna merah untuk jawaban salah */
+}
+
+/* Gaya untuk pesan selesai */
+.quiz-completion {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+}

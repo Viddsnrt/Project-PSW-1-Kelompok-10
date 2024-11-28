@@ -7,16 +7,13 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-about">
           <h4>About ChimiLearn</h4>
-          <p>Your gateway to understanding chemistry in a fun and engaging way!</p>
+          <p>Web belajar kimia yang membantu kamu memahami kimia lebih baik!</p>
         </div>
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms & Conditions</a></li>
+            <li><a href="/OurServices">About Us</a></li>
+            <li><a href="/OurServices">Services</a></li>
           </ul>
         </div>
         <div className="footer-social">
@@ -38,7 +35,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 ChimiLearn | Designed with DAVID❤️ by Your Team</p>
+        <p>&copy; 2024 ChimiLearn</p>
       </div>
     </footer>
   );
