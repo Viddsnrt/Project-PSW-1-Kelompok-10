@@ -13,6 +13,10 @@ const Register = () => {
         e.preventDefault();
 
         // Basic validation
+        if (!fullname.trim()) {
+            setError('Nama lengkap tidak boleh kosong');
+            return;
+        }
         if (!validateEmail(email)) {
             setError('Email tidak valid');
             return;
@@ -22,12 +26,13 @@ const Register = () => {
             return;
         }
 
-        console.log('Nama Lengkap:', fullname);
-        console.log('Email:', email);
-        console.log('Password:', password);
-        
+        // Simulate saving user data in localStorage
+        const userData = { fullname, email, password };
+        localStorage.setItem('userData', JSON.stringify(userData));
+        localStorage.setItem('isRegistered', 'true'); // Mark user as registered
+
         setError('');
-        navigate('/Login'); 
+        navigate('/Login'); // Redirect to login page
     };
 
     const validateEmail = (email) => {
