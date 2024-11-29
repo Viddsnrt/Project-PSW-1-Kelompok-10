@@ -1,46 +1,54 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./ProgramPembelajaran.css";
+import { FaFlask, FaBatteryHalf, FaCubes, FaAtom, FaBurn } from "react-icons/fa";
 
-function ProgramPembelajaran({ onLinkClick }) {
+function ProgramPembelajaran() {
   const programs = [
     {
       path: "/program-pembelajaran/sifat-koligatif",
       title: "Sifat Koligatif Larutan",
-      image: "https://via.placeholder.com/150?text=Sifat+Koligatif", // Ganti dengan gambar yang sesuai
+      icon: <FaFlask />,
     },
     {
       path: "/program-pembelajaran/reaksi-redoks",
       title: "Reaksi Redoks dan Elektrokimia",
-      image: "https://via.placeholder.com/150?text=Reaksi+Redoks", // Ganti dengan gambar yang sesuai
+      icon: <FaBatteryHalf />,
     },
     {
       path: "/program-pembelajaran/kimia-unsur",
       title: "Kimia Unsur",
-      image: "https://via.placeholder.com/150?text=Kimia+Unsur", // Ganti dengan gambar yang sesuai
+      icon: <FaCubes />,
     },
     {
       path: "/program-pembelajaran/senyawa-karbon",
       title: "Senyawa Karbon",
-      image: "https://via.placeholder.com/150?text=Senyawa+Karbon", // Ganti dengan gambar yang sesuai
+      icon: <FaAtom />,
     },
     {
       path: "/program-pembelajaran/benzena",
       title: "Benzena dan Turunannya",
-      image: "https://via.placeholder.com/150?text=Benzena", // Ganti dengan gambar yang sesuai
+      icon: <FaBurn />,
     },
   ];
 
   return (
-    <div className="programs-gallery">
-      {programs.map((program, index) => (
-        <div key={index} className="program-item">
-          <Link to={program.path} onClick={onLinkClick}>
-            <img src={program.image} alt={program.title} className="program-image" />
-            <div className="program-title">{program.title}</div>
-          </Link>
-        </div>
-      ))}
+    <div className="sidebar">
+      <h2 className="sidebar-title">Program Pembelajaran</h2>
+      <ul className="sidebar-menu">
+        {programs.map((program, index) => (
+          <li key={index} className="sidebar-item">
+            <NavLink
+              to={program.path}
+              className="sidebar-link"
+              activeClassName="active"
+            >
+              <span className="sidebar-icon">{program.icon}</span>
+              <span className="sidebar-text">{program.title}</span>
+            </NavLink>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
