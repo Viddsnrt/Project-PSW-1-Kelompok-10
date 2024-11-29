@@ -15,7 +15,7 @@ function Home() {
             Chemical Reactions <br /> Every Day
           </h1>
           <p className="hero-text">
-            Explore the world of chemistry <br /> and enhance your understanding tomorrow with <span>chimiLearn</span>
+            Explore the world of chemistry and enhance your understanding tomorrow with <span>chimiLearn</span>
           </p>
           {/* Conditional Navigation for Get Started Button */}
           <Link to={isLoggedIn ? "/dashboard" : "/register"}>
@@ -56,6 +56,9 @@ function Home() {
       <section className="cta-section">
         <h2>Join the ChimiLearn Community!</h2>
         <p>Start your journey into the fascinating world of chemistry today.</p>
+        <Link to="/community">
+          <button className="cta-button">Join Community</button>
+        </Link>
       </section>
     </div>
   );

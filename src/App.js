@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './element/Home';
-import ProgramPembelajaran from "./element/ProgramPembelajaran";
+import ProgramPembelajaran from './element/ProgramPembelajaran';
 import Footer from './element/Footer';
+import Forum from './element/Forum';
 import OurServices from './element/OurServices';
 import KirimPesan from './element/KirimPesan';
 import SifatKoligatif from './materi/SifatKoligatif';
@@ -17,6 +18,7 @@ import ResetPassword from './element/ResetPassword';
 import Register from './element/Register';
 import Quiz from './materi/Quiz';
 import SimulasiLaboratorium from './materi/SimulasiLaboratorium';
+import Community from './element/community';
 
 function App() {
   return (
@@ -24,22 +26,22 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ourservices" element={<OurServices/>} />
+        <Route path="/ourservices" element={<OurServices />} />
         <Route path="/kirim-pesan" element={<KirimPesan />} />
         <Route path="/program-pembelajaran/sifat-koligatif" element={<SifatKoligatif />} />
         <Route path="/program-pembelajaran/reaksi-redoks" element={<ReaksiRedoks />} />
         <Route path="/program-pembelajaran/kimia-unsur" element={<KimiaUnsur />} />
         <Route path="/program-pembelajaran/senyawa-karbon" element={<SenyawaKarbon />} />
+        <Route path="/forum" element={<Forum />} />
         <Route path="/program-pembelajaran/benzena" element={<Benzena />} />
-        <Route path="/program-pembelajaran/quiz" element={<Quiz />} />
+        <Route path="/quiz" element={<Quiz />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/ProgramPembelajaran" element={<ProgramPembelajaran />} />
+        <Route path="/program-pembelajaran" element={<ProgramPembelajaran />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/SimulasiLaboratorium" element={<SimulasiLaboratorium />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path ="/Footer" element={<Footer />} />
+        <Route path="/simulasi-laboratorium" element={<SimulasiLaboratorium />} />
+        <Route path="/community" element={<Community />} />
       </Routes>
       <Footer />
     </Router>
