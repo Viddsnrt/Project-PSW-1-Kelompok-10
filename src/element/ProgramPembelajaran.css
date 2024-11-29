@@ -1,42 +1,80 @@
+/* Programs Gallery Container */
 .programs-gallery {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Lebih besar minimum untuk estetika */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9fafb; /* Warna latar belakang lembut */
+}
+
+/* Individual Program Item */
+.program-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.program-item:hover {
+  transform: translateY(-5px); /* Memberi kesan elemen "terangkat" */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Program Image */
+.program-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.program-item:hover .program-image {
+  opacity: 0.9; /* Efek redup saat hover */
+}
+
+/* Program Title */
+.program-title {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: bold;
+  background-color: #fdfdfd; /* Warna lembut untuk judul */
+  border-top: 1px solid #eaeaea;
+  transition: color 0.3s ease;
+}
+
+.program-title:hover {
+  color: #3498db; /* Warna teks berubah saat hover */
+}
+
+/* Link in Program Item */
+.program-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .programs-gallery {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    background-color: #f5f5f5;
   }
-  
-  .program-item {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-  
-  .program-item:hover {
-    transform: scale(1.05);
-  }
-  
+
   .program-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
+    height: 140px;
   }
-  
-  .program-title {
-    padding: 15px;
-    text-align: center;
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-    background-color: #f9f9f9;
+}
+
+@media (max-width: 480px) {
+  .programs-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
-  
-  .program-item a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+
+  .program-image {
+    height: 120px;
   }
-  
+}
