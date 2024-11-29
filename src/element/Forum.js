@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./forum.css";
 
-function forum() {
+function Forum() {
   const [discussions, setDiscussions] = useState([
     {
       id: 1,
