@@ -1,3 +1,4 @@
+
 .reaksi-redoks-container {
   max-width: 800px;
   margin: 20px auto;
@@ -50,155 +51,47 @@ p{
 
 
 /* quiz */
-.quiz-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: #ffffff; /* Putih untuk kontras */
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Lebih ringan untuk gaya minimalis */
-  animation: fadeIn 0.8s ease-in-out;
+.kuis-pilihan-ganda {
+  margin-top: 30px;
+  text-align: left;
 }
 
-.quiz-container h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #2c3e50; /* Warna gelap tetapi tetap netral */
-  font-size: 2rem;
-  font-weight: 700;
+.quiz-option {
+  margin: 10px 0;
 }
 
-.question {
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+.quiz-button, .next-button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-button:hover, .next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Gaya untuk feedback */
+.quiz-feedback {
+  margin-top: 15px;
   font-weight: bold;
-  text-align: center;
-  color: #444;
 }
 
-.options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+.quiz-feedback.correct {
+  color: green; /* Warna hijau untuk jawaban benar */
 }
 
-.option-button {
-  padding: 0.8rem;
-  border: 2px solid #2c3e50; /* Warna yang senada dengan teks */
-  border-radius: 8px;
-  background: #ffffff;
-  color: #333;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.quiz-feedback.incorrect {
+  color: red; /* Warna merah untuk jawaban salah */
 }
 
-.option-button:hover {
-  background: #ecf0f1; /* Abu-abu terang untuk efek hover */
-  color: #2c3e50;
-  transform: scale(1.05);
-}
-
-.option-button.selected {
-  background: #3498db; /* Biru muda untuk menandai pilihan */
-  color: white;
-  border-color: #2980b9;
-  transform: scale(1.05);
-}
-
-.feedback {
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  text-align: center;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.feedback.correct {
-  background: #dff9db; /* Hijau pastel */
-  color: #2e7d32;
-  border: 1px solid #a5d6a7;
-}
-
-.feedback.incorrect {
-  background: #ffebee; /* Merah pastel */
-  color: #c62828;
-  border: 1px solid #ef9a9a;
-}
-
-.navigation {
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-.navigation button {
-  padding: 0.8rem 1.5rem;
-  background: #3498db; /* Biru muda */
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navigation button:hover {
-  background: #2980b9; /* Biru lebih gelap */
-  transform: scale(1.1);
-}
-
-.quiz-complete {
-  text-align: center;
-}
-
-.quiz-complete button {
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background: #28a745; /* Hijau netral */
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.quiz-complete button:hover {
-  background: #218838; /* Hijau lebih gelap */
-  transform: scale(1.1);
-}
-
-.score {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+/* Gaya untuk pesan selesai */
+.quiz-completion {
+  margin-top: 20px;
+  font-size: 18px;
   font-weight: bold;
-  text-align: center;
-  color: #444;
-}
-
-.start-container {
-  text-align: center;
-}
-.start-container h3 {
-  text-align: center;
-}
-
-.start-container button {
-  padding: 0.8rem 1.5rem;
-  background: #007bff; /* Biru standar */
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.start-container button:hover {
-  background: #0056b3; /* Biru lebih gelap */
-  transform: scale(1.1);
+  color: blue;
 }
