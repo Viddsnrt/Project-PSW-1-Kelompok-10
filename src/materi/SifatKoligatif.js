@@ -6,6 +6,7 @@ import RumusKenaikan from './RumusKenaikan';
 import TabelPelarut from './TabelPelarut';
 import RumusHubungan from './RumusHubungan';
 import TabelPelarut2 from './TabelPelarut2';
+import RumusOsmotik from './RumusOsmotik';
 
 function SifatKoligatif() {
   const [showOsmoticPressure, setShowOsmoticPressure] = useState(false);
@@ -209,7 +210,7 @@ function SifatKoligatif() {
       </p><br/>
 
       <section className="contoh-soal-ionisasi">
-          <h3>Contoh Soal Kenaikan Titik Didih dan Pembahasannya</h3><br/>
+          <h3>Contoh Soal Kenaikan Titik Didih</h3><br/>
           <p><strong>Soal:</strong> Tentukan kenaikan titik didih larutan gula 0,2 molal jika Kb air = 0,52 °C molal-1</p><br/>
           <p><strong>Penyelesaian:</strong></p><br/>
           <p>
@@ -461,24 +462,24 @@ function SifatKoligatif() {
         <br/>
         <p>Cara kerja tekanan osmotik dapat digambarkan dengan mudah melalui gambaran dari tiga taabung di bawah ini.</p>
         <br/>
-        <p><b>
+        <p>
         1. Bagian kiri tabung U berisi larutan berair, dan bagian kanan terdiri dari air murni. 
-        </b></p>
-        <p><b><br/>
+        </p>
+        <p>
         2. Di sini, air murni mencoba mengencerkan larutan dengan menembus membran semipermeabel tetapi berat yang ditambahkan oleh air pada tabung kiri menimbulkan tekanan untuk menahan osmosis.
-        </b></p>
-        <p><b><br/>
+        </p>
+        <p>
         3. Ini berlangsung sampai keseimbangan dipertahankan.
-        </b></p>
-        <p><b><br/>
+        </p>
+        <p>
         4. Sekarang untuk mencapai tekanan osmotik, tingkatkan tekanan hidrostatik pada sisi larutan membran. Ini kemudian menekan molekul pelarut lebih dekat, meningkatkan kecenderungan untuk melarikan diri.
-        </b></p>
-        <p><b><br/>
+        </p>
+        <p>
         5. Kecenderungan keluarnya larutan ini dapat ditingkatkan sampai menjadi sama dengan molekul dalam pelarut murni.
-        </b></p>
-        <p><b><br/>
+        </p>
+        <p>
         6. Dan pada titik ini, osmosis akan berhenti. Tekanan osmotik adalah tekanan yang diperlukan untuk mencapai keseimbangan osmotik.
-        </b></p><br/>
+        </p><br/>
         
         <h4>B. Apa Manfaat dari Tekanan Osmotik?</h4>
         <p>Tekanan osmotik memiliki keuntungan untuk mengetahui massa molar dibandingkan sifat koligatif lainnya.</p>
@@ -515,15 +516,99 @@ function SifatKoligatif() {
         <h4>E. Contoh Tekanan Osmotik dalam Kehidupan Sehari-hari</h4>
         <p>Apa saja contoh penerapan tekanan osmotik di kehidupan sehari-hari? Berikut ini beberapa contoh yang ada atau sering kamu alami, seperti:</p>
         <br/>
-        <p><b>
-        1. Terlalu lama berendam di bak mandi menyebabkan jari-jari mengkerut atau disebut  pruning
-        </b></p>
-        <p><b><br/>
+        <p>
+        1. Terlalu lama berendam di bak mandi menyebabkan jari-jari mengkerut atau disebut  pruning.
+        </p>
+        <p>
         2. Percikan garam pada cacing tanah menyebabkan sel-selnya mengalami dehidrasi sehingga membuat cacing terdesak dan muncul ke permukaan.
-        </b></p>
-        <p><b><br/>
+        </p>
+        <p>
         3. Proses pengawetan selai dan jeli yang menggunakan gula dalam jumlah banyak akan membantu membunuh bakteri. Hal ini dikarenakan larutan gula memiliki konsentrasi tinggi. 
-        </b></p>
+        </p><br/>
+
+        <h4>D. Apa rumus tekanan osmotik?</h4><br/>
+        <p>
+        Tekanan osmotik dapat dihitung dengan menggunakan rumus:
+        </p>
+        <RumusOsmotik /><br/>
+        <p>
+        Rumus ini dapat diterapkan untuk menghitung tekanan osmotik ketika larutan dianggap ideal, yaitu ketika konsentrasi zat terlarut rendah. 
+        </p><br/>
+        <p>
+        Dalam rumus, c adalah konsentrasi molar zat terlarut, yaitu jumlah awal atom, ion, atau molekul yang ada dalam zat terlarut. Khususnya, jumlah partikel menentukan interaksi mereka dalam osmosis. 
+        </p><br/>
+        <p>
+        R adalah tetapan gas ideal. Dalam hal ini, itu juga mengacu pada cairan seperti air. T mengacu pada suhu di Kelvin. 
+        </p><br/>
+        <p>
+        Tekanan osmotik suatu larutan dapat ditingkatkan dengan menaikkan suhunya. Suhu, dalam skenario ini, mengacu pada ukuran energi dalam molekul. 
+        </p><br/>
+        <p>
+        Tekanan osmotik suatu larutan dapat ditingkatkan dengan meningkatkan jumlah molekul zat terlarut. 
+        </p><br/>
+        <p>
+        Maka, untuk menghitung tekanan osmotik larutan dapat menggunakan rumus: <b>π = MRT</b>, di mana M adalah molaritas larutan.
+        </p><br/>
+        <p>
+        Rumus lain untuk menghitung tekanan osmotik adalah <b>π = n/VRT</b> dengan V adalah volume air.
+        </p><br/>
+
+        <section className="contoh-soal-ionisasi">
+          <h3>Contoh soal tekanan osmotik</h3><br/>
+          <p><strong>Soal:</strong> Satu mol garam meja dilarutkan ke dalam air dengan volume satu liter. Pada suhu 270C. Tentukan tekanan osmotik larutan tersebut. </p><br/>
+          <p>
+          <b>Bayangkan kita punya gelas berisi air.</b> Terus, kita tambahin garam dapur (NaCl) ke dalam air itu sampai jumlahnya pas 1 mol. Nah, air dalam gelas ini sekarang jadi larutan garam.
+          </p><br/>
+          <p><strong>Tekanan Osmotik itu Apa Sih?</strong></p><br/>
+          <p>
+          Kalau kita bayangin, partikel-partikel garam (ion Na+ dan Cl-) itu kayak anak kecil yang suka berlarian dan nabrak-nabrak dinding gelas. Nah, tekanan yang dihasilkan dari "tabrakan" partikel-partikel ini ke dinding gelas inilah yang disebut tekanan osmotik. Semakin banyak partikel garam, semakin sering mereka nabrak-nabrak, dan semakin besar tekanan osmosanya.
+          </p><br/>
+          <p><strong>Kenapa Faktor van't Hoff Jadi 2?</strong></p><br/>
+          <p>
+          Garam dapur (NaCl) itu kalau dilarutkan di air, dia akan pecah jadi dua bagian, yaitu ion Na+ dan ion Cl-. Jadi, setiap molekul NaCl yang kita larutkan, akan menghasilkan 2 partikel yang aktif bikin tekanan osmotik. Makanya, kita kalikan konsentrasi dengan faktor van't Hoff (i) yang nilainya 2.
+          </p><br/>
+          <p><strong>Rumus Ajaibnya</strong></p><br/>
+          <p>
+          Ada rumus khusus buat hitung tekanan osmotik, yaitu:
+          </p><br/>
+          <p>
+          π = i x C x R x T
+          </p><br/>
+          <p>
+            <ul>
+            <li><b>π:</b> Tekanan osmotik (yang mau kita cari)</li>
+            <li><b>i:</b> Faktor van't Hoff (dalam kasus ini, 2 karena NaCl jadi 2 ion)</li>
+            <li><b>C:</b> Konsentrasi larutan (dalam mol/liter)</li>
+            <li><b>R:</b> Konstanta gas ideal (nilai tetap)</li>
+            <li><b>T:</b> Suhu (dalam Kelvin)</li>
+            </ul>
+          </p><br/>
+          <p><strong>Yuk Kita Hitung!</strong></p><br/>
+          <p>
+          Kita udah tahu semua nilainya:
+          </p>
+          <p>
+            <ul>
+            <li>i = 2</li>
+            <li>C = 1 mol/liter (karena kita larutkan 1 mol garam dalam 1 liter air)</li>
+            <li>R = 0,0821 (konstanta gas ideal)</li>
+            <li>T = 27°C = 300 K (ingat, suhu harus dalam Kelvin)</li>
+            </ul>
+          </p>
+          <p>
+          Tinggal kita masukin angka-angkanya ke rumus:
+          </p><br/>
+          <p>
+          π = 2 x 1 x 0,0821 x 300
+          </p>
+          <p>
+          π = 49,26 atm
+          </p><br/>
+          <p><strong>Jadi, kesimpulannya:</strong></p><br/>
+          <p>
+          Tekanan osmotik larutan garam kita itu sebesar 49,26 atmosfer. Angka ini cukup besar, ya! Artinya, partikel-partikel garam itu nabrak-nabrak dinding gelas dengan sangat kuat.
+          </p><br/>
+        </section>
       </section>
 
       <section className="efek-ionisasi">
@@ -539,6 +624,137 @@ function SifatKoligatif() {
           <li>Kf = Konstanta pembekuan molal</li>
           <li>m = Molalitas larutan</li>
         </ul>
+        <img 
+            src="https://th.bing.com/th/id/OIP.9L2W4Z1WYXozh4086qHSzwHaHa?rs=1&pid=ImgDetMain" 
+            alt="Penurunan Titik Beku" 
+            className="colligative-img" 
+        /><br/>
+
+        <h4>A. Reaksi Ionisasi Larutan Elektrolit</h4><br/>
+        <p><b>1. Reaksi Ionisasi Elektrolit Kuat</b></p>
+        <p>
+        Reaksi ionisasi elektrolit kuat merupakan reaksi berkesudahan. Dalam larutan tidak ada lagi molekul elektrolit yang netral, semua telah diubah menjadi ion-ion. Larutan elektrolit kuat memiliki ciri-ciri sebagai berikut.
+        </p><br/>
+        <p>1. Larutan elektrolit kuat mempunyai daya hantar listrik yang baik atau kuat.</p>
+        <p>2. Dalam larutan terionisasi sempurna (seluruhnya berubah menjadi ion-ion).</p>
+        <p>3. Jumlah ion dalam larutan sangat banyak.</p>
+        <p>4. Harga derajat ionisasi mendekati 1 (harga α = 1).</p><br/>
+        <p>Berikut contoh penulisan reaksi ionisasi elektrolit kuat.</p>
+        <br/>
+        <p>Asam : HCl → H+ + Cl-</p>
+        <br/>
+        <p>Basa : Ba(OH)2 → Ba2+ + 2 OH</p>
+        <br/>
+        <p>Garam : Na2CO3 → 2 Na+ + CO3-</p>
+        <br/>
+
+        <p><b>2. Reaksi Ionisasi Elektrolit Lemah</b></p>
+        <p>Reaksi ionisasi elektrolit lemah merupakan reaksi keseimbangan karena elektrolit hanya terionisasi sebagian, sehingga dalam larutan masih ada molekul-molekul elektrolit yang netral. </p>
+        <br/>
+        <p>Larutan elektrolit lemah memiliki ciri-ciri sebagai berikut.</p>
+        <br/>
+        <p>1. Larutan elektrolit lemah mempunyai daya hantar listrik lemah.</p>
+        <p>2. Dalam larutan terionisasi sebagian (hanya sebagian kecil senyawa yang membentuk ion).</p> 
+        <p>3. Jumlah ion dalam larutan sedikit.</p>
+        <p>4. Harga derajat ionisasi kurang dari 1 (harga α kecil, yaitu 0 lebih kecil dari α lebih kecil dari 1).</p>
+        <br/>
+        <p>Berikut contoh penulisan reaksi ionisasi elektrolit lemah.</p>
+        <br/>
+        <p>Asam : CH3COOH ⇋ CH3COO + H+</p>
+        <br/>
+        <p>Basa : NH4OH ⇋ NH4+ + OH-</p>
+        <br/>
+        <p>(SFR)</p>
+        <br/>
+
+        <h4>B. Contoh Larutan Elektrolit:</h4>
+        <ul>
+          <li><b>Garam dapur (NaCl):</b> Ketika dilarutkan dalam air, NaCl akan terionisasi menjadi ion Na+ dan Cl-.</li>
+          <li><b>Asam klorida (HCl):</b> HCl akan terionisasi menjadi ion H+ dan Cl-.</li>
+          <li><b>Natrium hidroksida (NaOH):</b> NaOH akan terionisasi menjadi ion Na+ dan OH-.</li>
+        </ul><br/>
+
+        <p><b>1. Efek Ionisasi dalam Larutan Elektrolit</b></p>
+        <img 
+            src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1642494576/hs8v3kogcanvolvnpybk.jpg" 
+            alt="Reaksi Ionisasi Elektrolit Kuat" 
+            className="colligative-img" 
+        /><br/>
+        <ul>
+          <li><b>Konduktivitas:</b> Larutan elektrolit dapat menghantarkan arus listrik karena adanya ion-ion bebas yang bergerak menuju elektroda bermuatan berlawanan.</li>
+          <li><b>Sifat Koligatif:</b> Larutan elektrolit memiliki sifat koligatif yang lebih besar dibandingkan larutan non-elektrolit dengan konsentrasi yang sama. Sifat koligatif adalah sifat larutan yang tergantung pada jumlah partikel zat terlarut, bukan pada jenis zat terlarutnya. Contoh sifat koligatif adalah penurunan tekanan uap, kenaikan titik didih, penurunan titik beku, dan tekanan osmotik.</li>
+          <li><b>Reaksi Kimia:</b> Ion-ion dalam larutan elektrolit dapat bereaksi dengan zat lain membentuk senyawa baru.</li>
+          <li><b>Pengaruh pH:</b> Ion-ion H+ dan OH- yang dihasilkan dari ionisasi asam dan basa dapat mempengaruhi pH larutan.</li>
+        </ul><br/>
+
+        <p><b>2. Faktor yang Mempengaruhi Derajat Ionisasi</b></p>
+        <img 
+            src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1642494602/ewuvlitgvcsxwmbwoz5o.jpg" 
+            alt="Reaksi Ionisasi Elektrolit Lemah" 
+            className="colligative-img" 
+        /><br/>
+        <ul>
+          <li><b>Sifat zat terlarut:</b> Zat elektrolit kuat akan terionisasi sempurna, sedangkan zat elektrolit lemah hanya terionisasi sebagian.</li>
+          <li><b>Konsentrasi larutan:</b> Semakin encer larutan, semakin besar derajat ionisasinya.</li>
+          <li><b>Suhu:</b> Kenaikan suhu umumnya akan meningkatkan derajat ionisasi.</li>
+          <li><b>Adanya ion senama:</b> Adanya ion senama akan menghambat proses ionisasi.</li>
+        </ul><br/>
+
+        <p><b>3. Penerapan dalam Kehidupan Sehari-hari</b></p>
+        <ul>
+          <li><b>Baterai:</b> Larutan elektrolit digunakan sebagai penghantar ion dalam baterai.</li>
+          <li><b>Elektrolisis:</b> Proses elektrolisis digunakan untuk melapisi logam, menghasilkan gas, dan memproduksi zat kimia.</li>
+          <li><b>Pengolahan air:</b> Proses pengolahan air melibatkan penggunaan elektrolit untuk membunuh mikroorganisme.</li>
+          <li><b>Medis:</b> Larutan elektrolit digunakan dalam cairan infus untuk mengganti cairan tubuh yang hilang.</li>
+        </ul><br/>
+
+        <section className="contoh-soal-ionisasi">
+          <h3>Contoh soal efek ionisasi dalam larutan elektrolit</h3><br/>
+          <p><strong>Soal:</strong> Hitunglah tekanan osmotik larutan NaCl 0,1 M pada suhu 27°C. Diketahui R = 0,082 L atm/mol K dan NaCl terionisasi sempurna.</p><br/>
+          <p><strong>Kenapa harus dihitung?</strong></p><br/>
+          <p>
+          Mengerti tekanan osmotik itu penting banget, lho! Misalnya, dalam tubuh kita, tekanan osmotik membantu menjaga keseimbangan cairan. Di industri, tekanan osmotik juga digunakan dalam proses pengolahan air laut menjadi air tawar.
+          </p><br/>
+          <p><strong>Mari kita pecah-pecah soal ini:</strong></p><br/>
+          <p><b>
+          1. NaCl jadi Na+ dan Cl-:
+          </b></p>
+          <p>Saat kita larutkan garam dapur dalam air, dia akan pecah jadi ion Na+ (natrium) dan ion Cl- (klorida). Nah, jumlah ion ini yang akan mempengaruhi tekanan osmotik. Makanya kita kasih nilai i (faktor van't Hoff) = 2, artinya setiap molekul NaCl akan menghasilkan 2 partikel yang aktif bikin tekanan.</p>
+          <p><b><br/>
+          2. Rumus Ajaib:
+          </b></p>
+          <p>Untuk menghitung tekanan osmotik, kita pakai rumus ini:</p>
+          <p>π = i x M x R x T</p>
+          <p>
+            <ul>
+            <li><b>π:</b> Tekanan osmotik (yang mau kita cari)</li>
+            <li><b>i:</b> Faktor van't Hoff (dalam kasus ini, 2 karena NaCl jadi 2 ion)</li>
+            <li><b>C:</b> Konsentrasi larutan (dalam mol/liter)</li>
+            <li><b>R:</b> Konstanta gas ideal (nilai tetap)</li>
+            <li><b>T:</b> Suhu (dalam Kelvin)</li>
+            </ul>
+          </p><br/>
+          <p><b>
+          3. Masukin Angka:
+          </b></p>
+          <p>Kita udah tahu semua nilainya:</p>
+          <p>
+            <ul>
+            <li>i = 2</li>
+            <li>C = 1 mol/liter (artinya dalam 1 liter air, ada 0,1 mol NaCl)</li>
+            <li>R = 0,082 (nilai tetap)</li>
+            <li>T = 27°C = 300 K (ingat, suhu harus dalam Kelvin)</li>
+            </ul>
+          </p>
+          <p>Kita masukin angka-angkanya ke rumus:</p>
+          <p>π = 2 x 0,1 x 0,082 x 300</p>
+          <p>π = 4,92 atm</p><br/>
+          <p><strong>Jadi, kesimpulannya:</strong></p><br/>
+          <p>
+          Tekanan osmotik larutan garam kita itu sebesar 49,26 atmosfer. Angka ini cukup besar, ya! Artinya, partikel-partikel garam itu nabrak-nabrak dinding gelas dengan sangat kuat.
+          </p><br/>
+          <p><b>Bayangkan gelas itu seperti kolam renang kecil, dan partikel-partikel garamnya seperti anak-anak yang lagi berenang.</b> Semakin banyak anak-anak yang berenang dan nabrak-nabrak dinding kolam, semakin besar tekanan yang dirasakan dinding kolam itu.</p><br/>
+        </section>
       </section>
 
       <section className="molalitas-vs-molaritas">
