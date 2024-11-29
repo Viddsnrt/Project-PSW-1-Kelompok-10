@@ -1,7 +1,14 @@
-import React, {useState} from 'react';
-import './ReaksiRedoks.css';
+import React, { useState } from "react";
+import "./ReaksiRedoks.css";
 
 function ReaksiRedoks() {
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState("");
+  const [feedback, setFeedback] = useState("");
+  const [isAnswered, setIsAnswered] = useState(false);
+
+
   const questions = [
     {
       question: "Apa yang dimaksud dengan reaksi redoks?",
@@ -37,6 +44,7 @@ function ReaksiRedoks() {
       explanation: "Karena Sel galvani mengubah energi kimia menjadi energi listrik",
     }
   ];
+
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
@@ -75,6 +83,26 @@ function ReaksiRedoks() {
     setShowFeedback(false);
     setQuizCompleted(false);
     setQuizStarted(false);
+
+  const handleQuizSubmit = (event) => {
+    event.preventDefault();
+
+    if (isAnswered) return; // Mencegah jawaban ganda pada pertanyaan yang sama.
+
+    if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
+      setFeedback("Jawaban Anda benar!");
+    } else {
+      setFeedback("Jawaban Anda salah.");
+    }
+
+    setIsAnswered(true);
+  };
+
+  const handleNextQuestion = () => {
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    setSelectedOption("");
+    setFeedback("");
+    setIsAnswered(false);
   };
 
   return (
@@ -148,12 +176,11 @@ function ReaksiRedoks() {
       <section className="bilangan-oksidasi">
         <h3>Aturan Penentuan Bilangan Oksidasi</h3>
         <p>Bilangan oksidasi (biloks) digunakan untuk menentukan unsur yang teroksidasi dan tereduksi.</p>
-        <h4><strong> Aturan penentuan biloks: </strong></h4>
         <ul>
-          <li>Unsur bebas (unsur murni) memiliki biloks 0. </li>
-          <li>Ion monoatomik memiliki biloks sesuai muatannya. </li>
-          <li>Biloks oksigen dalam senyawa biasanya -2, kecuali pada peroksida (-1) dan senyawa dengan fluor</li>
-          <li>Biloks hidorgen dalam senyawa baisanya +1, kecuali dalam hidrida logam (-1)</li>
+          <li>Unsur bebas (unsur murni) memiliki biloks 0.</li>
+          <li>Ion monoatomik memiliki biloks sesuai muatannya.</li>
+          <li>Biloks oksigen dalam senyawa biasanya -2, kecuali pada peroksida (-1) dan senyawa dengan fluor.</li>
+          <li>Biloks hidrogen dalam senyawa biasanya +1, kecuali dalam hidrida logam (-1).</li>
           <li>Jumlah biloks dalam senyawa netral adalah 0, dan pada ion sama dengan muatannya.</li>
         </ul>
       </section>
@@ -196,50 +223,11 @@ function ReaksiRedoks() {
         </ul>
       </section>
 
-      <section classname="aplikasi">
-        <h3>Aplikasi Reaksi Redoks</h3>
-        <p>Apliksi reaksi redoks dapat ditemui dalam beberapa bidang antara lain sebagai berikut :</p>
-        <h4>1. Industri</h4>
-        <ul>
-          <li>Pemurnian logam (elektrolisis) </li>
-          <li>Produksi bahan kimia seperti amonia (reaksi Haber-Bosch)</li>
-        </ul>
-        <h4>2. Biologi</h4>
-        <ul>
-          <li>Respirasi seluler (reaksi glukosa dan oksigen menghasilkan energi)</li>
-          <li>Fotosintesis</li>
-        </ul>
-        <h4>3. Lingkungan</h4>
-        <ul>
-          <li>Proses pengolahan limbah</li>
-          <li>Pengendalian polusi udara</li>
-        </ul>
-        <h4>4. Kehidupan Sehari-hari</h4>
-        <ul>
-          <li>Baterai dan aki</li>
-          <li>Proses karat pada logam</li>
-        </ul>
-      </section>
-
       <section className="contoh-soal">
         <h3>Contoh Soal</h3>
-        <p><strong>Soal 1:</strong> Hitung potensial sel untuk sel galvani yang terdiri dari elektroda Zn/Zn²⁺ (E° = -0,76 V) dan elektroda Cu/Cu²⁺ (E° = +0,34 V).</p>
-        <p><strong>Penyelesaian:</strong></p>
-        <p>
-          E°<sub>sel</sub> = E°<sub>katoda</sub> - E°<sub>anoda</sub><br />
-          = (+0,34 V) - (-0,76 V)<br />
-          = +1,10 V
-        </p>
-        <p><strong>Jawaban:</strong> Potensial sel adalah +1,10 V.</p>
-
-        <p><strong>Soal 2:</strong> Pada reaksi redoks, mana yang mengalami oksidasi dan reduksi dalam reaksi berikut?<br />
-        Zn + Cu²⁺ → Zn²⁺ + Cu</p>
-        <p><strong>Penyelesaian:</strong></p>
-        <p>
-          - Zn mengalami oksidasi menjadi Zn²⁺.<br />
-          - Cu²⁺ mengalami reduksi menjadi Cu.
-        </p>
-        <p><strong>Jawaban:</strong> Zn teroksidasi dan Cu²⁺ tereduksi.</p>
+        <p><strong>Soal:</strong> Pada reaksi redoks berikut, mana yang mengalami oksidasi?</p>
+        <p><em>Reaksi:</em> Zn + Cu²⁺ → Zn²⁺ + Cu</p>
+        <p><strong>Jawaban:</strong> Zn teroksidasi menjadi Zn²⁺.</p>
       </section>
 
       <section className="quiz-container">
@@ -297,8 +285,48 @@ function ReaksiRedoks() {
       )}
     </section>
 
+      <section className="kuis-pilihan-ganda">
+        <h3>Mini Quiz</h3>
+        <p>
+          <strong>Soal {currentQuestionIndex + 1}:</strong> {questions[currentQuestionIndex].question}
+        </p>
+
+        <form onSubmit={handleQuizSubmit} className="quiz-form">
+          {questions[currentQuestionIndex].options.map((option, index) => (
+            <div key={index} className="quiz-option">
+              <label>
+                <input
+                  type="radio"
+                  value={option}
+                  checked={selectedOption === option}
+                  onChange={(e) => setSelectedOption(e.target.value)}
+                  disabled={isAnswered}
+                />
+                {String.fromCharCode(97 + index)}. {option}
+              </label>
+            </div>
+          ))}
+
+          {!isAnswered ? (
+            <button type="submit" className="quiz-button">
+              Submit
+            </button>
+          ) : (
+            currentQuestionIndex < questions.length - 1 && (
+              <button
+                type="button"
+                className="quiz-button"
+                onClick={handleNextQuestion}
+              >
+                Next Question
+              </button>
+            )
+          )}
+        </form>
+      </section>
     </div>
   );
-}
+};
+};
 
 export default ReaksiRedoks;
