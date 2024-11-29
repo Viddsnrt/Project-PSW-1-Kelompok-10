@@ -56,42 +56,109 @@ p{
   text-align: left;
 }
 
-.quiz-option {
-  margin: 10px 0;
+/* Untuk opsi yang benar dan salah */
+.quiz-option.correct {
+  background-color: #d4edda; /* Hijau muda */
+  border: 1px solid #28a745;
 }
 
-.quiz-button, .next-button {
-  margin-top: 15px;
-  padding: 8px 16px;
-  background-color: #007bff;
+.quiz-option.incorrect {
+  background-color: #f8d7da; /* Merah muda */
+  border: 1px solid #dc3545;
+}
+
+/* Tombol navigasi */
+.quiz-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.quiz-button {
+  padding: 10px 20px;
+  background-color: #a36500;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.quiz-button:hover, .next-button:hover {
+.quiz-button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.quiz-button:hover:not(:disabled) {
   background-color: #0056b3;
 }
 
-/* Gaya untuk feedback */
+.quiz-button:hover {
+  background-color: #0056b3;
+}
 .quiz-feedback {
   margin-top: 15px;
-  font-weight: bold;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.quiz-feedback.correct {
-  color: green; /* Warna hijau untuk jawaban benar */
+.correct-feedback { 
+  background-color: #d4edda; /* Hijau muda */
+  border: 1px solid #28a745;
+  color: #28a745;
 }
 
-.quiz-feedback.incorrect {
-  color: red; /* Warna merah untuk jawaban salah */
+.incorrect-feedback {
+  background-color: #f8d7da; /* Merah muda */
+  border: 1px solid #dc3545;
+  color: #dc3545;
 }
 
-/* Gaya untuk pesan selesai */
 .quiz-completion {
+  text-align: center;
   margin-top: 20px;
   font-size: 18px;
+  color: #2c3e50;
   font-weight: bold;
-  color: blue;
 }
+
+.quiz-option {
+  margin: 10px 0;
+  padding-right: 80%;
+}
+
+.quiz-option label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-left: 10px;
+  align-items: left;
+}
+
+.quiz-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+

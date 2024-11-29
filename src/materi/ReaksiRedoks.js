@@ -4,46 +4,111 @@ import "./ReaksiRedoks.css";
 function ReaksiRedoks() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState("");
-  const [feedback, setFeedback] = useState("");
-  const [isAnswered, setIsAnswered] = useState(false);
+  const [score, setScore] = useState(0);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [explanations, setExplanations] = useState([]);
+  const [showExplanation, setShowExplanation] = useState(false);
 
   const questions = [
     {
       question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
       options: ["Zn", "Cu", "Cu²⁺", "Zn²⁺"],
       correctAnswer: "Zn",
+      explanation: "Zn mengalami oksidasi karena kehilangan elektron dan berubah menjadi Zn²⁺.",
     },
     {
       question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
       options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
       correctAnswer: "Hidrogen",
+      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
     },
     {
       question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
       options: ["+1", "-2", "0", "-1"],
       correctAnswer: "-2",
+      explanation: "Oksigen dalam senyawa biasanya memiliki bilangan oksidasi -2 kecuali dalam senyawa peroksida atau fluorida.",
     },
+    {
+      question: "Reaksi antara seng dan asam klorida menghasilkan gas hidrogen. Reaksi tersebut adalah contoh dari reaksi redoks. Manakah yang mengalami reduksi dalam reaksi tersebut?",
+      options: ["Seng (Zn)", "Ion hidrogen (H⁺)", "Klorida (Cl⁻)", "Gas hidrogen (H₂)"],
+      correctAnswer: "Ion hidrogen (H⁺)",
+      explanation: "Ion H⁺ menerima elektron dan berubah menjadi gas hidrogen (H₂), sehingga mengalami reduksi.",
+    },
+    {
+      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
+      options: ["-1", "0", "+1", "+2"],
+      correctAnswer: "-1",
+      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+    },
+    {
+      question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
+      options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
+      correctAnswer : "Reduktor",
+      explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
+    },
+    {
+      question : "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
+      options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
+      correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
+      explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
+    },
+    {
+      question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
+      options : ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
+      correctAnswer: "Magnesium mengalami oksidasi",
+      explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
+    },
+    {
+      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
+      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
+      correctAnswer: "Hidrogen",
+      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
+    },
+    {
+      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
+      options: ["-1", "0", "+1", "+2"],
+      correctAnswer: "-1",
+      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+    },
+    
   ];
 
-  const handleQuizSubmit = (event) => {
-    event.preventDefault();
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+    const isCorrect = option === questions[currentQuestionIndex].correctAnswer;
+    if (isCorrect) setScore((prevScore) => prevScore + 1);
 
-    if (isAnswered) return; // Mencegah jawaban ganda pada pertanyaan yang sama.
+    setExplanations((prevExplanations) => {
+      const updated = [...prevExplanations];
+      updated[currentQuestionIndex] = {
+        correct: isCorrect,
+        explanation: questions[currentQuestionIndex].explanation,
+      };
+      return updated;
+    });
+    setShowExplanation(true);
+  };
 
-    if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
-      setFeedback("Jawaban Anda benar!");
-    } else {
-      setFeedback("Jawaban Anda salah.");
-    }
-
-    setIsAnswered(true);
+  const getFeedbackClass = (isCorrect) => {
+    return isCorrect ? "correct-feedback" : "incorrect-feedback";
   };
 
   const handleNextQuestion = () => {
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-    setSelectedOption("");
-    setFeedback("");
-    setIsAnswered(false);
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+      setSelectedOption("");
+      setShowExplanation(false);
+    } else {
+      setQuizCompleted(true); 
+    }
+  };
+
+  const handlePreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+      setSelectedOption("");
+      setShowExplanation(false);
+    }
   };
 
   return (
@@ -171,46 +236,88 @@ function ReaksiRedoks() {
         <p><strong>Jawaban:</strong> Zn teroksidasi menjadi Zn²⁺.</p>
       </section>
 
+      <section className="pengertian-redoks">
+        <h3>Pengenalan Reaksi Redoks</h3>
+        <p>
+          Reaksi redoks (reduksi-oksidasi) adalah reaksi kimia yang melibatkan perpindahan elektron dari satu zat ke zat lain.
+          Dalam reaksi redoks, terdapat dua proses utama:
+        </p>
+        <ul>
+          <li><strong>Oksidasi:</strong> Proses kehilangan elektron.</li>
+          <li><strong>Reduksi:</strong> Proses penambahan elektron.</li>
+        </ul>
+      </section>
+
       <section className="kuis-pilihan-ganda">
         <h3>Mini Quiz</h3>
-        <p>
-          <strong>Soal {currentQuestionIndex + 1}:</strong> {questions[currentQuestionIndex].question}
-        </p>
+        {!quizCompleted ? (
+          <>
+            <p>
+              <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
+              {questions[currentQuestionIndex].question}
+            </p>
 
-        <form onSubmit={handleQuizSubmit} className="quiz-form">
-          {questions[currentQuestionIndex].options.map((option, index) => (
-            <div key={index} className="quiz-option">
-              <label>
-                <input
-                  type="radio"
-                  value={option}
-                  checked={selectedOption === option}
-                  onChange={(e) => setSelectedOption(e.target.value)}
-                  disabled={isAnswered}
-                />
-                {String.fromCharCode(97 + index)}. {option}
-              </label>
+            <form className="quiz-form">
+              {questions[currentQuestionIndex].options.map((option, index) => (
+                <div key={index} className="quiz-option">
+                  <label>
+                    <input
+                      type="radio"
+                      value={option}
+                      checked={selectedOption === option}
+                      onChange={() => handleOptionSelect(option)}
+                      disabled={showExplanation}
+                    />
+                    {option}
+                  </label>
+                </div>
+              ))}
+            </form>
+
+            {showExplanation && (
+              <div
+              className={`quiz-feedback ${getFeedbackClass(
+                explanations[currentQuestionIndex].correct
+              )}`}
+            >
+                <p>
+                  {explanations[currentQuestionIndex].correct
+                    ? "Jawaban Anda benar!"
+                    : "Jawaban Anda salah."}
+                </p>
+                <p>{explanations[currentQuestionIndex].explanation}</p>
+              </div>
+            )}
+
+            <div className="quiz-buttons">
+              <div className="navigation-buttons">
+                <button
+                  type="button"
+                  className="quiz-button"
+                  onClick={handlePreviousQuestion}
+                  disabled={currentQuestionIndex === 0}
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  className="quiz-button"
+                  onClick={handleNextQuestion}
+                  disabled={!selectedOption}
+                >
+                  {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
+                </button>
+              </div>
             </div>
-          ))}
-
-          {!isAnswered ? (
-            <button type="submit" className="quiz-button">
-              Submit
-            </button>
-          ) : (
-            currentQuestionIndex < questions.length - 1 && (
-              <button
-                type="button"
-                className="quiz-button"
-                onClick={handleNextQuestion}
-              >
-                Next Question
-              </button>
-            )
-          )}
-        </form>
-
-        {feedback && <p className="quiz-feedback">{feedback}</p>}
+          </>
+        ) : (
+          <div className="quiz-completion">
+            <p>Quiz Selesai!</p>
+            <p>
+              Skor Anda: {score} dari {questions.length}
+            </p>
+          </div>
+        )}
       </section>
     </div>
   );
