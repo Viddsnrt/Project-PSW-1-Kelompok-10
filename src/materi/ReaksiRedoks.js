@@ -2,40 +2,80 @@ import React, {useState} from 'react';
 import './ReaksiRedoks.css';
 
 function ReaksiRedoks() {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedOption, setSelectedOption] = useState('');
-  const [feedback, setFeedback] = useState('');
-  const [isAnswered, setIsAnswered] = useState(false);
-
-  const handleQuizSubmit = (event) => {
-    event.preventDefault();
-
-    if (selectedOption === 'a') {
-      setFeedback('Jawaban Anda benar!');
-    } else {
-      setFeedback('Jawaban Anda salah.');
-    }
-
-  
   const questions = [
     {
-      question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
-      options: ["Zn", "Cu", "Cu²⁺", "Zn²⁺"],
-      correctAnswer: "Zn",
+      question: "Apa yang dimaksud dengan reaksi redoks?",
+      options: [
+        "Reaksi yang melibatkan perpindahan elektron",
+        "Reaksi yang hanya melibatkan perpindahan proton",
+        "Reaksi yang menghasilkan energi",
+        "Reaksi yang melibatkan gas",
+      ],
+      answer: "Reaksi yang melibatkan perpindahan elektron",
+      explanation: "Reaksi redoks melibatkan perpindahan elektron antara dua zat, satu teroksidasi dan satu lagi tereduksi.",
     },
     {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-      correctAnswer: "Hidrogen",
+      question: "Berapakah bilangan oksidasi unsur Brom dalam senyawa HBrO₄",
+      options: [
+        "+7",
+        "+3",
+        "-7",
+        "+4",
+      ],
+      answer: "+7",
+      explanation: "Biloks % = +1Biloks % + biloks O + bilok Br =  + biloks Br =  + biloks Br = Biloks Br = +7",
     },
     {
-      question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
-      options: ["+1", "-2", "0", "-1"],
-      correctAnswer: "-2",
-    },
+      question: "Contoh dari sel galvani ialah?",
+      options: [
+        "Logam",
+        "Gas",
+        "Baterai",
+        "Tembaga",
+      ],
+      answer: "Baterai",
+      explanation: "Karena Sel galvani mengubah energi kimia menjadi energi listrik",
+    }
   ];
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [score, setScore] = useState(0);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [quizStarted, setQuizStarted] = useState(false);
+
+  const handleStartQuiz = () => {
+    setQuizStarted(true);
   };
 
+  const handleAnswerClick = (answer) => {
+    setSelectedAnswer(answer);
+    setShowFeedback(true);
+
+    if (answer === questions[currentQuestion].answer) {
+      setScore(score + 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+      setSelectedAnswer('');
+      setShowFeedback(false);
+    } else {
+      setQuizCompleted(true);
+    }
+  };
+
+  const handleRestartQuiz = () => {
+    setCurrentQuestion(0);
+    setSelectedAnswer('');
+    setScore(0);
+    setShowFeedback(false);
+    setQuizCompleted(false);
+    setQuizStarted(false);
+  };
 
   return (
     <div className="reaksi-redoks-container">
@@ -202,63 +242,61 @@ function ReaksiRedoks() {
         <p><strong>Jawaban:</strong> Zn teroksidasi dan Cu²⁺ tereduksi.</p>
       </section>
 
+      <section className="quiz-container">
 
-      <section className="kuis-pilihan-ganda">
-        <h3>Mini Quiz</h3>
-        <p><strong>Soal:</strong> Pada reaksi redoks berikut, mana yang mengalami oksidasi?<br />
-        Zn + Cu²⁺ → Zn²⁺ + Cu</p>
-        
-        <form onSubmit={handleQuizSubmit} className="quiz-form">
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="a"
-                checked={selectedOption === 'a'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              a. Zn
-            </label>
-          </div>
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="b"
-                checked={selectedOption === 'b'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              b. Cu
-            </label>
-          </div>
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="c"
-                checked={selectedOption === 'c'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              c. Cu²⁺
-            </label>
-          </div>
-          <div className="quiz-option">
-            <label>
-              <input
-                type="radio"
-                value="d"
-                checked={selectedOption === 'd'}
-                onChange={(e) => setSelectedOption(e.target.value)}
-              />
-              d. Zn²⁺
-            </label>
+      {!quizStarted ? (
+        <div className="start-container">
+          <h3>Mini Quiz</h3>
+          <button onClick={handleStartQuiz}>Mulai Quiz</button>
+        </div>
+      ) : quizCompleted ? (
+        <div className="quiz-complete">
+          <p>Mini Quiz untuk materi Reaksi Redoks selesai! Skor kamu: <strong>{score}/{questions.length}</strong></p>
+          <button onClick={handleRestartQuiz}>Coba Lagi</button>
+        </div>
+      ) : (
+        <>
+          <div className="question">
+            <p>{questions[currentQuestion].question}</p>
           </div>
 
-          <button type="submit" className="quiz-button">Submit</button>
-        </form>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                className={`option-button ${selectedAnswer === option ? 'selected' : ''}`}
+                onClick={() => handleAnswerClick(option)}
+                disabled={showFeedback}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
 
-        {feedback && <p className="quiz-feedback">{feedback}</p>}
-      </section>
+          {showFeedback && (
+            <div className={`feedback ${selectedAnswer === questions[currentQuestion].answer ? 'correct' : 'incorrect'}`}>
+              <p>
+                {selectedAnswer === questions[currentQuestion].answer
+                  ? 'Jawaban kamu benar!'
+                  : `Jawaban salah. Jawaban yang benar: "${questions[currentQuestion].answer}".`}
+              </p>
+              <p><strong>Penjelasan:</strong> {questions[currentQuestion].explanation}</p>
+            </div>
+          )}
+
+          <div className="navigation">
+            <button onClick={handleNextClick} disabled={!showFeedback}>
+              {currentQuestion < questions.length - 1 ? 'Next' : 'Finish'}
+            </button>
+          </div>
+
+          <div className="score">
+            <p>Skor: {score}</p>
+          </div>
+        </>
+      )}
+    </section>
+
     </div>
   );
 }
