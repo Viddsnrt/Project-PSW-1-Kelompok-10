@@ -7,6 +7,9 @@ import TabelPelarut from './TabelPelarut';
 import RumusHubungan from './RumusHubungan';
 import TabelPelarut2 from './TabelPelarut2';
 import RumusOsmotik from './RumusOsmotik';
+import RumusMolalitas from './RumusMolalitas';
+import RumusMolaritas from './RumusMolaritas';
+import TabelMoliri from './TabelMoliri';
 
 function SifatKoligatif() {
   const [showOsmoticPressure, setShowOsmoticPressure] = useState(false);
@@ -763,6 +766,98 @@ function SifatKoligatif() {
           Molalitas (m) adalah jumlah mol zat terlarut per kilogram pelarut, sementara molaritas (M) adalah jumlah mol zat terlarut per liter larutan. 
           Molalitas lebih bergantung pada massa pelarut, sehingga tidak terpengaruh oleh perubahan suhu, sedangkan molaritas tergantung pada volume larutan, yang dapat berubah dengan suhu.
         </p>
+        <img 
+            src="https://www.zenius.net/blog/wp-content/uploads/2021/09/Desain-tanpa-judul-5.jpg" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
+
+        <h4>A. Perbedaan Rumus Molalitas dan Molaritas</h4>
+        <ul>
+          <li><b>Garam dapur (NaCl):</b> Ketika dilarutkan dalam air, NaCl akan terionisasi menjadi ion Na+ dan Cl-.</li>
+          <li><b>Asam klorida (HCl):</b> HCl akan terionisasi menjadi ion H+ dan Cl-.</li>
+          <li><b>Natrium hidroksida (NaOH):</b> NaOH akan terionisasi menjadi ion Na+ dan OH-.</li>
+        </ul><br/>
+        <p><b>
+          1. Molalitas(m)
+        </b></p>
+        <p><b>Defenisi:</b> Jumlah mol zat terlarut dalam 1 kg pelarut.</p>
+        <p><b>Rumus:</b></p>
+        <RumusMolalitas /><br/>
+        <p><b>Satuan:</b> mol/kg atau molal</p>
+        <p><b>Ciri khas:</b> Tidak dipengaruhi oleh perubahan suhu dan tekanan karena berkaitan dengan massa, bukan volume.</p><br/>
+      
+        <p><b>
+          2. Molaritas(M)
+        </b></p>
+        <p><b>Defenisi:</b> Jumlah mol zat terlarut dalam 1 liter larutan.</p>
+        <p><b>Rumus:</b></p>
+        <RumusMolaritas /><br/>
+        <p><b>Satuan:</b> mol/L atau molar</p>
+        <p><b>Ciri khas:</b> Dipengaruhi oleh perubahan suhu dan tekanan karena volume larutan dapat berubah akibat perubahan suhu dan tekanan.</p>
+        <TabelMoliri /><br/>
+
+        <h4>B. Kapan Menggunakan Masing-masing?</h4>
+        <p><b>
+          1. Molalitas:
+        </b></p>
+        <p> Lebih sering digunakan dalam sifat koligatif larutan (misalnya penurunan titik beku, kenaikan titik didih) karena tidak dipengaruhi oleh perubahan suhu dan tekanan.</p><br/>
+        <p><b>Molalitas</b> fokus pada massa pelarut, sedangkan molaritas fokus pada volume larutan.</p><br/>
+        <p><b>Molalitas</b> lebih stabil terhadap perubahan suhu dan tekanan.</p><br/>
+
+        <p><b>
+          2. Molaritas:
+        </b></p>
+        <p> Lebih sering digunakan dalam reaksi kimia dan stoikiometri karena berkaitan langsung dengan volume larutan yang terlibat dalam reaksi.</p><br/>
+        <p><b>Molaritas</b> lebih mudah digunakan dalam perhitungan stoikiometri.</p><br/>
+
+        <section className="contoh-soal-ionisasi">
+          <h3>Contoh soal perbedaan Molalitas dan Molaritas</h3><br/>
+          <p><strong>Soal:</strong> Misalnya kita punya larutan gula dengan 2 mol gula dilarutkan dalam 500 gram air. Berapa molalitas dan molaritas larutan tersebut?</p><br/>
+          <p><strong>Kenapa harus dihitung?</strong></p><br/>
+          <p>
+          Mengerti tekanan osmotik itu penting banget, lho! Misalnya, dalam tubuh kita, tekanan osmotik membantu menjaga keseimbangan cairan. Di industri, tekanan osmotik juga digunakan dalam proses pengolahan air laut menjadi air tawar.
+          </p><br/>
+          <p><strong>Mari kita pecah-pecah soal ini:</strong></p><br/>
+          <p><b>
+          1. NaCl jadi Na+ dan Cl-:
+          </b></p>
+          <p>Saat kita larutkan garam dapur dalam air, dia akan pecah jadi ion Na+ (natrium) dan ion Cl- (klorida). Nah, jumlah ion ini yang akan mempengaruhi tekanan osmotik. Makanya kita kasih nilai i (faktor van't Hoff) = 2, artinya setiap molekul NaCl akan menghasilkan 2 partikel yang aktif bikin tekanan.</p>
+          <p><b><br/>
+          2. Rumus Ajaib:
+          </b></p>
+          <p>Untuk menghitung tekanan osmotik, kita pakai rumus ini:</p>
+          <p>π = i x M x R x T</p>
+          <p>
+            <ul>
+            <li><b>π:</b> Tekanan osmotik (yang mau kita cari)</li>
+            <li><b>i:</b> Faktor van't Hoff (dalam kasus ini, 2 karena NaCl jadi 2 ion)</li>
+            <li><b>C:</b> Konsentrasi larutan (dalam mol/liter)</li>
+            <li><b>R:</b> Konstanta gas ideal (nilai tetap)</li>
+            <li><b>T:</b> Suhu (dalam Kelvin)</li>
+            </ul>
+          </p><br/>
+          <p><b>
+          3. Masukin Angka:
+          </b></p>
+          <p>Kita udah tahu semua nilainya:</p>
+          <p>
+            <ul>
+            <li>i = 2</li>
+            <li>C = 1 mol/liter (artinya dalam 1 liter air, ada 0,1 mol NaCl)</li>
+            <li>R = 0,082 (nilai tetap)</li>
+            <li>T = 27°C = 300 K (ingat, suhu harus dalam Kelvin)</li>
+            </ul>
+          </p>
+          <p>Kita masukin angka-angkanya ke rumus:</p>
+          <p>π = 2 x 0,1 x 0,082 x 300</p>
+          <p>π = 4,92 atm</p><br/>
+          <p><strong>Jadi, kesimpulannya:</strong></p><br/>
+          <p>
+          Tekanan osmotik larutan garam kita itu sebesar 49,26 atmosfer. Angka ini cukup besar, ya! Artinya, partikel-partikel garam itu nabrak-nabrak dinding gelas dengan sangat kuat.
+          </p><br/>
+          <p><b>Bayangkan gelas itu seperti kolam renang kecil, dan partikel-partikel garamnya seperti anak-anak yang lagi berenang.</b> Semakin banyak anak-anak yang berenang dan nabrak-nabrak dinding kolam, semakin besar tekanan yang dirasakan dinding kolam itu.</p><br/>
+        </section>
       </section>
 
       <section className="pengaruh-suhu">
@@ -773,21 +868,6 @@ function SifatKoligatif() {
         <p>
           Pada suhu yang lebih tinggi, tekanan uap larutan juga akan meningkat, menyebabkan peningkatan titik didih. Sebaliknya, penurunan suhu menyebabkan penurunan titik beku larutan.
         </p>
-      </section>
-
-      <section className="contoh-soal">
-        <h3>Contoh Soal</h3>
-        <p><strong>Soal:</strong> Berapakah tekanan osmotik dari larutan NaCl 0,1 M pada suhu 27°C? (Gunakan R = 0,0821 L·atm/K·mol)</p>
-        <p><strong>Penyelesaian:</strong></p>
-        <p>
-          Tekanan osmotik, π = MRT
-        </p>
-        <p>M = 0,1 M</p>
-        <p>T = 27°C + 273 = 300 K</p>
-        <p>
-          Jadi, π = (0,1)(0,0821)(300) = 2,463 atm
-        </p>
-        <p><strong>Jawaban:</strong> Tekanan osmotik larutan adalah 2,463 atm.</p>
       </section>
       
       <section className="contoh-soal-ionisasi">
