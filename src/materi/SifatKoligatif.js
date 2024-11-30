@@ -17,6 +17,7 @@ function SifatKoligatif() {
   const toggleOsmoticPressure = () => {
     setShowOsmoticPressure(!showOsmoticPressure);
   };
+  
 
   return (
     <div className="sifat-koligatif-container">
