@@ -4,7 +4,7 @@ import './KimiaUnsur.css';
 function KimiaUnsur() {
   return (
     <div className="kimia-unsur-container">
-      <h1 className="main-title">Bab 3: Kimia Unsur</h1>
+      <h2>Bab 3: Kimia Unsur</h2>
       <p className="intro-text">
         Kimia unsur adalah cabang kimia yang mempelajari sifat, keberadaan, reaksi, dan kegunaan unsur-unsur kimia dalam tabel periodik.
         Pembahasan mencakup unsur golongan utama, golongan transisi, hingga unsur langka.
@@ -12,7 +12,7 @@ function KimiaUnsur() {
 
       {/* Section A */}
       <section>
-        <h2 className="section-title">A. Kelimpahan Unsur-unsur di Alam</h2>
+        <h3 className="section-title">A. Kelimpahan Unsur-unsur di Alam</h3>
         <p>
           Sebagian besar unsur di alam terdapat sebagai senyawa, sedangkan hanya sebagian kecil yang terdapat sebagai unsur bebas.
           Bahan-bahan alam yang mengandung unsur atau senyawa tertentu disebut mineral, sedangkan mineral yang diolah secara komersial disebut bijih.
@@ -59,7 +59,7 @@ function KimiaUnsur() {
 
       {/* Section B */}
       <section>
-        <h2 className="section-title">B. Gas Mulia</h2>
+        <h3 className="section-title">B. Gas Mulia</h3>
         <p>
           Gas mulia adalah unsur-unsur dalam golongan VIIIA (lajur paling kanan tabel periodik) yang meliputi helium (He), neon (Ne), argon (Ar), kripton (Kr),
           xenon (Xe), dan radon (Rd). Gas mulia cenderung stabil karena memiliki konfigurasi elektron penuh (oktet/duplet).
@@ -75,7 +75,7 @@ function KimiaUnsur() {
 
       {/* Section C */}
       <section>
-        <h2 className="section-title">C. Halogen</h2>
+        <h3 className="section-title">C. Halogen</h3>
         <p>
           Unsur-unsur halogen terdiri dari fluor (F), klor (Cl), brom (Br), iodium (I), dan astatin (At). Mereka dikenal sebagai "pembentuk garam"
           karena sangat reaktif dan membentuk garam ketika bereaksi dengan logam.
@@ -90,7 +90,7 @@ function KimiaUnsur() {
 
       {/* Section D */}
       <section>
-        <h2 className="section-title">D. Unsur Periode Ketiga</h2>
+        <h3 className="section-title">D. Unsur Periode Ketiga</h3>
         <p>
           Unsur-unsur periode ketiga meliputi Na, Mg, Al, Si, P, S, Cl, dan Ar. Unsur-unsur ini menunjukkan sifat yang bervariasi dari logam alkali
           hingga gas mulia.
@@ -105,7 +105,7 @@ function KimiaUnsur() {
 
       {/* Section E */}
       <section>
-        <h2 className="section-title">E. Unsur Transisi Periode Keempat</h2>
+        <h3 className="section-title">E. Unsur Transisi Periode Keempat</h3>
         <p>
           Unsur transisi periode keempat meliputi Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, dan Zn. Unsur-unsur ini dikenal karena memiliki bilangan oksidasi
           yang bervariasi dan cenderung membentuk senyawa berwarna.
