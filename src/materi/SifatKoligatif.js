@@ -815,49 +815,46 @@ function SifatKoligatif() {
         <section className="contoh-soal-ionisasi">
           <h3>Contoh soal perbedaan Molalitas dan Molaritas</h3><br/>
           <p><strong>Soal:</strong> Misalnya kita punya larutan gula dengan 2 mol gula dilarutkan dalam 500 gram air. Berapa molalitas dan molaritas larutan tersebut?</p><br/>
-          <p><strong>Kenapa harus dihitung?</strong></p><br/>
+          <p><strong>Molalitas (Manisnya Teh)</strong></p>
           <p>
-          Mengerti tekanan osmotik itu penting banget, lho! Misalnya, dalam tubuh kita, tekanan osmotik membantu menjaga keseimbangan cairan. Di industri, tekanan osmotik juga digunakan dalam proses pengolahan air laut menjadi air tawar.
+          Molalitas itu kayak ukuran seberapa banyak gula yang kamu larutkan dalam air. Semakin banyak gula, semakin manis tehnya. Jadi, molalitas itu kayak ukuran "kemanisan" larutan.
           </p><br/>
-          <p><strong>Mari kita pecah-pecah soal ini:</strong></p><br/>
-          <p><b>
-          1. NaCl jadi Na+ dan Cl-:
-          </b></p>
-          <p>Saat kita larutkan garam dapur dalam air, dia akan pecah jadi ion Na+ (natrium) dan ion Cl- (klorida). Nah, jumlah ion ini yang akan mempengaruhi tekanan osmotik. Makanya kita kasih nilai i (faktor van't Hoff) = 2, artinya setiap molekul NaCl akan menghasilkan 2 partikel yang aktif bikin tekanan.</p>
-          <p><b><br/>
-          2. Rumus Ajaib:
-          </b></p>
-          <p>Untuk menghitung tekanan osmotik, kita pakai rumus ini:</p>
-          <p>π = i x M x R x T</p>
+          <p><strong>Cara hitungnya gampang banget:</strong></p>
+          <ul>
+            <li><b>Jumlah gula:</b> Kita punya 2 bungkus gula (2 mol).</li>
+            <li><b>Jumlah air:</b> Kita punya 500 gram air, atau sama dengan 0,5 kg.</li>
+          </ul><br/>
+          <p><strong>Jadi, molalitasnya adalah:</strong></p>
+          <p>
+          <ul>
+            <li>Molalitas = (Jumlah gula) / (Jumlah air dalam kg)</li>
+            <li>Molalitas = 2 mol / 0,5 kg = 4 mol/kg</li>
+          </ul>
+          </p><br/>
+          <p>Artinya, dalam setiap 1 kg air, ada 4 mol gula. Makin besar nilai molalitas, berarti larutannya makin manis.</p><br/>
+          <p><strong>Molaritas (Berapa Banyak Gelas?)</strong></p>
+          <p>
+          Molaritas itu beda lagi. Kalau molalitas ngukur seberapa manis, molaritas lebih ke ngukur seberapa banyak larutan yang kita punya. Misalnya, kalau kamu mau bagi-bagi teh manis ke teman-teman, kamu perlu tahu ada berapa gelas teh yang bisa kamu buat.
+          </p><br/>
+          <p>Cara hitung molaritas butuh informasi tambahan, yaitu volume larutan. Sayangnya, dalam soal ini kita enggak tahu berapa volume teh manis yang kita buat. Jadi, kita enggak bisa hitung molaritasnya.</p><br/>
+          <p><strong>Kapan Pakai Molalitas dan Kapan Pakai Molaritas?</strong></p>
           <p>
             <ul>
-            <li><b>π:</b> Tekanan osmotik (yang mau kita cari)</li>
-            <li><b>i:</b> Faktor van't Hoff (dalam kasus ini, 2 karena NaCl jadi 2 ion)</li>
-            <li><b>C:</b> Konsentrasi larutan (dalam mol/liter)</li>
-            <li><b>R:</b> Konstanta gas ideal (nilai tetap)</li>
-            <li><b>T:</b> Suhu (dalam Kelvin)</li>
+              <li><b>Molalitas:</b> Kalau kamu lagi belajar tentang sifat-sifat larutan, kayak misalnya titik beku atau titik didih, biasanya yang dipakai adalah molalitas. Soalnya, molalitas enggak peduli sama perubahan volume akibat suhu.</li>
+              <li><b>Molaritas:</b> Kalau kamu lagi ngitung-ngitung reaksi kimia atau mau bikin larutan dengan konsentrasi tertentu, biasanya yang dipakai adalah molaritas. Soalnya, molaritas berhubungan langsung dengan volume larutan.</li>
             </ul>
           </p><br/>
-          <p><b>
-          3. Masukin Angka:
-          </b></p>
-          <p>Kita udah tahu semua nilainya:</p>
+          <p><strong>Jadi intinya:</strong></p>
           <p>
             <ul>
-            <li>i = 2</li>
-            <li>C = 1 mol/liter (artinya dalam 1 liter air, ada 0,1 mol NaCl)</li>
-            <li>R = 0,082 (nilai tetap)</li>
-            <li>T = 27°C = 300 K (ingat, suhu harus dalam Kelvin)</li>
+              <li><b>Molalitas:</b> Ngeluarin rasa manisnya larutan.</li>
+              <li><b>Molaritas:</b> Ngeluarin jumlah larutan yang kita punya.</li>
             </ul>
-          </p>
-          <p>Kita masukin angka-angkanya ke rumus:</p>
-          <p>π = 2 x 0,1 x 0,082 x 300</p>
-          <p>π = 4,92 atm</p><br/>
-          <p><strong>Jadi, kesimpulannya:</strong></p><br/>
-          <p>
-          Tekanan osmotik larutan garam kita itu sebesar 49,26 atmosfer. Angka ini cukup besar, ya! Artinya, partikel-partikel garam itu nabrak-nabrak dinding gelas dengan sangat kuat.
           </p><br/>
-          <p><b>Bayangkan gelas itu seperti kolam renang kecil, dan partikel-partikel garamnya seperti anak-anak yang lagi berenang.</b> Semakin banyak anak-anak yang berenang dan nabrak-nabrak dinding kolam, semakin besar tekanan yang dirasakan dinding kolam itu.</p><br/>
+          <p><strong>Jadi, kesimpulannya:</strong></p>
+          <p>
+          Dalam soal gula kita ini, kita cuma bisa hitung molalitasnya. Kita tahu pasti bahwa dalam setiap 1 kg air ada 4 mol gula. Tapi kita enggak bisa tahu berapa molaritasnya karena kita kurang informasi tentang volume total larutan.
+          </p><br/>
         </section>
       </section>
 
@@ -865,10 +862,16 @@ function SifatKoligatif() {
         <h3>7. Pengaruh Suhu terhadap Sifat Koligatif</h3>
         <p>
           Suhu dapat mempengaruhi perubahan sifat koligatif, seperti titik didih dan titik beku. Sebagai contoh, peningkatan suhu menyebabkan peningkatan energi kinetik partikel dalam larutan, yang pada gilirannya dapat mengubah sifat koligatif larutan.
-        </p>
+        </p><br/>
         <p>
           Pada suhu yang lebih tinggi, tekanan uap larutan juga akan meningkat, menyebabkan peningkatan titik didih. Sebaliknya, penurunan suhu menyebabkan penurunan titik beku larutan.
+        </p><br/>
+        <h4>A. Pendahuluan</h4>
+        <p>
+          Sifat koligatif larutan adalah sifat larutan yang bergantung pada jumlah partikel zat terlarut dalam larutan, bukan pada jenis zat terlarutnya. Beberapa contoh sifat koligatif adalah penurunan tekanan uap, kenaikan titik didih, penurunan titik beku, dan tekanan osmosis.
         </p>
+        <p><b>Pertanyaan yang sering muncul adalah:</b> Bagaimana suhu mempengaruhi sifat-sifat ini?</p>
+
       </section>
       
       <section className="contoh-soal-ionisasi">
