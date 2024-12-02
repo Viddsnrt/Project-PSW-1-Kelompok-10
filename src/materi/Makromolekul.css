@@ -1,0 +1,97 @@
+.makromolekul-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+  }
+  
+  .main-title {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .section-title {
+    font-size: 22px;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-top: 15px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  .content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+  
+  .content-table th,
+  .content-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .content-table th {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  .content-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #34495e;
+  }
+  
+  button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }

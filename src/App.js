@@ -19,6 +19,7 @@ import Register from './element/Register';
 import Quiz from './materi/Quiz';
 import SimulasiLaboratorium from './materi/SimulasiLaboratorium';
 import Community from './element/community';
+import Makromolekul from './materi/Makromolekul';
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/simulasi-laboratorium" element={<SimulasiLaboratorium />} />
         <Route path="/community" element={<Community />} />
-      </Routes>
+        <Route path="/Makromolekul" element={<Makromolekul/>}/>      
+        </Routes>
       <Footer />
     </Router>
   );

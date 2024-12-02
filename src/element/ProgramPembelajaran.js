@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./ProgramPembelajaran.css";
-import { FaFlask, FaBatteryHalf, FaCubes, FaAtom, FaBurn } from "react-icons/fa";
+import { FaFlask, FaBatteryHalf, FaCubes, FaAtom, FaBurn, FaMicroscope } from "react-icons/fa";
 
 function ProgramPembelajaran() {
   const programs = [
@@ -29,7 +29,13 @@ function ProgramPembelajaran() {
       path: "/program-pembelajaran/benzena",
       title: "Benzena dan Turunannya",
       icon: <FaBurn />,
+    }, 
+    {
+      path: "/program-pembelajaran/Makromolekul",
+      title: "Makromolekul",
+      icon: <FaMicroscope />,
     },
+
   ];
 
   return (
