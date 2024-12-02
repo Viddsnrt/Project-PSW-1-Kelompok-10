@@ -869,9 +869,23 @@ function SifatKoligatif() {
         <h4>A. Pendahuluan</h4>
         <p>
           Sifat koligatif larutan adalah sifat larutan yang bergantung pada jumlah partikel zat terlarut dalam larutan, bukan pada jenis zat terlarutnya. Beberapa contoh sifat koligatif adalah penurunan tekanan uap, kenaikan titik didih, penurunan titik beku, dan tekanan osmosis.
-        </p>
-        <p><b>Pertanyaan yang sering muncul adalah:</b> Bagaimana suhu mempengaruhi sifat-sifat ini?</p>
-
+        </p><br/>
+        <p><b>Pertanyaan yang sering muncul adalah:</b> Bagaimana suhu mempengaruhi sifat-sifat ini?</p><br/>
+        <p
+        ><strong>Pengertian Suhu dan Sifat Koligatif</strong></p>
+        <ul>
+          <li><b>Suhu:</b> Ukuran energi kinetik rata-rata partikel dalam suatu sistem. Semakin tinggi suhu, semakin cepat partikel bergerak.
+          </li>
+          <li><b>Sifat Koligatif:</b> Sifat larutan yang hanya bergantung pada jumlah partikel zat terlarut, bukan jenisnya.</li>
+        </ul><br/>
+        <h4>B. Hubungan Suhu dan Sifat Koligatif</h4>
+        <p>Secara umum, <b>suhu tidak secara langsung mempengaruhi jumlah partikel zat terlarut dalam larutan.</b> Artinya, jika kita menaikkan suhu suatu larutan, jumlah partikel zat terlarutnya tidak akan bertambah secara signifikan.</p><br/>
+        <p>Namun, <b>perubahan suhu dapat mempengaruhi kesetimbangan antara zat terlarut dan pelarut.</b> Misalnya, pada suhu yang lebih tinggi, kelarutan beberapa zat padat dalam air dapat meningkat. Hal ini berarti jumlah partikel zat terlarut dalam larutan akan bertambah, sehingga sifat koligatifnya juga akan berubah.</p><br/>
+        <p><b>1. Penurunan Tekanan Uap:</b></p>
+        <ul>
+          <li>Suhu yang lebih tinggi akan meningkatkan energi kinetik partikel pelarut, sehingga lebih banyak partikel yang dapat mengatasi gaya tarik menarik antarpartikel dan berubah menjadi uap.</li>
+          <li>Namun, kehadiran zat terlarut akan mengurangi jumlah partikel pelarut yang dapat menguap, sehingga tekanan uap larutan akan lebih rendah dibandingkan dengan pelarut murni.</li>
+        </ul>
       </section>
       
       <section className="contoh-soal-ionisasi">
