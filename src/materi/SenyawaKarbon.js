@@ -111,100 +111,501 @@ function SenyawaKarbon() {
     }
   };
 
+ 
+  function SenyawaKarbon() {
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [selectedOption, setSelectedOption] = useState("");
+    const [score, setScore] = useState(0);
+    const [quizCompleted, setQuizCompleted] = useState(false);
+    const [explanations, setExplanations] = useState([]);
+    const [showExplanation, setShowExplanation] = useState(false);
+  
+    const questions = [
+      {
+        question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
+        options: ["Zn", "Cu", "Cu²⁺", "Zn²⁺"],
+        correctAnswer: "Zn",
+        explanation: "Zn mengalami oksidasi karena kehilangan elektron dan berubah menjadi Zn²⁺.",
+      },
+      {
+        question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
+        options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
+        correctAnswer: "Hidrogen",
+        explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
+      },
+      {
+        question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
+        options: ["+1", "-2", "0", "-1"],
+        correctAnswer: "-2",
+        explanation: "Oksigen dalam senyawa biasanya memiliki bilangan oksidasi -2 kecuali dalam senyawa peroksida atau fluorida.",
+      },
+      {
+        question: "Reaksi antara seng dan asam klorida menghasilkan gas hidrogen. Reaksi tersebut adalah contoh dari reaksi redoks. Manakah yang mengalami reduksi dalam reaksi tersebut?",
+        options: ["Seng (Zn)", "Ion hidrogen (H⁺)", "Klorida (Cl⁻)", "Gas hidrogen (H₂)"],
+        correctAnswer: "Ion hidrogen (H⁺)",
+        explanation: "Ion H⁺ menerima elektron dan berubah menjadi gas hidrogen (H₂), sehingga mengalami reduksi.",
+      },
+      {
+        question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
+        options: ["-1", "0", "+1", "+2"],
+        correctAnswer: "-1",
+        explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+      },
+      {
+        question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
+        options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
+        correctAnswer : "Reduktor",
+        explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
+      },
+      {
+        question : "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
+        options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
+        correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
+        explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
+      },
+      {
+        question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
+        options : ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
+        correctAnswer: "Magnesium mengalami oksidasi",
+        explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
+      },
+      {
+        question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
+        options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
+        correctAnswer: "Hidrogen",
+        explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
+      },
+      {
+        question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
+        options: ["-1", "0", "+1", "+2"],
+        correctAnswer: "-1",
+        explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+      },
+      
+    ];
+  
+    const handleOptionSelect = (option) => {
+      setSelectedOption(option);
+      const isCorrect = option === questions[currentQuestionIndex].correctAnswer;
+      if (isCorrect) setScore((prevScore) => prevScore + 1);
+  
+      setExplanations((prevExplanations) => {
+        const updated = [...prevExplanations];
+        updated[currentQuestionIndex] = {
+          correct: isCorrect,
+          explanation: questions[currentQuestionIndex].explanation,
+        };
+        return updated;
+      });
+      setShowExplanation(true);
+    };
+  
+    const getFeedbackClass = (isCorrect) => {
+      return isCorrect ? "correct-feedback" : "incorrect-feedback";
+    };
+  
+    const handleNextQuestion = () => {
+      if (currentQuestionIndex < questions.length - 1) {
+        setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+        setSelectedOption("");
+        setShowExplanation(false);
+      } else {
+        setQuizCompleted(true); 
+      }
+    };
+  
+    const handlePreviousQuestion = () => {
+      if (currentQuestionIndex > 0) {
+        setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+        setSelectedOption("");
+        setShowExplanation(false);
+      }
+    };
+  }
   return (
-    <div className="senyawa-karbon-container">
-      <h1 className="main-title">Bab 4: Senyawa Karbon</h1>
+    <><div className="senyawa-karbon-container">
+      <h1 className="main-title">Bab 4: Senyawa Karbon dan Turunan Alkana</h1>
       <p className="intro-text">
-        Senyawa karbon adalah senyawa kimia yang mengandung unsur karbon sebagai bagian utama struktur molekulnya. Senyawa ini meliputi hidrokarbon
-        seperti alkana, alkena, alkuna, serta senyawa organik lainnya seperti alkohol, aldehida, keton, asam karboksilat, dan ester.
+        Alkana (juga disebut dengan <em>parafin</em>) adalah senyawa kimia hidrokarbon jenuh asiklis. Alkana termasuk senyawa alifatik. Dengan kata lain, alkana adalah sebuah rantai karbon panjang dengan ikatan-ikatan tunggal. Rumus umum untuk alkana adalah C<sub>n</sub>H<sub>2n+2</sub>.
       </p>
-
-      {/* Section A */}
+      <p>Penggunaan alkana sudah dapat diketahui dengan baik oleh manusia. Penggunaan alkana biasanya dikelompokkan berdasarkan jumlah atom karbonnya.</p>
+      <img
+        src="https://i.pinimg.com/736x/33/32/8c/33328c9611df6b132fb62c5db72ecaa1.jpg"
+        alt="Senyawa turunan Alkana" />
       <section>
-        <h2 className="section-title">A. Hidrokarbon</h2>
-        <p>
-          Hidrokarbon adalah senyawa yang hanya terdiri dari atom karbon (C) dan hidrogen (H). Hidrokarbon dapat dikategorikan menjadi tiga jenis:
-        </p>
+        <h2>1. Alkohol</h2>
+        <h3>A. Sifat-sifat Alkohol</h3>
         <ul>
-          <li>
-            <b>Alkana:</b> Hidrokarbon jenuh dengan ikatan tunggal, seperti metana (CH<sub>4</sub>) dan etana (C<sub>2</sub>H<sub>6</sub>).
-          </li>
-          <li>
-            <b>Alkena:</b> Hidrokarbon tak jenuh dengan satu atau lebih ikatan rangkap dua, seperti etena (C<sub>2</sub>H<sub>4</sub>).
-          </li>
-          <li>
-            <b>Alkuna:</b> Hidrokarbon tak jenuh dengan satu atau lebih ikatan rangkap tiga, seperti etuna (C<sub>2</sub>H<sub>2</sub>).
-          </li>
+          <li>Alkohol mempunyai ikatan hidrogen.</li>
+          <li>Semakin besar massa molekul alkohol, titik didihnya semakin tinggi.</li>
+          <li>Alkohol mudah larut dalam air.</li>
+        </ul>
+        <p>Dapat mengalami reaksi-reaksi berikut:</p>
+        <ul>
+          <li>Bereaksi dengan logam Na, menghasilkan natrium etanolat.</li>
+          <div>
+            <img
+              src="https://soalkimia.com/wp-content/uploads/2020/01/alkohol-1.jpg"
+              alt="Reaksi natrium etanolat" />
+          </div>
+          <li>Dapat diestifikasi dengan asam, menghasilkan ester.</li>
+          <div>
+            <img
+              src="https://soalkimia.com/wp-content/uploads/2020/01/alkohol-2.jpg"
+              alt="Ester dari Alkohol" />
+          </div>
+        </ul>
+        <li>Dapat dioksidasi:</li>
+        <ul>
+          <li>Oksidasi alkohol primer menghasilkan aldehid dan asam karboksilat.</li>
+          <li>Oksidasi alkohol sekunder menghasilkan keton.</li>
+          <li>Mengalami reaksi dehidrasi (memanaskan alkohol dengan asam kuat menghasilkan alkena dan air).</li>
+          <li>Bereaksi dengan hidrogen halida menghasilkan haloalkana dan air.</li>
+        </ul>
+        <h3>B. Pembuatan Alkohol</h3>
+        <ul>
+          <li>Hidrasi alkena dengan katalis asam menghasilkan etanol.</li>
+          <li>Metanol dibuat dari gas alam (metana) dengan H<sub>2</sub>O dan gas H<sub>2</sub>.</li>
+          <li>Fermentasi karbohidrat dengan bantuan ragi menghasilkan etanol.</li>
+          <li>Mengalami pereaksi Grignard.</li>
+        </ul>
+        <h3>C. Kegunaan Alkohol</h3>
+        <h4>1. Metanol</h4>
+        <ul>
+          <li>Pelarut</li>
+          <li>Bahan baku pembuatan formaldehid (untuk membuat polimer)</li>
+          <li>Campuran bahan bakar bensin</li>
+          <li>Proses pembakaran: <code>2CH3OH + 3O2 → 2CO2 + 4H2O</code></li>
+          <li>Sumber industri</li>
+        </ul>
+        <section>
+          <h3>Etanol</h3>
+          <ul>
+            <li>Pembersih luka dan antiseptik</li>
+            <li>Spirit (minuman keras) bermetil yang diproduksi dalam skala industri</li>
+            <li>Bahan bakar: Gasohol (bensin dengan 10-20% etanol)</li>
+            <li>Pelarut dalam parfum dan kosmetik</li>
+          </ul>
+          <h3>Contoh Etanol</h3>
+          <h4>1. Etilen Glikol</h4>
+          <ul>
+            <li>Zat anti beku pada radiator</li>
+            <li>Bahan bak u serat sintetis seperti daktron</li>
+            <li>Bahan pelunak atau pelembut</li>
+          </ul>
+          <h4>2. Gliserol</h4>
+          <ul>
+            <li>Pelembab dan pelembut pada losion dan kosmetik</li>
+            <li>Pelembut pada tembakau dan obat-obatan</li>
+            <li>Bahan pembuat nitrogliserin (bahan peledak)</li>
+          </ul>
+          <h4>3. Propan-2-ol</h4>
+          <ul>
+            <li>Digunakan sebagai pelarut</li>
+          </ul>
+        </section>
+        <section>
+          <h2>2. Eter</h2>
+          <h3>A. Sifat-sifat Eter</h3>
+          <ul>
+            <li>Cairan yang mudah menguap dan mudah terbakar.</li>
+            <li>Titik didih rendah, lebih rendah daripada alkohol dengan massa molekul yang sama.</li>
+            <li>Sedikit larut dalam air.</li>
+            <li>Melarutkan senyawa-senyawa kovalen.</li>
+            <li>Bersifat anestetik.</li>
+            <li>Tidak reaktif, tidak dapat dioksidasi, direduksi, dieleminasi, atau direaksikan dengan basa, tetapi dapat disubstitusikan dengan asam kuat.</li>
+          </ul>
+          <h3>B. Pembuatan Eter</h3>
+          <h4>1. Reaksi dengan Asam Sulfat dan Etanol</h4>
+          <p>Reaksi ini menghasilkan dietil eter dan etil hidrogen sulfat sebagai zat antara.</p>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/eter-1.jpg"
+            alt="Reaksi dengan Asam Sulfat dan Etanol" />
+          <h4>2. Sintesis Williamson</h4>
+          <p>Sintesis ini terjadi antara alkil halida dengan alkoksida.</p>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/eter-2.jpg"
+            alt="Sintesis Williamson" />
+          <h3>C. Kegunaan Eter</h3>
+          <ul>
+            <li>Digunakan sebagai pelarut dan obat anestesi</li>
+            <li>Etil eter yang diberikan melalui pernapasan sebagai obat bius</li>
+            <li>Contoh anestesi: kloroform dan siklopropana</li>
+            <li>Metil-tersierbutil eter (MTBE) digunakan sebagai zat aditif pada bensin untuk menaikkan bilangan oktan bensin</li>
+          </ul>
+          <p>Perbedaan antara alkohol dan eter dapat dilihat melalui reaksi dengan logam natrium fosfor pentaklorida (PCl5).</p>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/eter-3.jpg"
+            alt="Kegunaan Eter" />
+        </section>
+        <h2>3. Aldehid</h2>
+        <h3>A. Sifat-Sifat Aldehid</h3>
+        <ul>
+          <li>Merupakan senyawa polar</li>
+          <li>Mudah larut dalam air</li>
+          <li>Melarutkan senyawa polar dan nonpolar</li>
+          <li>Tidak mempunyai ikatan hidrogen</li>
+          <li>Titik didihnya lebih tinggi dibandingkan dengan senyawa karbon yang massa relatifnya hampir sama</li>
+        </ul>
+        <h3>B. Reaksi-reaksi Aldehid</h3>
+        <div>
+          <ul>
+            <li>Hidrogenasi
+              <div>
+                <img
+                  src="https://soalkimia.com/wp-content/uploads/2020/01/Aldehid-1.jpg"
+                  alt="Hidrogenasi Aldehid" />
+              </div>
+              <p>Aldehid dapat mengadisi hidrogen menjadi alkohol primer.</p>
+            </li>
+            <li>Adisi NaHSO3
+              <div>
+                <img
+                  src="https://soalkimia.com/wp-content/uploads/2020/01/Aldehid-2.jpg"
+                  alt="Adisi NaHSO3" />
+              </div>
+              <p>Adisi aldehid dengan natrium bisulfit menghasilkan senyawa padat dan sukar larut.</p>
+            </li>
+            <li>Adisi Hidrogen Sianida
+              <div>
+                <img
+                  src="https://soalkimia.com/wp-content/uploads/2020/01/Aldehid-3.jpg"
+                  alt="Adisi Hidrogen Sianida" />
+              </div>
+              <p>Adisi hidrogen sianida menghasilkan sianohidral.</p>
+            </li>
+            <li>Oksidasi pada Aldehid
+              <p>Aldehid dapat dioksidasi dengan pereaksi Fehling dan Tollens, membentuk asam karboksilat.</p>
+            </li>
+            <li>Oksidasi dengan Pereaksi Fehling
+              <p>Menghasilkan endapan merah bata. Larutan Fehling A merupakan larutan CuSO4, sedangkan Fehling B merupakan larutan kalium natrium tartat dalam NaOH.</p>
+            </li>
+            <li>Oksidasi dengan Pereaksi Tollens
+              <p>Merupakan larutan AgNO3 dicampur dengan larutan amonia berlebih sehingga dalam larutan mengandung ion Ag[NH3]2+. Menghasilkan endapan perak yang menempel pada dinding tabung reaksi dan membentuk cermin. Endapan ini disebut dengan cermin perak.</p>
+            </li>
+          </ul>
+        </div>
+        <h3>C. Pembuatan Aldehid</h3>
+        <div>
+          <h4>1. Oksidasi Alkohol Primer</h4>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/Aldehid-4.jpg"
+            alt="Oksidasi Alkohol Primer" />
+          <p>Oksidasi alkohol primer menghasilkan aldehid.</p>
+          <h4>2. Reduksi Asam Karboksilat</h4>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/Aldehid-5.jpg"
+            alt="Reduksi Asam Karboksilat" />
+          <p>Reduksi asam karboksilat juga menghasilkan aldehid.</p>
+        </div>
+        <h3>D. Kegunaan Aldehid</h3>
+        <p>Aldehid yang banyak digunakan yaitu formaldehid. Formaldehid digunakan untuk membuat formalin. Formalin digunakan untuk pengawet mayat dan spesimen biologi, serta untuk pembuatan plastik tahan panas.</p>
+      </section>
+      <section>
+        <h2>4. KETON</h2>
+        <h3>A. Sifat - Sifat Keton</h3>
+        <ul>
+          <li>Merupakan senyawa polar</li>
+          <li>Larut dalam air</li>
+          <li>Tidak mempunyai ikatan hidrogen</li>
+          <li>Titik didih keton lebih tinggi dibandingkan hidrokarbon lain dengan massa molekul relatif hampir sama.</li>
+        </ul>
+        <p>Mengalami reaksi berikut:</p>
+        <ul>
+          <li>Adisi hidrogen, menghasilkan alkohol.</li>
+          <li>Adisi HCN, menghasilkan sianohidral.</li>
+          <li>Halogenasi.</li>
+        </ul>
+        <h3>B. Pembuatan Keton</h3>
+        <p>Dari oksidasi alkohol sekunder</p>
+        <div>
+          <h4>Oksidasi Alkohol Sekunder</h4>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/keton-1.jpg"
+            alt="Oksidasi Alkohol Sekunder Image" />
+          <p>Distilasi kering garam alkali atau alkali tanah karboksilat</p>
+        </div>
+        <h3>C. Kegunaan Keton</h3>
+        <p>Paling banyak digunakan yaitu aseton atau propanon, digunakan sebagai pelarut senyawa-senyawa nonpolar.</p>
+      </section>
+      <section>
+        <h2>5. Asam Karboksilat</h2>
+        <h3>A. Sifat-sifat Asam Karboksilat</h3>
+        <ul>
+          <li>Merupakan senyawa polar.</li>
+          <li>Senyawa dengan atom C<sub>1</sub> – C<sub>4</sub> mudah larut dalam air, semakin banyak cabang kelarutannya dalam air berkurang.</li>
+          <li>Titik didih tinggi karena mempunyai ikatan hidrogen.</li>
+        </ul>
+        <p>Mengalami reaksi-reaksi berikut:</p>
+        <ul>
+          <li>Reaksi dengan logam, garam karbonat, dan basa alkali.</li>
+          <li>Reaksi esterifikasi.</li>
+        </ul>
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2020/01/asam-karboksilat-1.jpg"
+          alt="Reaksi Esterifikasi Asam Karboksilat" />
+        <h3>B. Pembuatan Asam Karboksilat</h3>
+        <ul>
+          <li>Oksidasi alkohol primer.</li>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/asam-karboksilat-2.jpg"
+            alt="Oksidasi Alkohol Primer" />
+          <li>Hidrolisis senyawa alkana nitril pada suhu tinggi dan asam kuat.</li>
+          <li>Hidrolisis gas asetilen dilanjutkan oksidasi di udara.</li>
+          <li>Mereaksikan gas karbon monoksida dengan larutan NaOH pada tekanan tinggi.</li>
+          <li>Oksidasi keton.</li>
+          <img
+            src="https://soalkimia.com/wp-content/uploads/2020/01/asam-karboksilat-3.jpg"
+            alt="Oksidasi Keton" />
+        </ul>
+        <h3>C. Kegunaan Asam Karboksilat</h3>
+        <p>Asam karboksilat yang banyak digunakan dalam kehidupan sehari-hari yaitu:</p>
+        <ul>
+          <li>Asam format, digunakan untuk penyamakan kulit, industri tekstil, dan pengumpulan lateks diperkebunan karet.</li>
+          <li>Asam asetat, digunakan sebagai pelarut, dan sintesis hasil industri serat dan plastik.</li>
+          <li>Asam oksalat, digunakan untuk penghilang karat dan pereaksi pada pembuatan zat warna.</li>
+          <li>Asam tartat, digunakan untuk penyamakan, fotografi dan keramik.</li>
         </ul>
       </section>
-
-      {/* Section B */}
       <section>
-        <h2 className="section-title">B. Senyawa Turunan Hidrokarbon</h2>
-        <p>Senyawa turunan hidrokarbon adalah senyawa organik yang mengandung atom karbon tetapi juga memiliki gugus fungsi tertentu.</p>
+        <h2>6. Ester</h2>
+        <h3>A. Sifat-sifat Ester</h3>
         <ul>
-          <li>
-            <b>Alkohol (R-OH):</b> Mengandung gugus hidroksil (-OH). Contoh: etanol (C<sub>2</sub>H<sub>5</sub>OH).
-          </li>
-          <li>
-            <b>Aldehida (R-CHO):</b> Mengandung gugus karbonil (-CHO). Contoh: formaldehida (HCHO).
-          </li>
-          <li>
-            <b>Keton (R-CO-R’):</b> Mengandung gugus karbonil di antara dua atom karbon. Contoh: aseton (CH<sub>3</sub>COCH<sub>3</sub>).
-          </li>
-          <li>
-            <b>Asam karboksilat (R-COOH):</b> Mengandung gugus karboksil (-COOH). Contoh: asam asetat (CH<sub>3</sub>COOH).
-          </li>
-          <li>
-            <b>Ester (R-COOR’):</b> Dibentuk dari reaksi antara asam karboksilat dan alkohol. Contoh: metil butanoat.
-          </li>
+          <li>Mudah menguap.</li>
+          <li>Sedikit larut dalam air.</li>
+          <li>Semakin besar massa molekul relatifnya, semakin tinggi titik didihnya.</li>
         </ul>
+        <p>Dapat mengalami reaksi-reaksi berikut:</p>
+        <ul>
+          <li>Reaksi hidrolisis, terbentuk reaksi kesetimbangan antara asam karboksilat dengan alkohol.</li>
+          <li>Hidrolisis dengan basa, menghasilkan suatu garam dan alkohol.</li>
+          <li>Reaksi dengan alkohol, menghasilkan ester lain dan alkohol lain.</li>
+          <li>Dapat direduksi menghasilkan alkohol.</li>
+          <li>Bereaksi dengan pereaksi Grignard menghasilkan alkohol.</li>
+        </ul>
+        <h3>B. Pembuatan Ester</h3>
+        <p>Ester dibuat dari reaksi antara asam karboksilat dengan alkohol, reaksi ini disebut esterifikasi.</p>
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2020/01/esterifikasi-1.jpg"
+          alt="Pembuatan Ester" />
+        <h3>C. Kegunaan Ester</h3>
+        <p>Senyawa-senyawa ester banyak digunakan sebagai esens karena mempunyai aroma khas, antara lain:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Ester</th>
+              <th>Aroma</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Etil butirat</td>
+              <td>Nanas</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Metil butirat</td>
+              <td>Apel</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Etil format</td>
+              <td>Rum</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Propil asetat</td>
+              <td>Pir</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Isopentil asetat</td>
+              <td>Pisang</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>N-oktil asetat</td>
+              <td>Jeruk manis</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Metil salisilat</td>
+              <td>Saesaparila</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
-
-      {/* Section C */}
       <section>
-        <h2 className="section-title">C. Reaksi-reaksi Senyawa Karbon</h2>
-        <p>
-          Senyawa karbon mengalami berbagai jenis reaksi kimia. Beberapa reaksi penting adalah:
-        </p>
+        <h2>7. HaloAlkana</h2>
+        <h3>A. Kloroform (CHCl<sub>3</sub>)</h3>
+        <p>Kloroform diperoleh dengan mereaksikan etanol dengan Cl<sub>2</sub> dan KOH atau kapur klor. Cl<sub>2</sub> berfungsi untuk mengoksidasi etanol menjadi etanal. Etanal dengan Cl<sub>2</sub> membentuk trikloro etanal (kloral). Dalam basa, kloral diubah menjadi kalium metanoat dan kloroform.</p>
+        <p>Kloroform bersifat anestesi sehingga dimanfaatkan dalam bidang kedokteran sebagai obat bius. Kloroform sebagai obat bius dinyatakan tidak aman karena mengganggu fungsi hati, sehingga diganti dengan senyawa 2-bromo-2-kloro-1,1,1-trifluoro etana atau disebut senyawa haloetana.</p>
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2020/01/esterifikasi-2.jpg"
+          alt="Rumus Struktur Kloroform" />
+        <h3>B. Iodoform (CHI<sub>3</sub>)</h3>
+        <p>Merupakan kristal padat berwarna kuning dan berbau khas, digunakan di bidang kedokteran sebagai antiseptik.</p>
+        <h3>C. Karbon Tetraklorida (CCl<sub>4</sub>)</h3>
+        <p>Merupakan zat cair yang tidak berwarna dan lebih berat dari air. Uap CCl<sub>4</sub> tidak mudah terbakar dan non eksplosif. Senyawa CCl<sub>4</sub> dibuat dengan mereaksikan kloroform (CHCl<sub>3</sub>) dengan Cl<sub>2</sub>.</p>
+        <p>Dalam rumah tangga, CCl<sub>4</sub> digunakan untuk menghilangkan noda-noda minyak atau lemak pada pakaian, digunakan juga sebagai bahan pemadam kebakaran dan pelarut lemak, lilin, damar, dan protein.</p>
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2020/01/esterifikasi-3.jpg"
+          alt="Karbon Tetraklorida" />
+        <h3>D. Freon (CCl<sub>2</sub>F<sub>2</sub>)</h3>
+        <p>Freon merupakan senyawa halo alkana yang sangat stabil, tidak berbau, mudah menguap, tidak mudah terbakar, dan mempunyai toksisitas rendah. Kegunaan freon adalah sebagai berikut:</p>
         <ul>
-          <li>
-            <b>Reaksi Substitusi:</b> Penggantian atom atau gugus atom dalam senyawa. Contoh: klorinasi metana menghasilkan metil klorida.
-          </li>
-          <li>
-            <b>Reaksi Adisi:</b> Penambahan atom atau gugus atom pada ikatan rangkap. Contoh: hidrogenasi alkena menghasilkan alkana.
-          </li>
-          <li>
-            <b>Reaksi Eliminasi:</b> Penghilangan gugus atom dari molekul. Contoh: dehidrasi alkohol menghasilkan alkena.
-          </li>
-          <li>
-            <b>Reaksi Esterifikasi:</b> Pembentukan ester dari asam karboksilat dan alkohol. Contoh: pembentukan metil asetat.
-          </li>
+          <li>Pelarut lemak, minyak, dan damar.</li>
+          <li>Bahan pendingin pada freezer dan AC, karena mempunyai titik didih –30°C.</li>
+          <li>Sebagai aerosol pada hair spray dan body spray.</li>
         </ul>
+        <p>Penggunaan freon yang berlebihan dapat merusak lapisan ozon dikarenakan atom-atom klorin yang dibebaskan dari penguraian freon dapat bereaksi dengan ozon.</p>
+        <h3>E. Fosgen (COCl<sub>2</sub>)</h3>
+        <p>Fosgen merupakan gas tidak berwarna dan sangat beracun. Fosgen dibuat dengan mereaksikan gas klorin dengan CO dan dialirkan melalui arang tulang.</p>
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2020/01/esterifikasi-4.jpg"
+          alt="Fosgen" />
+        <p>Reaksi antara gas fosgen dengan etanol menghasilkan ester dietil karbonat, sementara reaksi gas fosgen dengan amonia menghasilkan urea yang banyak digunakan sebagai pupuk.</p>
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2020/ 01/esterifikasi-5.jpg"
+          alt="Fosgen2" />
       </section>
-
-      {/* Section D */}
-      <section>
-        <h2 className="section-title">D. Aplikasi Senyawa Karbon</h2>
-        <p>
-          Senyawa karbon memiliki banyak aplikasi dalam kehidupan sehari-hari:
-        </p>
+      <section className="Contoh-soal-Senyawa">
+        <h3>Contoh Soal Senyawa Karbon Turunan Alkana</h3><br />
+        <h4>1. Berikut rumus molekul dari aldehid (alkanal) yang benar adalah…</h4>
+        <p>a. CnH<sub>2</sub>O</p>
+        <p>b. CnH<sub>2</sub>nO<sub>2</sub></p>
+        <p>c. CnHnO<sub>2</sub></p>
+        <p>d. CnH<sub>2</sub>nO<sub>2</sub>n</p>
+        <p>e. CnH<sub>2</sub>nO</p>
+        <h4>Jawaban : D</h4>
+        <p><strong>Pembahasan :</strong> Karena jumlah atom hidrogen dalam aldehid adalah dua kali jumlah atom karbonnya, salah satu atom karbon dalam aldehid mempunyai ikatan ganda dengan oksigen.</p>
+        <br />
+        <h4>2. Nama senyawa dibawah yang benar adalah…</h4> <br />
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2017/05/soal-senyawa-karbon-kelas-12.jpg"
+          alt="Soal2" />
+        <p>a. 4-metil 2-kloro pentana</p>
+        <p>b. 3-metil 2-kloro pentana </p>
+        <p>c. 2,4-dikloro pentana</p>
+        <p>d. 1,4-dikloro 2-metil pentana</p>
+        <p>e. 1,3-dikloro pentana</p>
+        <h4>Jawaban : D </h4>
+        <p><strong>Pembahasan : </strong></p>
+        <p><i>Langkah-langkah menentukan nama senyawa :</i></p>
         <ul>
-          <li>
-            <b>Bahan bakar:</b> Metana dan propana digunakan sebagai bahan bakar rumah tangga dan industri.
-          </li>
-          <li>
-            <b>Pelarut:</b> Etanol digunakan sebagai pelarut organik dan antiseptik.
-          </li>
-          <li>
-            <b>Pestisida:</b> Senyawa karbon seperti DDT digunakan untuk melawan hama.
-          </li>
-          <li>
-            <b>Pembuatan plastik:</b> Polietilena dan PVC dibuat dari hidrokarbon.
-          </li>
+          <li>Mengidentifikasi gugus fungsi.</li>
+          <li>Memilih rantai induk, yaitu rantai terpanjang yang mengandung gugus fungsi.</li>
+          <li>Menuliskan nomor, dimulai dari salah satu ujung dari nomor terkecil.</li>
+          <li>Menuliskan nama berdasarkan abjad, dimulai dengan nama cabang, kemudian rantai induk.</li>
+          <li>Apabila ada cabang – cabang sejenis digabung dan dinyatakan dengan awalan di, tri, terta, dan seterusnya.</li>
         </ul>
+        <img
+          src="https://soalkimia.com/wp-content/uploads/2017/05/soal-senyawa-karbon-kelas-12-no-2.jpg"
+          alt="Kunci2" />
       </section>
-      <section className="kuis-pilihan-ganda">
+    </div><section className="kuis-pilihan-ganda">
         <h3>Mini Quiz</h3>
         {!quizCompleted ? (
           <>
@@ -222,8 +623,7 @@ function SenyawaKarbon() {
                       value={option}
                       checked={selectedOption === option}
                       onChange={() => handleOptionSelect(option)}
-                      disabled={showExplanation}
-                    />
+                      disabled={showExplanation} />
                     {option}
                   </label>
                 </div>
@@ -232,10 +632,10 @@ function SenyawaKarbon() {
 
             {showExplanation && (
               <div
-              className={`quiz-feedback ${getFeedbackClass(
-                explanations[currentQuestionIndex].correct
-              )}`}
-            >
+                className={`quiz-feedback ${getFeedbackClass(
+                  explanations[currentQuestionIndex].correct
+                )}`}
+              >
                 <p>
                   {explanations[currentQuestionIndex].correct
                     ? "Jawaban Anda benar!"
@@ -274,9 +674,79 @@ function SenyawaKarbon() {
             </p>
           </div>
         )}
-      </section>
-    </div>
+      </section><section className="kuis-pilihan-ganda">
+        <h3>Mini Quiz</h3>
+        {!quizCompleted ? (
+          <>
+            <p>
+              <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
+              {questions[currentQuestionIndex].question}
+            </p>
+
+            <form className="quiz-form">
+              {questions[currentQuestionIndex].options.map((option, index) => (
+                <div key={index} className="quiz-option">
+                  <label>
+                    <input
+                      type="radio"
+                      value={option}
+                      checked={selectedOption === option}
+                      onChange={() => handleOptionSelect(option)}
+                      disabled={showExplanation} />
+                    {option}
+                  </label>
+                </div>
+              ))}
+            </form>
+
+            {showExplanation && (
+              <div
+                className={`quiz-feedback ${getFeedbackClass(
+                  explanations[currentQuestionIndex].correct
+                )}`}
+              >
+                <p>
+                  {explanations[currentQuestionIndex].correct
+                    ? "Jawaban Anda benar!"
+                    : "Jawaban Anda salah."}
+                </p>
+                <p>{explanations[currentQuestionIndex].explanation}</p>
+              </div>
+            )}
+
+            <div className="quiz-buttons">
+              <div className="navigation-buttons">
+                <button
+                  type="button"
+                  className="quiz-button"
+                  onClick={handlePreviousQuestion}
+                  disabled={currentQuestionIndex === 0}
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  className="quiz-button"
+                  onClick={handleNextQuestion}
+                  disabled={!selectedOption}
+                >
+                  {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
+                </button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="quiz-completion">
+            <p>Quiz Selesai!</p>
+            <p>
+              Skor Anda: {score} dari {questions.length}
+            </p>
+          </div>
+        )}
+      </section></>
+
   );
 }
+
 
 export default SenyawaKarbon;

@@ -7,6 +7,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
   }
+
+  .Contoh-soal-Senyawa{
+    font-family: 'Courier New', monospace;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;
+  }
   
   .main-title {
     text-align: center;
@@ -61,4 +68,5 @@
     background-color: #34495e;
     color: white;
   }
-  
+
+ 
