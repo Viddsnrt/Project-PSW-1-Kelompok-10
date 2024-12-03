@@ -866,6 +866,11 @@ function SifatKoligatif() {
         <p>
           Pada suhu yang lebih tinggi, tekanan uap larutan juga akan meningkat, menyebabkan peningkatan titik didih. Sebaliknya, penurunan suhu menyebabkan penurunan titik beku larutan.
         </p><br/>
+        <img 
+            src="https://th.bing.com/th/id/OIP.G917i4WFCHG0-2Bfb8zMaQHaHa?w=172&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
         <h4>A. Pendahuluan</h4>
         <p>
           Sifat koligatif larutan adalah sifat larutan yang bergantung pada jumlah partikel zat terlarut dalam larutan, bukan pada jenis zat terlarutnya. Beberapa contoh sifat koligatif adalah penurunan tekanan uap, kenaikan titik didih, penurunan titik beku, dan tekanan osmosis.
@@ -882,34 +887,80 @@ function SifatKoligatif() {
         <p>Secara umum, <b>suhu tidak secara langsung mempengaruhi jumlah partikel zat terlarut dalam larutan.</b> Artinya, jika kita menaikkan suhu suatu larutan, jumlah partikel zat terlarutnya tidak akan bertambah secara signifikan.</p><br/>
         <p>Namun, <b>perubahan suhu dapat mempengaruhi kesetimbangan antara zat terlarut dan pelarut.</b> Misalnya, pada suhu yang lebih tinggi, kelarutan beberapa zat padat dalam air dapat meningkat. Hal ini berarti jumlah partikel zat terlarut dalam larutan akan bertambah, sehingga sifat koligatifnya juga akan berubah.</p><br/>
         <p><b>1. Penurunan Tekanan Uap:</b></p>
+        <img 
+            src="https://asset.kompas.com/crops/yuKtUgCAeONI6VRE5hJnKeBJJ3Q=/40x32:552x373/750x500/data/photo/2023/10/09/6523a5bb1695e.jpg" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
         <ul>
           <li>Suhu yang lebih tinggi akan meningkatkan energi kinetik partikel pelarut, sehingga lebih banyak partikel yang dapat mengatasi gaya tarik menarik antarpartikel dan berubah menjadi uap.</li>
           <li>Namun, kehadiran zat terlarut akan mengurangi jumlah partikel pelarut yang dapat menguap, sehingga tekanan uap larutan akan lebih rendah dibandingkan dengan pelarut murni.</li>
-        </ul>
-      </section>
-      
-      <section className="contoh-soal-ionisasi">
-        <h3>Contoh Soal Efek Ionisasi dalam Larutan Elektrolit</h3>
-        <p><strong>Soal:</strong> Sebuah larutan K₂SO₄ 0,2 m (molal) disiapkan dengan menggunakan pelarut air. Hitunglah penurunan titik beku larutan tersebut, jika konstanta pembekuan molal air (Kf) adalah 1,86°C·kg/mol.</p>
-        <p><strong>Penyelesaian:</strong></p>
-        <p>
-          Karena K₂SO₄ adalah elektrolit, ia terionisasi menjadi 3 ion (2 K⁺ dan 1 SO₄²⁻). Oleh karena itu, faktor Van 't Hoff (i) untuk K₂SO₄ adalah 3.
-        </p>
-        <p>
-          Rumus penurunan titik beku: ΔTf = i * Kf * m
-        </p>
-        <p>
-          Dimana: <br />
-          i = 3 (faktor ionisasi K₂SO₄) <br />
-          Kf = 1,86°C·kg/mol <br />
-          m = 0,2 m
-        </p>
-        <p>
-          Jadi, ΔTf = 3 * 1,86 * 0,2 = 1,116°C
-        </p>
-        <p><strong>Jawaban:</strong> Penurunan titik beku larutan K₂SO₄ adalah 1,116°C.</p>
-      </section>
+        </ul><br/>
+        <p><b>2. Kenaikan Titik Didih:</b></p>
+        <img 
+            src="https://th.bing.com/th/id/OIP.0OrU6vAlJ82hrQkNf0R1kQAAAA?rs=1&pid=ImgDetMain" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
+        <ul>
+          <li>Untuk mendidih, tekanan uap suatu cairan harus sama dengan tekanan atmosfer.</li>
+          <li>Karena zat terlarut menurunkan tekanan uap larutan, maka diperlukan suhu yang lebih tinggi untuk mencapai tekanan uap yang sama dengan tekanan atmosfer.</li>
+        </ul><br/>
+        <p><b>3. Penurunan Titik Beku:</b></p>
+        <img 
+            src="https://image.slidesharecdn.com/penurunantitikbeku-130924203821-phpapp02/95/penurunan-titik-beku-6-638.jpg?cb=1380055186" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
+        <ul>
+          <li>Zat terlarut mengganggu pembentukan kristal padat dari pelarut, sehingga diperlukan suhu yang lebih rendah untuk membekukan larutan dibandingkan dengan pelarut murni.</li>
+        </ul><br/>
+        <p><b>4. Tekanan Osmotik:</b></p>
+        <img 
+            src="https://asset.kompas.com/crops/LA-_87ZRmIoRvxAc91CBh7_Js9U=/82x51:724x480/750x500/data/photo/2021/12/11/61b47ef743c77.jpg" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
+        <ul>
+          <li>Tekanan osmosis dipengaruhi oleh konsentrasi larutan dan suhu. Semakin tinggi suhu, semakin besar energi kinetik partikel pelarut, sehingga tekanan osmosis juga akan meningkat.</li>
+        </ul><br/>
 
+        <h4>C. Faktor Lain yang Mempengaruhi Sifat Koligatif</h4>
+        <p>Selain suhu, faktor lain yang juga dapat mempengaruhi sifat koligatif adalah:</p><br/>
+        <ul>
+          <li><b>Jenis zat terlarut:</b> Zat terlarut elektrolit (yang terionisasi dalam larutan) akan memberikan pengaruh yang lebih besar terhadap sifat koligatif dibandingkan dengan zat terlarut non-elektrolit.</li>
+          <li><b>Konsentrasi larutan:</b> Semakin tinggi konsentrasi larutan, semakin besar pengaruhnya terhadap sifat koligatif.</li>
+          <li><b>Tekanan:</b> Perubahan tekanan dapat mempengaruhi titik didih dan titik beku suatu larutan.</li>
+        </ul><br/>
+
+        <h4>Kesimpulan</h4>
+        <p>
+          Meskipun suhu tidak secara langsung mempengaruhi jumlah partikel zat terlarut dalam larutan, perubahan suhu dapat mempengaruhi kesetimbangan antara zat terlarut dan pelarut, sehingga dapat mengubah sifat koligatif larutan. Selain suhu, faktor lain seperti jenis zat terlarut, konsentrasi, dan tekanan juga berperan penting dalam menentukan sifat koligatif suatu larutan.
+        </p><br/>
+        <p>
+          <b>Penting untuk diingat:</b> Pengaruh suhu terhadap sifat koligatif adalah kompleks dan dipengaruhi oleh berbagai faktor. Untuk memahami lebih dalam, diperlukan pemahaman yang mendalam tentang konsep-konsep dasar dalam kimia larutan.
+        </p><br/>
+
+        <section className="contoh-soal-ionisasi">
+          <h3>Contoh Soal Pengaruh Suhu terhadap Sifat Koligatif</h3>
+          <p><strong>Soal:</strong> Diketahui dua larutan glukosa dengan konsentrasi yang sama. Larutan A dipanaskan hingga suhunya menjadi 50°C, sedangkan larutan B dijaga pada suhu 25°C. Manakah larutan yang memiliki tekanan uap jenuh yang lebih tinggi? Jelaskan!</p><br/>
+          <p><strong>Penyelesaian:</strong></p>
+          <p>
+            <b>Bayangkan kamu sedang merebus air.</b> Saat air dipanaskan, kan lama-lama jadi uap air, gitu kan? Nah, uap air itu yang bikin tekanan di dalam panci meningkat. Nah, tekanan uap ini sebenarnya sama kayak tekanan yang dihasilkan oleh partikel-partikel zat cair yang berusaha melompat keluar dari permukaan cairan dan berubah jadi gas.
+          </p><br/>
+          <p>
+            <b>Sekarang, balik ke larutan glukosa kita.</b> Kedua larutan ini kan punya konsentrasi yang sama, artinya jumlah glukosa yang larut dalam airnya sama. Tapi, yang membedakan adalah suhunya.
+          </p><br/>
+          <p>
+            1. <b>Larutan A yang dipanaskan:</b> Bayangkan partikel-partikel air dan glukosa di sini seperti anak-anak yang lagi semangat banget. Karena dipanaskan, mereka jadi punya energi yang lebih besar dan bergerak lebih cepat. Nah, karena energinya besar, mereka lebih gampang buat "loncat" keluar dari permukaan larutan dan berubah jadi uap. Jadi, tekanan uapnya jadi lebih tinggi.
+          </p><br/>
+          <p>
+            2. <b>Larutan B yang dingin:</b> Nah, kalau di larutan B ini, partikel-partikelnya kayak lagi ngantuk. Karena suhunya rendah, energi mereka kecil dan gerakannya jadi lebih lambat. Jadi, mereka susah buat "loncat" keluar dari permukaan larutan. Akibatnya, tekanan uapnya jadi lebih rendah.
+          </p><br/>
+          <p><strong>Jadi kesimpulannya,</strong>  larutan yang suhunya lebih tinggi (larutan A) akan punya tekanan uap yang lebih tinggi juga. Ini karena partikel-partikel di larutan yang lebih panas punya energi yang lebih besar dan lebih mudah menguap.</p><br/>
+          <p><b>Gampangnya, semakin panas suatu larutan, semakin banyak partikel yang bisa "kabur" dari permukaan larutan dan berubah jadi gas. Makanya, tekanannya jadi lebih tinggi.</b></p>
+        </section>
+      </section>
     </div>
   );
 }
