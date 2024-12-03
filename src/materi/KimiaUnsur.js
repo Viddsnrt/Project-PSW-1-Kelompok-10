@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import React, { useState } from "react";
+=======
+import React from "react";
+>>>>>>> Stashed changes
 import "./KimiaUnsur.css";
 
 function KimiaUnsur() {
@@ -115,16 +119,19 @@ function KimiaUnsur() {
     <div className="kimia-unsur-container">
       <h2>Bab 3: Kimia Unsur</h2>
       <p className="intro-text">
-        Kimia unsur adalah cabang kimia yang mempelajari sifat, keberadaan, reaksi, dan kegunaan unsur-unsur kimia dalam tabel periodik.
-        Pembahasan mencakup unsur golongan utama, golongan transisi, hingga unsur langka.
+        Kimia unsur adalah cabang kimia yang mempelajari sifat, keberadaan,
+        reaksi, dan kegunaan unsur-unsur kimia dalam tabel periodik. Pembahasan
+        mencakup unsur golongan utama, golongan transisi, hingga unsur langka.
       </p>
 
       {/* Section A */}
       <section>
         <h3 className="section-title">A. Kelimpahan Unsur-unsur di Alam</h3>
         <p>
-          Sebagian besar unsur di alam terdapat sebagai senyawa, sedangkan hanya sebagian kecil yang terdapat sebagai unsur bebas.
-          Bahan-bahan alam yang mengandung unsur atau senyawa tertentu disebut mineral, sedangkan mineral yang diolah secara komersial disebut bijih.
+          Sebagian besar unsur di alam terdapat sebagai senyawa, sedangkan hanya
+          sebagian kecil yang terdapat sebagai unsur bebas. Bahan-bahan alam
+          yang mengandung unsur atau senyawa tertentu disebut mineral, sedangkan
+          mineral yang diolah secara komersial disebut bijih.
         </p>
         <table className="content-table">
           <thead>
@@ -170,15 +177,29 @@ function KimiaUnsur() {
       <section>
         <h3 className="section-title">B. Gas Mulia</h3>
         <p>
-          Gas mulia adalah unsur-unsur dalam golongan VIIIA (lajur paling kanan tabel periodik) yang meliputi helium (He), neon (Ne), argon (Ar), kripton (Kr),
-          xenon (Xe), dan radon (Rd). Gas mulia cenderung stabil karena memiliki konfigurasi elektron penuh (oktet/duplet).
+          Gas mulia adalah unsur-unsur dalam golongan VIIIA (lajur paling kanan
+          tabel periodik) yang meliputi helium (He), neon (Ne), argon (Ar),
+          kripton (Kr), xenon (Xe), dan radon (Rd). Gas mulia cenderung stabil
+          karena memiliki konfigurasi elektron penuh (oktet/duplet).
         </p>
         <ul>
-          <li><b>Helium (He):</b> Digunakan sebagai cairan pendingin karena memiliki titik didih paling rendah.</li>
-          <li><b>Neon (Ne):</b> Digunakan pada lampu neon.</li>
-          <li><b>Argon (Ar):</b> Melindungi logam panas dalam pengelasan.</li>
-          <li><b>Kripton (Kr) dan Xenon (Xe):</b> Digunakan untuk lampu listrik.</li>
-          <li><b>Radon (Rn):</b> Digunakan sebagai sumber partikel alfa untuk pengobatan kanker.</li>
+          <li>
+            <b>Helium (He):</b> Digunakan sebagai cairan pendingin karena
+            memiliki titik didih paling rendah.
+          </li>
+          <li>
+            <b>Neon (Ne):</b> Digunakan pada lampu neon.
+          </li>
+          <li>
+            <b>Argon (Ar):</b> Melindungi logam panas dalam pengelasan.
+          </li>
+          <li>
+            <b>Kripton (Kr) dan Xenon (Xe):</b> Digunakan untuk lampu listrik.
+          </li>
+          <li>
+            <b>Radon (Rn):</b> Digunakan sebagai sumber partikel alfa untuk
+            pengobatan kanker.
+          </li>
         </ul>
       </section>
 
@@ -186,14 +207,26 @@ function KimiaUnsur() {
       <section>
         <h3 className="section-title">C. Halogen</h3>
         <p>
-          Unsur-unsur halogen terdiri dari fluor (F), klor (Cl), brom (Br), iodium (I), dan astatin (At). Mereka dikenal sebagai "pembentuk garam"
-          karena sangat reaktif dan membentuk garam ketika bereaksi dengan logam.
+          Unsur-unsur halogen terdiri dari fluor (F), klor (Cl), brom (Br),
+          iodium (I), dan astatin (At). Mereka dikenal sebagai "pembentuk garam"
+          karena sangat reaktif dan membentuk garam ketika bereaksi dengan
+          logam.
         </p>
         <ul>
-          <li><b>Fluor:</b> Digunakan untuk membuat teflon dan zat pendingin.</li>
-          <li><b>Klor:</b> Digunakan untuk membuat PVC dan desinfektan seperti kaporit.</li>
-          <li><b>Brom:</b> Digunakan dalam fotografi dan zat pemadam kebakaran.</li>
-          <li><b>Iod:</b> Digunakan dalam obat luka (tingtur iodium) dan uji amilum.</li>
+          <li>
+            <b>Fluor:</b> Digunakan untuk membuat teflon dan zat pendingin.
+          </li>
+          <li>
+            <b>Klor:</b> Digunakan untuk membuat PVC dan desinfektan seperti
+            kaporit.
+          </li>
+          <li>
+            <b>Brom:</b> Digunakan dalam fotografi dan zat pemadam kebakaran.
+          </li>
+          <li>
+            <b>Iod:</b> Digunakan dalam obat luka (tingtur iodium) dan uji
+            amilum.
+          </li>
         </ul>
       </section>
 
@@ -201,14 +234,27 @@ function KimiaUnsur() {
       <section>
         <h3 className="section-title">D. Unsur Periode Ketiga</h3>
         <p>
-          Unsur-unsur periode ketiga meliputi Na, Mg, Al, Si, P, S, Cl, dan Ar. Unsur-unsur ini menunjukkan sifat yang bervariasi dari logam alkali
+          Unsur-unsur periode ketiga meliputi Na, Mg, Al, Si, P, S, Cl, dan Ar.
+          Unsur-unsur ini menunjukkan sifat yang bervariasi dari logam alkali
           hingga gas mulia.
         </p>
         <ul>
-          <li><b>Aluminium (Al):</b> Digunakan untuk kabel, peralatan dapur, dan aluminium foil.</li>
-          <li><b>Silikon (Si):</b> Penting dalam pembuatan elektronik dan bahan konstruksi seperti kaca.</li>
-          <li><b>Fosfor (P):</b> Digunakan dalam pupuk fosfat dan bidang gesek korek api.</li>
-          <li><b>Belerang (S):</b> Membentuk asam sulfat, salah satu bahan kimia industri paling penting.</li>
+          <li>
+            <b>Aluminium (Al):</b> Digunakan untuk kabel, peralatan dapur, dan
+            aluminium foil.
+          </li>
+          <li>
+            <b>Silikon (Si):</b> Penting dalam pembuatan elektronik dan bahan
+            konstruksi seperti kaca.
+          </li>
+          <li>
+            <b>Fosfor (P):</b> Digunakan dalam pupuk fosfat dan bidang gesek
+            korek api.
+          </li>
+          <li>
+            <b>Belerang (S):</b> Membentuk asam sulfat, salah satu bahan kimia
+            industri paling penting.
+          </li>
         </ul>
       </section>
 
@@ -216,13 +262,22 @@ function KimiaUnsur() {
       <section>
         <h3 className="section-title">E. Unsur Transisi Periode Keempat</h3>
         <p>
-          Unsur transisi periode keempat meliputi Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, dan Zn. Unsur-unsur ini dikenal karena memiliki bilangan oksidasi
+          Unsur transisi periode keempat meliputi Sc, Ti, V, Cr, Mn, Fe, Co, Ni,
+          Cu, dan Zn. Unsur-unsur ini dikenal karena memiliki bilangan oksidasi
           yang bervariasi dan cenderung membentuk senyawa berwarna.
         </p>
         <ul>
-          <li><b>Besi (Fe):</b> Digunakan untuk pembuatan baja.</li>
-          <li><b>Tembaga (Cu):</b> Digunakan dalam kabel listrik dan bahan konduktor.</li>
-          <li><b>Seng (Zn):</b> Digunakan dalam galvanisasi dan pembuatan paduan logam.</li>
+          <li>
+            <b>Besi (Fe):</b> Digunakan untuk pembuatan baja.
+          </li>
+          <li>
+            <b>Tembaga (Cu):</b> Digunakan dalam kabel listrik dan bahan
+            konduktor.
+          </li>
+          <li>
+            <b>Seng (Zn):</b> Digunakan dalam galvanisasi dan pembuatan paduan
+            logam.
+          </li>
         </ul>
       </section>
       <section className="kuis-pilihan-ganda">
