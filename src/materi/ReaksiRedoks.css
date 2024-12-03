@@ -163,3 +163,16 @@ p{
   background-color: #218838;
 }
 
+.contoh-soal p {
+  font-family: 'Courier New', monospace;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.contoh-soal{
+  font-family: 'Courier New', monospace;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+}

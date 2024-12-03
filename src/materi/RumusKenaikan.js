@@ -1,5 +1,5 @@
-import React from 'react';
-import './DeltaTb.css';
+import React from "react";
+import "./DeltaTb.css";
 
 function RumusKenaikan() {
   return (
