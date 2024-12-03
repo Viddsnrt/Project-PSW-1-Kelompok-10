@@ -605,145 +605,79 @@ function SenyawaKarbon() {
           src="https://soalkimia.com/wp-content/uploads/2017/05/soal-senyawa-karbon-kelas-12-no-2.jpg"
           alt="Kunci2" />
       </section>
-    </div><section className="kuis-pilihan-ganda">
-        <h3>Mini Quiz</h3>
-        {!quizCompleted ? (
-          <>
+      </div>
+      <div className="quiz-container">
+        <section className="kuis-pilihan-ganda">
+          <h3>Mini Quiz</h3>
+          {!quizCompleted ? (
+            <>
             <p>
-              <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
-              {questions[currentQuestionIndex].question}
+             <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
+             {questions[currentQuestionIndex].question}
             </p>
-
             <form className="quiz-form">
-              {questions[currentQuestionIndex].options.map((option, index) => (
-                <div key={index} className="quiz-option">
-                  <label>
-                    <input
-                      type="radio"
-                      value={option}
-                      checked={selectedOption === option}
-                      onChange={() => handleOptionSelect(option)}
-                      disabled={showExplanation} />
-                    {option}
-                  </label>
-                </div>
-              ))}
-            </form>
-
-            {showExplanation && (
-              <div
-                className={`quiz-feedback ${getFeedbackClass(
-                  explanations[currentQuestionIndex].correct
-                )}`}
-              >
-                <p>
-                  {explanations[currentQuestionIndex].correct
-                    ? "Jawaban Anda benar!"
-                    : "Jawaban Anda salah."}
-                </p>
-                <p>{explanations[currentQuestionIndex].explanation}</p>
-              </div>
-            )}
-
-            <div className="quiz-buttons">
-              <div className="navigation-buttons">
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handlePreviousQuestion}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Previous
-                </button>
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handleNextQuestion}
-                  disabled={!selectedOption}
-                >
-                  {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
-                </button>
-              </div>
+             {questions[currentQuestionIndex].options.map((option, index) => (
+              <div key={index} className="quiz-option">
+              <label>
+                <input
+                  type="radio"
+                  value={option}
+                  checked={selectedOption === option}
+                  onChange={() => handleOptionSelect(option)}
+                  disabled={showExplanation} />
+                {option}
+              </label>
             </div>
-          </>
-        ) : (
-          <div className="quiz-completion">
-            <p>Quiz Selesai!</p>
+          ))}
+        </form>
+
+        {showExplanation && (
+          <div
+            className={`quiz-feedback ${getFeedbackClass(
+              explanations[currentQuestionIndex].correct
+            )}`}
+          >
             <p>
-              Skor Anda: {score} dari {questions.length}
+              {explanations[currentQuestionIndex].correct
+                ? "Jawaban Anda benar!"
+                : "Jawaban Anda salah."}
             </p>
+            <p>{explanations[currentQuestionIndex].explanation}</p>
           </div>
         )}
-      </section><section className="kuis-pilihan-ganda">
-        <h3>Mini Quiz</h3>
-        {!quizCompleted ? (
-          <>
-            <p>
-              <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
-              {questions[currentQuestionIndex].question}
-            </p>
 
-            <form className="quiz-form">
-              {questions[currentQuestionIndex].options.map((option, index) => (
-                <div key={index} className="quiz-option">
-                  <label>
-                    <input
-                      type="radio"
-                      value={option}
-                      checked={selectedOption === option}
-                      onChange={() => handleOptionSelect(option)}
-                      disabled={showExplanation} />
-                    {option}
-                  </label>
-                </div>
-              ))}
-            </form>
-
-            {showExplanation && (
-              <div
-                className={`quiz-feedback ${getFeedbackClass(
-                  explanations[currentQuestionIndex].correct
-                )}`}
-              >
-                <p>
-                  {explanations[currentQuestionIndex].correct
-                    ? "Jawaban Anda benar!"
-                    : "Jawaban Anda salah."}
-                </p>
-                <p>{explanations[currentQuestionIndex].explanation}</p>
-              </div>
-            )}
-
-            <div className="quiz-buttons">
-              <div className="navigation-buttons">
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handlePreviousQuestion}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Previous
-                </button>
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handleNextQuestion}
-                  disabled={!selectedOption}
-                >
-                  {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
-                </button>
-              </div>
-            </div>
-          </>
-        ) : (
-          <div className="quiz-completion">
-            <p>Quiz Selesai!</p>
-            <p>
-              Skor Anda: {score} dari {questions.length}
-            </p>
+        <div className="quiz-buttons">
+          <div className="navigation-buttons">
+            <button
+              type="button"
+              className="quiz-button"
+              onClick={handlePreviousQuestion}
+              disabled={currentQuestionIndex === 0}
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              className="quiz-button"
+              onClick={handleNextQuestion}
+              disabled={!selectedOption}
+            >
+              {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
+            </button>
           </div>
-        )}
-      </section></>
+        </div>
+      </>
+    ) : (
+      <div className="quiz-completion">
+        <p>Quiz Selesai!</p>
+        <p>
+          Skor Anda: {score} dari {questions.length}
+        </p>
+      </div>
+    )}
+  </section>
+</div>
+</>
 
   );
 }
