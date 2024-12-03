@@ -43,12 +43,13 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/simulasi-laboratorium" element={<SimulasiLaboratorium />} />
+        <Route path="/simulasilaboratorium" element={<SimulasiLaboratorium />} />
         <Route path="/community" element={<Community />} />
         <Route path="/Makromolekul" element={<Makromolekul />} />
         <Route path="/webinars" element={<Webinars />} />
         <Route path="/Registernow" element={<Registernow />} />
       </Routes>
+
       <Footer />
     </Router>
   );
