@@ -1,0 +1,71 @@
+/* Container Styles */
+.register-page {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .register-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .register-page h2 {
+    font-size: 1.8rem;
+    color: #f1c40f;
+  }
+  
+  .register-page p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Form Styles */
+  form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+  }
+  

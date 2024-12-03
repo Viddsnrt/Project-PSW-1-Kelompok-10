@@ -20,6 +20,8 @@ import Quiz from './materi/Quiz';
 import SimulasiLaboratorium from './materi/SimulasiLaboratorium';
 import Community from './element/Community';
 import Makromolekul from './materi/Makromolekul';
+import Webinars from './element/Webinars';
+import Registernow from './element/Registernow';
 
 function App() {
   return (
@@ -43,8 +45,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/simulasilaboratorium" element={<SimulasiLaboratorium />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/program-pembelajaran/Makromolekul" element={<Makromolekul/>}/>      
-        </Routes>
+        <Route path="/Makromolekul" element={<Makromolekul />} />
+        <Route path="/webinars" element={<Webinars />} />
+        <Route path="/Registernow" element={<Registernow />} />
+      </Routes>
+
       <Footer />
     </Router>
   );
