@@ -17,6 +17,115 @@ function SifatKoligatif() {
   const toggleOsmoticPressure = () => {
     setShowOsmoticPressure(!showOsmoticPressure);
   };
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState("");
+  const [score, setScore] = useState(0);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [explanations, setExplanations] = useState([]);
+  const [showExplanation, setShowExplanation] = useState(false);
+
+  const questions = [
+    {
+      question: "Apa yang dimaksud dengan sifat koligatif larutan?",
+      options: ["Sifat yang bergantung pada jenis zat terlarut", "Sifat yang bergantung pada konsentrasi zat terlarut", "Sifat yang bergantung pada jenis dan jumlah zat terlarut", "Sifat yang bergantung pada suhu larutan"],
+      correctAnswer: "Sifat yang bergantung pada konsentrasi zat terlarut",
+      explanation: "Sifat koligatif hanya bergantung pada jumlah partikel zat terlarut, bukan jenisnya.",
+    },
+    {
+      question: "Sifat koligatif larutan adalah sifat yang bergantung pada",
+      options: ["Jenis zat terlarut", "Massa pelarut", "Jumlah partikel zat terlarut", "Wujud larutan"],
+      correctAnswer: "Jumlah partikel zat terlarut",
+      explanation: "Sifat koligatif bergantung pada jumlah partikel zat terlarut, bukan jenisnya. Contohnya adalah tekanan osmosis, penurunan tekanan uap, kenaikan titik didih, dan penurunan titik beku.",
+    },
+    {
+      question: "Penurunan tekanan uap larutan terjadi karena?",
+      options: ["Larutan memiliki partikel zat terlarut yang menghalangi penguapan pelarut", "Larutan memiliki tekanan osmosis yang lebih besar", "Pelarut murni memiliki titik didih yang lebih rendah", "Pelarut murni memiliki titik beku lebih tinggi"],
+      correctAnswer: "Larutan memiliki partikel zat terlarut yang menghalangi penguapan pelarut",
+      explanation: "Penurunan tekanan uap terjadi karena partikel zat terlarut menghalangi pelarut untuk menguap. Akibatnya, molekul pelarut yang bisa keluar dari permukaan larutan berkurang.",
+    },
+    {
+      question: "Sifat koligatif meliputi semua hal berikut, kecuali...",
+      options: ["Penurunan tekanan uap", "Penurunan titik beku", "Kenaikan titik didih", "Kelarutan zat terlarut"],
+      correctAnswer: "Kelarutan zat terlarut",
+      explanation: "Sifat koligatif tidak berhubungan dengan kelarutan zat. Sifat ini hanya mencakup penurunan tekanan uap, kenaikan titik didih, penurunan titik beku, dan tekanan osmosis.",
+    },
+    {
+      question: "Larutan dengan tekanan osmosis tertinggi adalah",
+      options: ["1 M NaCl (𝑖 = 2 i=2)", "1 M glukosa (𝑖 =1 i=1)", "0,5 M K2SO4 (𝑖 = 3 i=3)", "0,5 M urea (𝑖 = 1 i=1)"],
+      correctAnswer: "1 M NaCl (𝑖 = 2 i=2)",
+      explanation: "Tekanan osmosis bergantung pada konsentrasi partikel dalam larutan. Pada 1 M NaCl (𝑖 = 2 i=2), jumlah partikel lebih tinggi dibandingkan larutan lain.",
+    },
+    {
+      question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
+      options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
+      correctAnswer : "Reduktor",
+      explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
+    },
+    {
+      question : "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
+      options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
+      correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
+      explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
+    },
+    {
+      question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
+      options : ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
+      correctAnswer: "Magnesium mengalami oksidasi",
+      explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
+    },
+    {
+      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
+      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
+      correctAnswer: "Hidrogen",
+      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
+    },
+    {
+      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
+      options: ["-1", "0", "+1", "+2"],
+      correctAnswer: "-1",
+      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+    },
+    
+  ];
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+    const isCorrect = option === questions[currentQuestionIndex].correctAnswer;
+    if (isCorrect) setScore((prevScore) => prevScore + 1);
+
+    setExplanations((prevExplanations) => {
+      const updated = [...prevExplanations];
+      updated[currentQuestionIndex] = {
+        correct: isCorrect,
+        explanation: questions[currentQuestionIndex].explanation,
+      };
+      return updated;
+    });
+    setShowExplanation(true);
+  };
+
+  const getFeedbackClass = (isCorrect) => {
+    return isCorrect ? "correct-feedback" : "incorrect-feedback";
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+      setSelectedOption("");
+      setShowExplanation(false);
+    } else {
+      setQuizCompleted(true); 
+    }
+  };
+
+  const handlePreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+      setSelectedOption("");
+      setShowExplanation(false);
+    }
+  };
   
 
   return (
@@ -960,6 +1069,78 @@ function SifatKoligatif() {
           <p><strong>Jadi kesimpulannya,</strong>  larutan yang suhunya lebih tinggi (larutan A) akan punya tekanan uap yang lebih tinggi juga. Ini karena partikel-partikel di larutan yang lebih panas punya energi yang lebih besar dan lebih mudah menguap.</p><br/>
           <p><b>Gampangnya, semakin panas suatu larutan, semakin banyak partikel yang bisa "kabur" dari permukaan larutan dan berubah jadi gas. Makanya, tekanannya jadi lebih tinggi.</b></p>
         </section>
+      </section>
+
+      <section className="kuis-pilihan-ganda">
+        <h3>Mini Quiz</h3>
+        {!quizCompleted ? (
+          <>
+            <p>
+              <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
+              {questions[currentQuestionIndex].question}
+            </p>
+
+            <form className="quiz-form">
+              {questions[currentQuestionIndex].options.map((option, index) => (
+                <div key={index} className="quiz-option">
+                  <label>
+                    <input
+                      type="radio"
+                      value={option}
+                      checked={selectedOption === option}
+                      onChange={() => handleOptionSelect(option)}
+                      disabled={showExplanation}
+                    />
+                    {option}
+                  </label>
+                </div>
+              ))}
+            </form>
+
+            {showExplanation && (
+              <div
+              className={`quiz-feedback ${getFeedbackClass(
+                explanations[currentQuestionIndex].correct
+              )}`}
+            >
+                <p>
+                  {explanations[currentQuestionIndex].correct
+                    ? "Jawaban Anda benar!"
+                    : "Jawaban Anda salah."}
+                </p>
+                <p>{explanations[currentQuestionIndex].explanation}</p>
+              </div>
+            )}
+
+            <div className="quiz-buttons">
+              <div className="navigation-buttons">
+                <button
+                  type="button"
+                  className="quiz-button"
+                  onClick={handlePreviousQuestion}
+                  disabled={currentQuestionIndex === 0}
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  className="quiz-button"
+                  onClick={handleNextQuestion}
+                  disabled={!selectedOption}
+                >
+                  {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
+                </button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="quiz-completion">
+            <p>Quiz Selesai!</p>
+            <p>
+              Skor Anda: {score} dari {questions.length}
+            </p>
+          </div>
+        )}
       </section>
     </div>
   );
