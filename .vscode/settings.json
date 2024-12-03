@@ -1,0 +1,7 @@
+{
+  "cody.autocomplete.formatOnAccept": true,
+  "editor.codeActionsOnSave": {},
+  "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
+  "editor.unusualLineTerminators": "auto",
+  "terminal.integrated.fontFamily": "Consolas"
+}

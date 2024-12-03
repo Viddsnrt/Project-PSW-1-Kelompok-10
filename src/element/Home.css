@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f4f4f9;
   color: #333;
   line-height: 1.6;
@@ -191,6 +191,10 @@ body {
   text-align: center;
   background: #008080;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memusatkan semua elemen */
+  justify-content: center;
 }
 
 .cta-section h2 {
@@ -200,12 +204,27 @@ body {
 
 .cta-section p {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; /* Jarak antara teks dan tombol */
 }
 
 .cta-section .cta-button {
   background-color: #ff4500;
   color: white;
+  border: none;
+  padding: 12px 24px; /* Padding lebih besar agar tombol terlihat proporsional */
+  border-radius: 5px; /* Membulatkan ujung tombol */
+  font-size: 18px; /* Ukuran font yang lebih besar */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.cta-section .cta-button:hover {
+  background-color: #ffeb3b;
+  color: #ff4500;
+  transform: translateY(-3px); /* Efek hover animasi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan pada hover */
 }
 
 /* Animations */
@@ -234,7 +253,8 @@ body {
     text-align: center;
   }
 
-  .hero-content, .hero-image {
+  .hero-content,
+  .hero-image {
     width: 100%;
     margin: 1rem 0;
   }

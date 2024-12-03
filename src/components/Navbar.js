@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import ProgramPembelajaran from "../element/ProgramPembelajaran";  
+import ProgramPembelajaran from "../element/ProgramPembelajaran";
 
 function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -56,7 +56,11 @@ function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${isMenuOpen ? "open" : ""} ${isSticky ? "sticky" : ""}`}>
+    <nav
+      className={`navbar ${isMenuOpen ? "open" : ""} ${
+        isSticky ? "sticky" : ""
+      }`}
+    >
       <h2 className="navbar-brand">ChimiLearn</h2>
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>

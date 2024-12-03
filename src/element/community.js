@@ -1,6 +1,6 @@
-import React from 'react';
-import './community.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./community.css";
+import { Link } from "react-router-dom";
 
 function Community() {
   return (
@@ -16,7 +16,9 @@ function Community() {
       <section className="community-features">
         <div className="feature-card">
           <h3>Discussion Forums</h3>
-          <p>Engage in conversations about chemistry topics with other members.</p>
+          <p>
+            Engage in conversations about chemistry topics with other members.
+          </p>
           <Link to="/forum">
             <button className="feature-button">Visit Forums</button>
           </Link>
@@ -30,7 +32,9 @@ function Community() {
         </div>
         <div className="feature-card">
           <h3>Resource Library</h3>
-          <p>Access a collection of articles, guides, and experiment tutorials.</p>
+          <p>
+            Access a collection of articles, guides, and experiment tutorials.
+          </p>
           <Link to="/resources">
             <button className="feature-button">Browse Resources</button>
           </Link>

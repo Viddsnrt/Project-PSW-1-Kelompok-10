@@ -31,7 +31,9 @@ function Forum() {
     <div className="forum-container">
       <header className="forum-header">
         <h1>Discussion Forum</h1>
-        <p>Join the conversation and enhance your understanding of chemistry!</p>
+        <p>
+          Join the conversation and enhance your understanding of chemistry!
+        </p>
         <button className="new-discussion-button" onClick={handleNewDiscussion}>
           Start New Discussion
         </button>

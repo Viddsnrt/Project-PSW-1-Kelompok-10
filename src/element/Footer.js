@@ -1,5 +1,5 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -12,8 +12,12 @@ function Footer() {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/OurServices">About Us</a></li>
-            <li><a href="/OurServices">Services</a></li>
+            <li>
+              <a href="/OurServices">About Us</a>
+            </li>
+            <li>
+              <a href="/OurServices">Services</a>
+            </li>
           </ul>
         </div>
         <div className="footer-social">
