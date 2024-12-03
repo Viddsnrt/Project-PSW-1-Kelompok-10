@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-import React, { useState } from "react";
-=======
-import React from "react";
->>>>>>> Stashed changes
+import React, { useState } from "react"; 
 import "./KimiaUnsur.css";
 
 function KimiaUnsur() {
@@ -47,18 +43,18 @@ function KimiaUnsur() {
     {
       question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
       options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
-      correctAnswer : "Reduktor",
+      correctAnswer: "Reduktor",
       explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
     },
     {
-      question : "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
+      question: "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
       options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
       correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
       explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
     },
     {
       question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
-      options : ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
+      options: ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
       correctAnswer: "Magnesium mengalami oksidasi",
       explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
     },
@@ -74,7 +70,6 @@ function KimiaUnsur() {
       correctAnswer: "-1",
       explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
     },
-    
   ];
 
   const handleOptionSelect = (option) => {
@@ -124,162 +119,60 @@ function KimiaUnsur() {
         mencakup unsur golongan utama, golongan transisi, hingga unsur langka.
       </p>
 
-      {/* Section A */}
-      <section>
-        <h3 className="section-title">A. Kelimpahan Unsur-unsur di Alam</h3>
+      {/* Sections with content */}
+      <section className="material-section">
+        <h3>A. Pengertian Kimia Unsur</h3>
         <p>
-          Sebagian besar unsur di alam terdapat sebagai senyawa, sedangkan hanya
-          sebagian kecil yang terdapat sebagai unsur bebas. Bahan-bahan alam
-          yang mengandung unsur atau senyawa tertentu disebut mineral, sedangkan
-          mineral yang diolah secara komersial disebut bijih.
+          Kimia unsur adalah cabang ilmu kimia yang mempelajari unsur-unsur
+          kimia yang terdapat dalam tabel periodik. Unsur-unsur tersebut
+          dibedakan berdasarkan golongan dan periode yang ada di tabel
+          periodik. Dalam kimia unsur, kita mempelajari sifat fisik dan kimia,
+          reaksi kimia, serta kegunaan unsur-unsur tersebut dalam kehidupan
+          sehari-hari.
         </p>
-        <table className="content-table">
-          <thead>
-            <tr>
-              <th>Anion</th>
-              <th>Contoh Mineral</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Tidak ada</td>
-              <td>Au, Ag, Pt, Cu, Bi, As, Sb, Os, Ir, Ru, Rh, Pd</td>
-            </tr>
-            <tr>
-              <td>Oksida</td>
-              <td>Fe2O3, Fe3O4, Al2O3, SnO, SiO2</td>
-            </tr>
-            <tr>
-              <td>Sulfida</td>
-              <td>CuFeS2, Cu2S, ZnS, PbS, FeS2, HgS</td>
-            </tr>
-            <tr>
-              <td>Klorida</td>
-              <td>NaCl, KCl, KCl-MgCl2</td>
-            </tr>
-            <tr>
-              <td>Karbonat</td>
-              <td>CaCO3, MgCO3, MgCO3.CaCO3</td>
-            </tr>
-            <tr>
-              <td>Sulfat</td>
-              <td>CaSO4.2H2O, MgSO4.7H2O, BaSO4</td>
-            </tr>
-            <tr>
-              <td>Silikat</td>
-              <td>Be3Al2Si6O18, Al2Si2O8(OH)4</td>
-            </tr>
-          </tbody>
-        </table>
       </section>
 
-      {/* Section B */}
-      <section>
-        <h3 className="section-title">B. Gas Mulia</h3>
+      <section className="material-section">
+        <h3>B. Golongan dan Periode Unsur</h3>
         <p>
-          Gas mulia adalah unsur-unsur dalam golongan VIIIA (lajur paling kanan
-          tabel periodik) yang meliputi helium (He), neon (Ne), argon (Ar),
-          kripton (Kr), xenon (Xe), dan radon (Rd). Gas mulia cenderung stabil
-          karena memiliki konfigurasi elektron penuh (oktet/duplet).
+          Unsur-unsur kimia dalam tabel periodik dibagi dalam golongan dan
+          periode. Golongan mengelompokkan unsur-unsur berdasarkan sifat-sifat
+          kimia yang serupa, sedangkan periode mengelompokkan unsur berdasarkan
+          nomor atomnya. Unsur golongan utama adalah unsur-unsur yang memiliki
+          sifat kimia yang lebih stabil dan mudah bereaksi.
         </p>
-        <ul>
-          <li>
-            <b>Helium (He):</b> Digunakan sebagai cairan pendingin karena
-            memiliki titik didih paling rendah.
-          </li>
-          <li>
-            <b>Neon (Ne):</b> Digunakan pada lampu neon.
-          </li>
-          <li>
-            <b>Argon (Ar):</b> Melindungi logam panas dalam pengelasan.
-          </li>
-          <li>
-            <b>Kripton (Kr) dan Xenon (Xe):</b> Digunakan untuk lampu listrik.
-          </li>
-          <li>
-            <b>Radon (Rn):</b> Digunakan sebagai sumber partikel alfa untuk
-            pengobatan kanker.
-          </li>
-        </ul>
       </section>
 
-      {/* Section C */}
-      <section>
-        <h3 className="section-title">C. Halogen</h3>
+      <section className="material-section">
+        <h3>C. Reaksi-reaksi dalam Kimia Unsur</h3>
         <p>
-          Unsur-unsur halogen terdiri dari fluor (F), klor (Cl), brom (Br),
-          iodium (I), dan astatin (At). Mereka dikenal sebagai "pembentuk garam"
-          karena sangat reaktif dan membentuk garam ketika bereaksi dengan
-          logam.
+          Reaksi kimia dalam kimia unsur melibatkan perubahan dalam struktur
+          atom dan pembentukan senyawa baru. Reaksi redoks adalah salah satu
+          jenis reaksi yang terjadi pada unsur-unsur, di mana terjadi
+          perpindahan elektron antara dua zat.
         </p>
-        <ul>
-          <li>
-            <b>Fluor:</b> Digunakan untuk membuat teflon dan zat pendingin.
-          </li>
-          <li>
-            <b>Klor:</b> Digunakan untuk membuat PVC dan desinfektan seperti
-            kaporit.
-          </li>
-          <li>
-            <b>Brom:</b> Digunakan dalam fotografi dan zat pemadam kebakaran.
-          </li>
-          <li>
-            <b>Iod:</b> Digunakan dalam obat luka (tingtur iodium) dan uji
-            amilum.
-          </li>
-        </ul>
       </section>
 
-      {/* Section D */}
-      <section>
-        <h3 className="section-title">D. Unsur Periode Ketiga</h3>
+      <section className="material-section">
+        <h3>D. Sifat Fisik dan Kimia Unsur</h3>
         <p>
-          Unsur-unsur periode ketiga meliputi Na, Mg, Al, Si, P, S, Cl, dan Ar.
-          Unsur-unsur ini menunjukkan sifat yang bervariasi dari logam alkali
-          hingga gas mulia.
+          Setiap unsur memiliki sifat fisik dan kimia yang unik. Sifat fisik
+          meliputi titik leleh, titik didih, dan kerapatan, sementara sifat kimia
+          meliputi kecenderungan unsur untuk bereaksi dengan unsur lain.
         </p>
-        <ul>
-          <li>
-            <b>Aluminium (Al):</b> Digunakan untuk kabel, peralatan dapur, dan
-            aluminium foil.
-          </li>
-          <li>
-            <b>Silikon (Si):</b> Penting dalam pembuatan elektronik dan bahan
-            konstruksi seperti kaca.
-          </li>
-          <li>
-            <b>Fosfor (P):</b> Digunakan dalam pupuk fosfat dan bidang gesek
-            korek api.
-          </li>
-          <li>
-            <b>Belerang (S):</b> Membentuk asam sulfat, salah satu bahan kimia
-            industri paling penting.
-          </li>
-        </ul>
       </section>
 
-      {/* Section E */}
-      <section>
-        <h3 className="section-title">E. Unsur Transisi Periode Keempat</h3>
+      <section className="material-section">
+        <h3>E. Kegunaan Unsur dalam Kehidupan Sehari-hari</h3>
         <p>
-          Unsur transisi periode keempat meliputi Sc, Ti, V, Cr, Mn, Fe, Co, Ni,
-          Cu, dan Zn. Unsur-unsur ini dikenal karena memiliki bilangan oksidasi
-          yang bervariasi dan cenderung membentuk senyawa berwarna.
+          Unsur-unsur kimia digunakan dalam berbagai bidang, termasuk
+          industri, pertanian, dan teknologi. Contohnya, unsur karbon digunakan
+          dalam bentuk grafit untuk pensil, sementara unsur logam seperti
+          tembaga digunakan dalam kabel listrik.
         </p>
-        <ul>
-          <li>
-            <b>Besi (Fe):</b> Digunakan untuk pembuatan baja.
-          </li>
-          <li>
-            <b>Tembaga (Cu):</b> Digunakan dalam kabel listrik dan bahan
-            konduktor.
-          </li>
-          <li>
-            <b>Seng (Zn):</b> Digunakan dalam galvanisasi dan pembuatan paduan
-            logam.
-          </li>
-        </ul>
       </section>
+
+      {/* Mini Quiz */}
       <section className="kuis-pilihan-ganda">
         <h3>Mini Quiz</h3>
         {!quizCompleted ? (
@@ -292,62 +185,46 @@ function KimiaUnsur() {
             <form className="quiz-form">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <div key={index} className="quiz-option">
-                  <label>
-                    <input
-                      type="radio"
-                      value={option}
-                      checked={selectedOption === option}
-                      onChange={() => handleOptionSelect(option)}
-                      disabled={showExplanation}
-                    />
-                    {option}
-                  </label>
+                  <input
+                    type="radio"
+                    id={option}
+                    name="option"
+                    value={option}
+                    checked={selectedOption === option}
+                    onChange={() => handleOptionSelect(option)}
+                  />
+                  <label htmlFor={option}>{option}</label>
                 </div>
               ))}
             </form>
 
             {showExplanation && (
               <div
-              className={`quiz-feedback ${getFeedbackClass(
-                explanations[currentQuestionIndex].correct
-              )}`}
-            >
-                <p>
-                  {explanations[currentQuestionIndex].correct
-                    ? "Jawaban Anda benar!"
-                    : "Jawaban Anda salah."}
-                </p>
-                <p>{explanations[currentQuestionIndex].explanation}</p>
+                className={`explanation ${getFeedbackClass(
+                  explanations[currentQuestionIndex]?.correct
+                )}`}
+              >
+                <p>{explanations[currentQuestionIndex]?.explanation}</p>
               </div>
             )}
 
-            <div className="quiz-buttons">
-              <div className="navigation-buttons">
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handlePreviousQuestion}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Previous
-                </button>
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handleNextQuestion}
-                  disabled={!selectedOption}
-                >
-                  {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
-                </button>
-              </div>
+            <div className="quiz-navigation">
+              <button
+                type="button"
+                onClick={handlePreviousQuestion}
+                disabled={currentQuestionIndex === 0}
+              >
+                Sebelumnya
+              </button>
+              <button type="button" onClick={handleNextQuestion}>
+                Selanjutnya
+              </button>
             </div>
           </>
         ) : (
-          <div className="quiz-completion">
-            <p>Quiz Selesai!</p>
-            <p>
-              Skor Anda: {score} dari {questions.length}
-            </p>
+          <div className="quiz-summary">
+            <h4>Quiz Selesai!</h4>
+            <p>Skor Anda: {score} dari {questions.length}</p>
           </div>
         )}
       </section>
