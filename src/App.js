@@ -43,7 +43,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/simulasilaboratorium" element={<SimulasiLaboratorium />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/Makromolekul" element={<Makromolekul/>}/>      
+        <Route path="/program-pembelajaran/Makromolekul" element={<Makromolekul/>}/>      
         </Routes>
       <Footer />
     </Router>
