@@ -18,7 +18,7 @@ import ResetPassword from './element/ResetPassword';
 import Register from './element/Register';
 import Quiz from './materi/Quiz';
 import SimulasiLaboratorium from './materi/SimulasiLaboratorium';
-import Community from './element/community';
+import Community from './element/Community';
 import Makromolekul from './materi/Makromolekul';
 
 function App() {
