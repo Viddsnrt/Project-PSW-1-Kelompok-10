@@ -98,11 +98,13 @@ function Navbar() {
           </Link>
         </li>
         {!isLoggedIn ? (
-          
-          <li>
-            <Link to="/Makromolekul" onClick={handleLinkClick}>
-            Makromolekul</Link>
-          </li>
+          <>
+            <li>
+              <Link to="/Login" onClick={handleLinkClick}>
+                Login
+              </Link>
+            </li>
+          </>
         ) : (
           <>
             <li className="user-name">{userName}</li>
