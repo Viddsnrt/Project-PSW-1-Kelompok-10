@@ -1,7 +1,6 @@
 
 import React from "react";
 import "./AboutUs.css";
- // Pastikan file CSS untuk styling
 
 const AboutUs = () => {
   return (

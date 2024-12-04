@@ -3,8 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background:#18343f;
-    color: white;
   }
   
   .about-content {
@@ -15,22 +13,28 @@
   .about-title {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color:aliceblue;
+    color: black;
+    margin-left: 10%;
   }
 
 
   .about-text {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color:#ffffff;
+    color:black;
+    margin-left: 10%;
   }
   
   .about-image img {
     max-width: 80%;
     height: auto;
-    border-radius: 15px;
-    align-items: normal;
+    border-radius: 30px;
+    margin-top: 40px; 
+    margin-left: 8%;
+    display: block; 
+    transform: translateX(10%); 
   }
+  
   
   /* Features Section */
   .abtus-section {
