@@ -1,73 +1,80 @@
 /* Forum Container */
 .forum-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #f9fafb;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Header */
-  .forum-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .forum-header h1 {
-    font-size: 28px;
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .forum-header p {
-    font-size: 16px;
-    color: #7f8c8d;
-    margin-bottom: 20px;
-  }
-  
-  .new-discussion-button {
-    padding: 10px 15px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .new-discussion-button:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Discussion List */
-  .discussion-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .discussion-item {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-  }
-  
-  .discussion-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .discussion-title {
-    font-size: 18px;
-    color: #34495e;
-    margin-bottom: 5px;
-  }
-  
-  .discussion-meta {
-    font-size: 14px;
-    color: #7f8c8d;
-  }
-  
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.forum-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.forum-header h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.forum-header p {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.new-discussion-button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-discussion-button:hover {
+  background-color: #2980b9;
+}
+
+/* Message when feature is coming soon */
+.coming-soon-message {
+  font-size: 16px;
+  color: #e74c3c;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Discussion List */
+.discussion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.discussion-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.discussion-item:hover {
+  transform: translateY(-5px);
+}
+
+.discussion-title {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.discussion-meta {
+  font-size: 14px;
+  color: #7f8c8d;
+}
