@@ -135,35 +135,72 @@ const Makromolekul = () => {
       <p>Uji ini digunakan untuk mendeteksi keberadaan lemak dalam sampel dengan menggunakan pewarna Sudan III.</p>
       
       <div className="quiz-container">
-        <h2 className="section-title">Mini Quiz</h2>
-        {!quizCompleted ? (
-          <div className="quiz-content">
-            <h3>{questions[currentQuestionIndex].question}</h3>
-            <ul className="options-list">
-              {questions[currentQuestionIndex].options.map((option, index) => (
-                <li 
-                  key={index} 
-                  onClick={() => handleOptionSelect(option)} 
-                  className={`option-item ${selectedOption === option ? (option === questions[currentQuestionIndex].correctAnswer ? "correct" : "incorrect") : ""}`}
-                  style={{ cursor: "pointer" }}
-                >
-                  {option}
-                </li>
-              ))}
-            </ul>
-            {showExplanation && (
-              <p className="explanation">
-                {selectedOption === questions[currentQuestionIndex].correctAnswer ? "Benar! " : "Salah! "} {questions[currentQuestionIndex].explanation}
+        <section className="kuis-pilihan-ganda">
+          <h3>Mini Quiz</h3>
+          {!quizCompleted ? (
+            <>
+              <p>
+                <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
+                {questions[currentQuestionIndex].question}
               </p>
-            )}
-            <div className="navigation-buttons">
-              <button onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0}>Sebelumnya</button>
-              <button onClick={handleNextQuestion}>{currentQuestionIndex < questions.length - 1 ? "Selanjutnya" : "Selesai"}</button>
+              <form className="quiz-form">
+                {questions[currentQuestionIndex].options.map((option, index) => (
+                  <div key={index} className="quiz-option">
+                    <label>
+                      <input
+                        type="radio"
+                        value={option}
+                        checked={selectedOption === option}
+                        onChange={() => handleOptionSelect(option)}
+                        disabled={showExplanation}
+                      />
+                      {option}
+                    </label>
+                  </div>
+                ))}
+              </form>
+
+              {showExplanation && (
+                <div className={`quiz-feedback ${selectedOption === questions[currentQuestionIndex].correctAnswer ? "correct" : "incorrect"}`}>
+                  <p>
+                    {selectedOption === questions[currentQuestionIndex].correctAnswer
+                      ? "Jawaban Anda benar!"
+                      : "Jawaban Anda salah."}
+                  </p>
+                  <p>{questions[currentQuestionIndex].explanation}</p>
+                </div>
+              )}
+
+              <div className="quiz-buttons">
+                <div className="navigation-buttons">
+                  <button
+                    type="button"
+                    className="quiz-button"
+                    onClick={handlePreviousQuestion}
+                    disabled={currentQuestionIndex === 0}
+                  >
+                    Sebelumnya
+                  </button>
+                  <button
+                    type="button"
+                    className="quiz-button"
+                    onClick={handleNextQuestion}
+                    disabled={!selectedOption}
+                  >
+                    {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Selanjutnya"}
+                  </button>
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="quiz-completion">
+              <p>Quiz Selesai!</p>
+              <p>
+                Skor Anda: {score} dari {questions.length}
+              </p>
             </div>
-          </div>
-        ) : (
-          <h3>Quiz selesai! Skor Anda: {score} dari {questions.length}</h3>
-        )}
+          )}
+        </section>
       </div>
     </div>
   );
