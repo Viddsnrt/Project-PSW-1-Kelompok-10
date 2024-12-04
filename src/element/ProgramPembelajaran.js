@@ -31,7 +31,7 @@ function ProgramPembelajaran() {
       icon: <FaBurn />,
     }, 
     {
-      path: "/program-pembelajaran/Makromolekul",
+      path: "/Makromolekul",
       title: "Makromolekul",
       icon: <FaMicroscope />,
     },

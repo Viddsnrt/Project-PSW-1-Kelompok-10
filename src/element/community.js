@@ -26,7 +26,7 @@ function Community() {
         <div className="feature-card">
           <h3>Live Webinars</h3>
           <p>Join live sessions hosted by experts and expand your knowledge.</p>
-          <Link to="/webinars">
+          <Link to="/Registernow">
             <button className="feature-button">View Schedule</button>
           </Link>
         </div>
@@ -35,7 +35,7 @@ function Community() {
           <p>
             Access a collection of articles, guides, and experiment tutorials.
           </p>
-          <Link to="/resources">
+          <Link to="/Resourcelibrary">
             <button className="feature-button">Browse Resources</button>
           </Link>
         </div>
@@ -44,7 +44,7 @@ function Community() {
       <section className="join-section">
         <h2>Ready to Start?</h2>
         <p>Become a part of the ChimiLearn Community today.</p>
-        <Link to="/register">
+        <Link to="/Joincommunity">
           <button className="cta-button">Join Now</button>
         </Link>
       </section>

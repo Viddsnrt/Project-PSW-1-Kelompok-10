@@ -26,7 +26,7 @@ function Registernow() {
   };
 
   return (
-    <div className="register-page">
+    <div className="Registernow">
       <h1>Register for Webinar</h1>
       <h2>{state.title}</h2>
       <p>Date: {state.date}</p>
