@@ -18,7 +18,7 @@ import ResetPassword from './element/ResetPassword';
 import Register from './element/Register';
 import Quiz from './materi/Quiz';
 import SimulasiLaboratorium from './materi/SimulasiLaboratorium';
-import Community from './element/community';
+import Community from './element/Community';
 import Makromolekul from './materi/Makromolekul';
 import Webinars from './element/Webinars';
 import Registernow from './element/Registernow';
@@ -48,7 +48,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/simulasilaboratorium" element={<SimulasiLaboratorium />} />
-        <Route path="/community" element={<Community />} />
+        <Route path="/Community" element={<Community />} />
         <Route path="/Makromolekul" element={<Makromolekul/>} />
         <Route path="/webinars" element={<Webinars />} />
         <Route path="/Registernow" element={<Registernow />} />
