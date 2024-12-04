@@ -11,66 +11,35 @@ function SenyawaKarbon() {
 
   const questions = [
     {
-      question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
-      options: ["Zn", "Cu", "Cu²⁺", "Zn²⁺"],
-      correctAnswer: "Zn",
-      explanation: "Zn mengalami oksidasi karena kehilangan elektron dan berubah menjadi Zn²⁺.",
+      question: "Senyawa karbon yang termasuk dalam golongan hidrokarbon jenuh adalah..",
+      options: ["Metana", "Etilena", "Asetilena", "Benzena", "Butadiena"],
+      correctAnswer: "Metana",
+      explanation: "Metana (CH₄) adalah contoh hidrokarbon jenuh, yang berarti hanya memiliki ikatan tunggal antara atom karbon.",
     },
     {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-      correctAnswer: "Hidrogen",
-      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
+      question: "Senyawa karbon yang memiliki gugus fungsi alkohol adalah..",
+      options: ["Ethanol", "Aseton", "Asam asetat", "Metanal", "Butanal"],
+      correctAnswer: "Ethanol",
+      explanation: "Ethanol (C₂H₅OH) memiliki gugus fungsi -OH, yang membuatnya termasuk dalam golongan alkohol.",
     },
     {
-      question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
-      options: ["+1", "-2", "0", "-1"],
-      correctAnswer: "-2",
-      explanation: "Oksigen dalam senyawa biasanya memiliki bilangan oksidasi -2 kecuali dalam senyawa peroksida atau fluorida.",
+      question: "Berikut ini yang merupakan senyawa karbon yang termasuk dalam golongan aldehida adalah..",
+      options: ["Etanal", "Asam propionat", "Ethanol", "Glukosa", "Aseton"],
+      correctAnswer: "Etanal",
+      explanation: "Etanal (atau asetaldehida) adalah senyawa karbon yang memiliki gugus fungsi -CHO, yang merupakan ciri khas aldehida.",
     },
     {
-      question: "Reaksi antara seng dan asam klorida menghasilkan gas hidrogen. Reaksi tersebut adalah contoh dari reaksi redoks. Manakah yang mengalami reduksi dalam reaksi tersebut?",
-      options: ["Seng (Zn)", "Ion hidrogen (H⁺)", "Klorida (Cl⁻)", "Gas hidrogen (H₂)"],
-      correctAnswer: "Ion hidrogen (H⁺)",
-      explanation: "Ion H⁺ menerima elektron dan berubah menjadi gas hidrogen (H₂), sehingga mengalami reduksi.",
+      question: "Senyawa karbon yang mengandung gugus fungsi karboksil (-COOH) adalah..",
+      options: ["Asam asetat", "Metanol", "Etena", "Benzena", "Glukosa"],
+      correctAnswer: "Asam asetat",
+      explanation: "Asam asetat (CH₃COOH) memiliki gugus karboksil (-COOH), yang memberikan sifat asam pada senyawa tersebut.",
     },
     {
-      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-      options: ["-1", "0", "+1", "+2"],
-      correctAnswer: "-1",
-      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+      question: "Senyawa karbon berikut yang merupakan isomer struktural dari butana adalah..",
+      options: ["Isobutana", "Metana", "Etana", "Asetilen", "Etilena"],
+      correctAnswer: "Isobutana",
+      explanation: "Isobutana adalah isomer struktural dari butana, yang berarti memiliki rumus molekul yang sama tetapi struktur atom yang berbeda.",
     },
-    {
-      question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
-      options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
-      correctAnswer : "Reduktor",
-      explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
-    },
-    {
-      question : "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
-      options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
-      correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
-      explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
-    },
-    {
-      question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
-      options : ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
-      correctAnswer: "Magnesium mengalami oksidasi",
-      explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
-    },
-    {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-      correctAnswer: "Hidrogen",
-      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
-    },
-    {
-      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-      options: ["-1", "0", "+1", "+2"],
-      correctAnswer: "-1",
-      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
-    },
-    
   ];
 
   const handleOptionSelect = (option) => {
@@ -110,118 +79,7 @@ function SenyawaKarbon() {
       setShowExplanation(false);
     }
   };
-
- 
-  function SenyawaKarbon() {
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [selectedOption, setSelectedOption] = useState("");
-    const [score, setScore] = useState(0);
-    const [quizCompleted, setQuizCompleted] = useState(false);
-    const [explanations, setExplanations] = useState([]);
-    const [showExplanation, setShowExplanation] = useState(false);
   
-    const questions = [
-      {
-        question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
-        options: ["Zn", "Cu", "Cu²⁺", "Zn²⁺"],
-        correctAnswer: "Zn",
-        explanation: "Zn mengalami oksidasi karena kehilangan elektron dan berubah menjadi Zn²⁺.",
-      },
-      {
-        question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-        options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-        correctAnswer: "Hidrogen",
-        explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
-      },
-      {
-        question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
-        options: ["+1", "-2", "0", "-1"],
-        correctAnswer: "-2",
-        explanation: "Oksigen dalam senyawa biasanya memiliki bilangan oksidasi -2 kecuali dalam senyawa peroksida atau fluorida.",
-      },
-      {
-        question: "Reaksi antara seng dan asam klorida menghasilkan gas hidrogen. Reaksi tersebut adalah contoh dari reaksi redoks. Manakah yang mengalami reduksi dalam reaksi tersebut?",
-        options: ["Seng (Zn)", "Ion hidrogen (H⁺)", "Klorida (Cl⁻)", "Gas hidrogen (H₂)"],
-        correctAnswer: "Ion hidrogen (H⁺)",
-        explanation: "Ion H⁺ menerima elektron dan berubah menjadi gas hidrogen (H₂), sehingga mengalami reduksi.",
-      },
-      {
-        question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-        options: ["-1", "0", "+1", "+2"],
-        correctAnswer: "-1",
-        explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
-      },
-      {
-        question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
-        options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
-        correctAnswer : "Reduktor",
-        explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
-      },
-      {
-        question : "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
-        options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
-        correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
-        explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
-      },
-      {
-        question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
-        options : ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
-        correctAnswer: "Magnesium mengalami oksidasi",
-        explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
-      },
-      {
-        question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-        options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-        correctAnswer: "Hidrogen",
-        explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
-      },
-      {
-        question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-        options: ["-1", "0", "+1", "+2"],
-        correctAnswer: "-1",
-        explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
-      },
-      
-    ];
-  
-    const handleOptionSelect = (option) => {
-      setSelectedOption(option);
-      const isCorrect = option === questions[currentQuestionIndex].correctAnswer;
-      if (isCorrect) setScore((prevScore) => prevScore + 1);
-  
-      setExplanations((prevExplanations) => {
-        const updated = [...prevExplanations];
-        updated[currentQuestionIndex] = {
-          correct: isCorrect,
-          explanation: questions[currentQuestionIndex].explanation,
-        };
-        return updated;
-      });
-      setShowExplanation(true);
-    };
-  
-    const getFeedbackClass = (isCorrect) => {
-      return isCorrect ? "correct-feedback" : "incorrect-feedback";
-    };
-  
-    const handleNextQuestion = () => {
-      if (currentQuestionIndex < questions.length - 1) {
-        setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-        setSelectedOption("");
-        setShowExplanation(false);
-      } else {
-        setQuizCompleted(true); 
-      }
-    };
-  
-    const handlePreviousQuestion = () => {
-      if (currentQuestionIndex > 0) {
-        setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
-        setSelectedOption("");
-        setShowExplanation(false);
-      }
-    };
-  }
   return (
     <><div className="senyawa-karbon-container">
       <h1 className="main-title">Bab 4: Senyawa Karbon dan Turunan Alkana</h1>
@@ -605,9 +463,8 @@ function SenyawaKarbon() {
           src="https://soalkimia.com/wp-content/uploads/2017/05/soal-senyawa-karbon-kelas-12-no-2.jpg"
           alt="Kunci2" />
       </section>
-      </div>
-      <div className="quiz-container">
-        <section className="kuis-pilihan-ganda">
+
+      <section className="kuis-pilihan-ganda">
           <h3>Mini Quiz</h3>
           {!quizCompleted ? (
             <>
@@ -676,7 +533,7 @@ function SenyawaKarbon() {
       </div>
     )}
   </section>
-</div>
+      </div>
 </>
 
   );

@@ -11,64 +11,34 @@ function Benzena() {
 
   const questions = [
     {
-      question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
-      options: ["Zn", "Cu", "Cu²⁺", "Zn²⁺"],
-      correctAnswer: "Zn",
-      explanation: "Zn mengalami oksidasi karena kehilangan elektron dan berubah menjadi Zn²⁺.",
+      question: "Benzena merupakan senyawa yang memiliki struktur..",
+      options: ["Cincin segi enam dengan ikatan rangkap antara atom karbon", "Cincin segi empat dengan ikatan tunggal antara atom karbon", "Cincin segi lima dengan ikatan ganda", "Ikatan tunggal antara atom karbon dan hidrogen", "Ikatan ganda antara dua atom karbon"],
+      correctAnswer: "Cincin segi enam dengan ikatan rangkap antara atom karbon",
+      explanation: "Benzena memiliki struktur cincin segi enam dengan ikatan rangkap yang bersifat terdelokalisasi antara atom karbon, yang disebut dengan ikatan pi terdelokalisasi.",
     },
     {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-      correctAnswer: "Hidrogen",
-      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
+      question: "Senyawa yang diperoleh dari reaksi benzena dengan klorin menggunakan katalis FeCl₃ adalah..",
+      options: ["Benzil", "Klorobenzena", "Aseton", "Toluena", "Asam benzoat"],
+      correctAnswer: "Klorobenzena",
+      explanation: "Reaksi benzena dengan klorin (Cl₂) menggunakan katalis besi klorida (FeCl₃) menghasilkan klorobenzena, yang merupakan senyawa aromatik.",
     },
     {
-      question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
-      options: ["+1", "-2", "0", "-1"],
-      correctAnswer: "-2",
-      explanation: "Oksigen dalam senyawa biasanya memiliki bilangan oksidasi -2 kecuali dalam senyawa peroksida atau fluorida.",
+      question: "Benzena memiliki sifat yang sangat khas, yaitu..",
+      options: ["Memiliki titik didih tinggi dan mudah terbakar", "Mudah larut dalam air", "Tidak berbau dan tidak berwarna", "Berbau khas dan sangat beracun", "Bersifat nonpolar dan mudah larut dalam air"],
+      correctAnswer: "Berbau khas dan sangat beracun",
+      explanation: "Benzena memiliki bau yang khas dan sangat beracun. Selain itu, benzena juga bersifat nonpolar dan sukar larut dalam air.",
     },
     {
-      question: "Reaksi antara seng dan asam klorida menghasilkan gas hidrogen. Reaksi tersebut adalah contoh dari reaksi redoks. Manakah yang mengalami reduksi dalam reaksi tersebut?",
-      options: ["Seng (Zn)", "Ion hidrogen (H⁺)", "Klorida (Cl⁻)", "Gas hidrogen (H₂)"],
-      correctAnswer: "Ion hidrogen (H⁺)",
-      explanation: "Ion H⁺ menerima elektron dan berubah menjadi gas hidrogen (H₂), sehingga mengalami reduksi.",
+      question: "Reaksi yang digunakan untuk memodifikasi benzena dengan menambahkan gugus alkil adalah..",
+      options: ["Reaksi substitusi elektrofilik", "Reaksi adisi", "Reaksi eliminasi", "Reaksi polimerisasi", "Reaksi redoks"],
+      correctAnswer: "Reaksi substitusi elektrofilik",
+      explanation: "Reaksi substitusi elektrofilik adalah reaksi di mana gugus alkil menggantikan salah satu atom hidrogen dalam cincin benzena.",
     },
     {
-      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-      options: ["-1", "0", "+1", "+2"],
-      correctAnswer: "-1",
-      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
-    },
-    {
-      question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
-      options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
-      correctAnswer: "Reduktor",
-      explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
-    },
-    {
-      question: "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
-      options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
-      correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
-      explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
-    },
-    {
-      question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
-      options: ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
-      correctAnswer: "Magnesium mengalami oksidasi",
-      explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi.",
-    },
-    {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-      correctAnswer: "Hidrogen",
-      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
-    },
-    {
-      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-      options: ["-1", "0", "+1", "+2"],
-      correctAnswer: "-1",
-      explanation : "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+      question: "Benzena termasuk dalam kelas senyawa..",
+      options: ["Alkohol", "Amin", "Aromatik", "Alkana", "Eter"],
+      correctAnswer: "Aromatik",
+      explanation: "Benzena termasuk dalam kelas senyawa aromatik, yang memiliki struktur cincin karbon dengan ikatan terdelokalisasi.",
     },
   ];
 
@@ -300,8 +270,10 @@ function Benzena() {
 
             {showExplanation && (
               <div
-                class Name="quiz-feedback ${getFeedbackClass(explanations[currentQuestionIndex].correct)}"
-              >
+              className={`quiz-feedback ${getFeedbackClass(
+                explanations[currentQuestionIndex].correct
+              )}`}
+            >
                 <p>
                   {explanations[currentQuestionIndex].correct
                     ? "Jawaban Anda benar!"

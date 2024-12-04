@@ -11,6 +11,7 @@
 .register-container h2 {
     margin-bottom: 20px;
     color: #894400;
+    text-align: center;
 }
 
 .register-container input {
