@@ -126,3 +126,122 @@ ul li {
 .efek-ionisasi h4{
   color: maroon;
 }
+
+/* quiz */
+.kuis-pilihan-ganda {
+  margin-top: 30px;
+  text-align: left;
+}
+
+/* Untuk opsi yang benar dan salah */
+.quiz-option.correct {
+  background-color: #d4edda; /* Hijau muda */
+  border: 1px solid #28a745;
+}
+
+.quiz-option.incorrect {
+  background-color: #f8d7da; /* Merah muda */
+  border: 1px solid #dc3545;
+}
+
+/* Tombol navigasi */
+.quiz-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.quiz-button {
+  padding: 10px 20px;
+  background-color: #a36500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.quiz-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.quiz-button:hover {
+  background-color: #0056b3;
+}
+.quiz-feedback {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.correct-feedback { 
+  background-color: #d4edda; /* Hijau muda */
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+.incorrect-feedback {
+  background-color: #f8d7da; /* Merah muda */
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+.quiz-completion {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.quiz-option {
+  margin: 10px 0;
+  padding-right: 80%;
+}
+
+.quiz-option label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-left: 10px;
+  align-items: left;
+}
+
+.quiz-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.contoh-soal p {
+  font-family: 'Courier New', monospace;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+}
