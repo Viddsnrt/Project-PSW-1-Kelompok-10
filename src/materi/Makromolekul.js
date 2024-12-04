@@ -133,35 +133,38 @@ const Makromolekul = () => {
 
       <h3>Uji Sudan III</h3>
       <p>Uji ini digunakan untuk mendeteksi keberadaan lemak dalam sampel dengan menggunakan pewarna Sudan III.</p>
-
-      <h2 className="section-title">8. Mini Quiz</h2>
-      {!quizCompleted ? (
-        <div>
-          <h3>{questions[currentQuestionIndex].question}</h3>
-          <ul>
-            {questions[currentQuestionIndex].options.map((option, index) => (
-              <li key={index} onClick={() => handleOptionSelect(option)} style={{ cursor: "pointer", backgroundColor: selectedOption === option ? (option === questions[currentQuestionIndex].correctAnswer ? "lightgreen" : "lightcoral") : "transparent" }}>
-                {option}
-              </li>
-            ))}
-          </ul>
-          {showExplanation && (
-            <p>
-              {selectedOption === questions[currentQuestionIndex].correctAnswer ? "Benar! " : "Salah! "} {questions[currentQuestionIndex].explanation}
-            </p>
-          )}
-          <button onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0}>Sebelumnya</button>
-          <button onClick={handleNextQuestion}>{currentQuestionIndex < questions.length - 1 ? "Selanjutnya" : "Selesai"}</button>
-        </div>
-      ) : (
-        <h3>Quiz selesai! Skor Anda: {score} dari {questions.length}</h3>
-      )}
-
-      <footer>
-        <p>
-          Makromolekul seperti karbohidrat, protein, dan lemak memiliki peran penting dalam kehidupan sehari-hari dan kesehatan tubuh. Memahami struktur dan fungsi dari makromolekul ini sangat penting untuk menjaga pola makan yang seimbang.
-        </p>
-      </footer>
+      
+      <div className="quiz-container">
+        <h2 className="section-title">Mini Quiz</h2>
+        {!quizCompleted ? (
+          <div className="quiz-content">
+            <h3>{questions[currentQuestionIndex].question}</h3>
+            <ul className="options-list">
+              {questions[currentQuestionIndex].options.map((option, index) => (
+                <li 
+                  key={index} 
+                  onClick={() => handleOptionSelect(option)} 
+                  className={`option-item ${selectedOption === option ? (option === questions[currentQuestionIndex].correctAnswer ? "correct" : "incorrect") : ""}`}
+                  style={{ cursor: "pointer" }}
+                >
+                  {option}
+                </li>
+              ))}
+            </ul>
+            {showExplanation && (
+              <p className="explanation">
+                {selectedOption === questions[currentQuestionIndex].correctAnswer ? "Benar! " : "Salah! "} {questions[currentQuestionIndex].explanation}
+              </p>
+            )}
+            <div className="navigation-buttons">
+              <button onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0}>Sebelumnya</button>
+              <button onClick={handleNextQuestion}>{currentQuestionIndex < questions.length - 1 ? "Selanjutnya" : "Selesai"}</button>
+            </div>
+          </div>
+        ) : (
+          <h3>Quiz selesai! Skor Anda: {score} dari {questions.length}</h3>
+        )}
+      </div>
     </div>
   );
 };
