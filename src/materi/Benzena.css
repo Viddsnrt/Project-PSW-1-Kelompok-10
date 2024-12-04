@@ -49,6 +49,8 @@
   .image-container {
     text-align: center;
     margin: 20px 0;
+    height: auto;
+    
   }
   
   .benzene-image {

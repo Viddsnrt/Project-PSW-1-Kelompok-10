@@ -94,7 +94,7 @@ function Benzena() {
         </p>
         <div className="image-container">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Benzene-2D-full.svg"
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh30-C28PS6ig4T9djj6bnbalNZ6Fo4CGrjbFQt_846lF3zDc7gC1wli_N5RMUONFUeQxsPY66J8gTyS60ZmtJZKLC4-oAFmvTD_F2Yw5s-9yqvNlPLbwpfGzpoBg_JxIph3Y6ITdqNqGWi/s1600/struktur-benzena-6.jpg"
             alt="Struktur Benzena"
             className="benzene-image"
           />

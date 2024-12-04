@@ -82,7 +82,7 @@ function SenyawaKarbon() {
   
   return (
     <><div className="senyawa-karbon-container">
-      <h1 className="main-title">Bab 4: Senyawa Karbon dan Turunan Alkana</h1>
+        <h1>Bab 4: Senyawa Karbon dan Turunan Alkana</h1>
       <p className="intro-text">
         Alkana (juga disebut dengan <em>parafin</em>) adalah senyawa kimia hidrokarbon jenuh asiklis. Alkana termasuk senyawa alifatik. Dengan kata lain, alkana adalah sebuah rantai karbon panjang dengan ikatan-ikatan tunggal. Rumus umum untuk alkana adalah C<sub>n</sub>H<sub>2n+2</sub>.
       </p>

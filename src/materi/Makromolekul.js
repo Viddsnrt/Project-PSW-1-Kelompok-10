@@ -95,7 +95,7 @@ const Makromolekul = () => {
   return (
     <div className="makromolekul-container">
       <header>
-        <h1 className="main-title">Materi Makromolekul Secara Lengkap</h1>
+        <h1 className="main-title">Bab 6: Materi Makromolekul Secara Lengkap</h1>
       </header>
 
       <section>
