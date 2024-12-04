@@ -13,7 +13,7 @@ function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <a href="/OurServices">About Us</a>
+              <a href="/aboutus">About Us</a>
             </li>
             <li>
               <a href="/OurServices">Services</a>

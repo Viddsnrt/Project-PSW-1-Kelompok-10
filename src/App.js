@@ -22,6 +22,7 @@ import Community from './element/Community';
 import Makromolekul from './materi/Makromolekul';
 import Webinars from './element/Webinars';
 import Registernow from './element/Registernow';
+import AboutUs from './element/AboutUs';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/Makromolekul" element={<Makromolekul />} />
         <Route path="/webinars" element={<Webinars />} />
         <Route path="/Registernow" element={<Registernow />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
 
       <Footer />
