@@ -6,7 +6,6 @@ const Makromolekul = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
-  const [explanations, setExplanations] = useState([]);
   const [showExplanation, setShowExplanation] = useState(false);
 
   const questions = [
@@ -22,56 +21,13 @@ const Makromolekul = () => {
       correctAnswer: "Bakelit",
       explanation: "Bakelit adalah polimer termoset, bukan termoplas.",
     },
-    {
-      question: "Berikut ini yang termasuk dalam contoh polimer alami adalah..",
-      options: ["Nilon", "Polietilen", "Starch (amilum)", "Polipropilena", "PVC"],
-      correctAnswer: "Starch (amilum)",
-      explanation: "Starch (amilum) adalah contoh polimer alami yang terdiri dari banyak unit glukosa yang terikat dalam rantai panjang.",
-    },
-    {
-      question: "Polimer yang digunakan sebagai bahan pembuat plastik keras dan digunakan dalam pipa air adalah..",
-      options: ["Polietilen", "PVC", "Poliester", "Nilon", "Akrilik"],
-      correctAnswer: "PVC",
-      explanation: "PVC (Polivinil Klorida) adalah polimer yang digunakan dalam pembuatan berbagai produk plastik keras, seperti pipa air.",
-    },
-    {
-      question: "Senyawa yang terbentuk dari dua atau lebih unit monomer yang bergabung melalui reaksi kondensasi disebut..",
-      options: ["Polimer", "Dimer", "Monomer", "Dimetilpolisiloksan", "Alkohol"],
-      correctAnswer: "Polimer",
-      explanation: "Polimer terbentuk ketika dua atau lebih unit monomer bergabung melalui reaksi kondensasi, yang menghilangkan molekul kecil seperti air.",
-    },
-    {
-      question: "Proses pembuatan polietilen dengan cara pemanasan pada tekanan tinggi disebut..",
-      options: ["Polimerisasi radikal bebas", "Polimerisasi kondensasi", "Polimerisasi adisi", "Polimerisasi jaringan silang", "Polimerisasi kopolimer"],
-      correctAnswer: "Polimerisasi radikal bebas",
-      explanation: "Polimerisasi radikal bebas adalah proses yang digunakan untuk membuat polietilen, di mana radikal bebas memulai reaksi adisi untuk menghasilkan rantai polimer.",
-    },
-    {
-      question: "Polimer yang digunakan dalam pembuatan pakaian dan tekstil serta memiliki sifat kuat dan elastis adalah..",
-      options: ["Polietilen", "Nilon", "PVC", "Teflon", "Poliester"],
-      correctAnswer: "Nilon",
-      explanation: "Nilon adalah polimer sintetis yang digunakan dalam pembuatan tekstil karena sifatnya yang kuat, elastis, dan tahan lama.",
-    },
   ];
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     const isCorrect = option === questions[currentQuestionIndex].correctAnswer;
     if (isCorrect) setScore((prevScore) => prevScore + 1);
-
-    setExplanations((prevExplanations) => {
-      const updated = [...prevExplanations];
-      updated[currentQuestionIndex] = {
-        correct: isCorrect,
-        explanation: questions[currentQuestionIndex].explanation,
-      };
-      return updated;
-    });
     setShowExplanation(true);
-  };
-
-  const getFeedbackClass = (isCorrect) => {
-    return isCorrect ? "correct-feedback" : "incorrect-feedback";
   };
 
   const handleNextQuestion = () => {
@@ -80,7 +36,7 @@ const Makromolekul = () => {
       setSelectedOption("");
       setShowExplanation(false);
     } else {
-      setQuizCompleted(true); 
+      setQuizCompleted(true);
     }
   };
 
@@ -177,79 +133,75 @@ const Makromolekul = () => {
 
       <h3>Uji Sudan III</h3>
       <p>Uji ini digunakan untuk mendeteksi keberadaan lemak dalam sampel dengan menggunakan pewarna Sudan III.</p>
+      
+      <div className="quiz-container">
+        <section className="kuis-pilihan-ganda">
+          <h3>Mini Quiz</h3>
+          {!quizCompleted ? (
+            <>
+              <p>
+                <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
+                {questions[currentQuestionIndex].question}
+              </p>
+              <form className="quiz-form">
+                {questions[currentQuestionIndex].options.map((option, index) => (
+                  <div key={index} className="quiz-option">
+                    <label>
+                      <input
+                        type="radio"
+                        value={option}
+                        checked={selectedOption === option}
+                        onChange={() => handleOptionSelect(option)}
+                        disabled={showExplanation}
+                      />
+                      {option}
+                    </label>
+                  </div>
+                ))}
+              </form>
 
-      <section className="kuis-pilihan-ganda">
-        <h3>Mini Quiz</h3>
-        {!quizCompleted ? (
-          <>
-            <p>
-              <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
-              {questions[currentQuestionIndex].question}
-            </p>
-
-            <form className="quiz-form">
-              {questions[currentQuestionIndex].options.map((option, index) => (
-                <div key={index} className="quiz-option">
-                  <label>
-                    <input
-                      type="radio"
-                      value={option}
-                      checked={selectedOption === option}
-                      onChange={() => handleOptionSelect(option)}
-                      disabled={showExplanation}
-                    />
-                    {option}
-                  </label>
+              {showExplanation && (
+                <div className={`quiz-feedback ${selectedOption === questions[currentQuestionIndex].correctAnswer ? "correct" : "incorrect"}`}>
+                  <p>
+                    {selectedOption === questions[currentQuestionIndex].correctAnswer
+                      ? "Jawaban Anda benar!"
+                      : "Jawaban Anda salah."}
+                  </p>
+                  <p>{questions[currentQuestionIndex].explanation}</p>
                 </div>
-              ))}
-            </form>
+              )}
 
-            {showExplanation && (
-              <div
-              className={`quiz-feedback ${getFeedbackClass(
-                explanations[currentQuestionIndex].correct
-              )}`}
-            >
-                <p>
-                  {explanations[currentQuestionIndex].correct
-                    ? "Jawaban Anda benar!"
-                    : "Jawaban Anda salah."}
-                </p>
-                <p>{explanations[currentQuestionIndex].explanation}</p>
+              <div className="quiz-buttons">
+                <div className="navigation-buttons">
+                  <button
+                    type="button"
+                    className="quiz-button"
+                    onClick={handlePreviousQuestion}
+                    disabled={currentQuestionIndex === 0}
+                  >
+                    Sebelumnya
+                  </button>
+                  <button
+                    type="button"
+                    className="quiz-button"
+                    onClick={handleNextQuestion}
+                    disabled={!selectedOption}
+                  >
+                    {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Selanjutnya"}
+                  </button>
+                </div>
               </div>
-            )}
-
-            <div className="quiz-buttons">
-              <div className="navigation-buttons">
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handlePreviousQuestion}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Previous
-                </button>
-                <button
-                  type="button"
-                  className="quiz-button"
-                  onClick={handleNextQuestion}
-                  disabled={!selectedOption}
-                >
-                  {currentQuestionIndex === questions.length - 1 ? "Lihat Skor" : "Next"}
-                </button>
-              </div>
+            </>
+          ) : (
+            <div className="quiz-completion">
+              <p>Quiz Selesai!</p>
+              <p>
+                Skor Anda: {score} dari {questions.length}
+              </p>
             </div>
-          </>
-        ) : (
-          <div className="quiz-completion">
-            <p>Quiz Selesai!</p>
-            <p>
-              Skor Anda: {score} dari {questions.length}
-            </p>
-          </div>
-        )}
-      </section>
-    
+          )}
+        </section>
+      </div>
     </div>
   );
 };
