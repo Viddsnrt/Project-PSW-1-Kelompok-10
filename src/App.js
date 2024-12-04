@@ -23,6 +23,7 @@ import Makromolekul from './materi/Makromolekul';
 import Webinars from './element/Webinars';
 import Registernow from './element/Registernow';
 import Resourcelibrary from './element/Resourcelibrary';
+import Joincommunity from './element/Joincommunity';
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
         <Route path="/webinars" element={<Webinars />} />
         <Route path="/Registernow" element={<Registernow />} />
         <Route path="/Resourcelibrary" element={<Resourcelibrary />} />
+        <Route path="/Joincommunity" element={<Joincommunity />} />
       </Routes>
 
       <Footer />
