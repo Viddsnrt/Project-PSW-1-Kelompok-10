@@ -17,8 +17,7 @@ function Home() {
           <p className="hero-text">
             Explore the world of chemistry and enhance your understanding tomorrow with <span>chimiLearn</span>
           </p>
-          {/* Conditional Navigation for Get Started Button */}
-          <Link to={isLoggedIn ? "/dashboard" : "/register"}>
+          <Link to={ "/register"}>
             <button className="cta-button">Get Started</button>
           </Link>
         </div>
