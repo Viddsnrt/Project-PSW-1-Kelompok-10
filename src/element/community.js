@@ -44,7 +44,7 @@ function Community() {
       <section className="join-section">
         <h2>Ready to Start?</h2>
         <p>Become a part of the ChimiLearn Community today.</p>
-        <Link to="/Registernow">
+        <Link to="/Joincommunity">
           <button className="cta-button">Join Now</button>
         </Link>
       </section>

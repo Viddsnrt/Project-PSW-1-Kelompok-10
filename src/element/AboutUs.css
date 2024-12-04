@@ -1,0 +1,158 @@
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-content {
+    flex: 1;
+    margin-right: 2rem;
+  }
+  
+  .about-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: black;
+    margin-left: 10%;
+  }
+
+
+  .about-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color:black;
+    margin-left: 10%;
+  }
+  
+  .about-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 40px; 
+    margin-left: 8%;
+    display: block; 
+    transform: translateX(10%); 
+  }
+  
+  
+  /* Features Section */
+  .abtus-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f4f4f9;
+  }
+  
+  .abtus-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .abtus-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .abtus-item {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .abtus-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .abtus-item i {
+    font-size: 2.5rem;
+    color: #ff4500;
+    margin-bottom: 1rem;
+  }
+  
+  .abtus-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .abtus-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .abt-button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .abt-button:hover {
+    background-color: #ffeb3b;
+    color: #ff4500;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    /* About Section */
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-content {
+      margin-right: 0;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-text {
+      font-size: 1.2rem;
+    }
+  
+    .about-image img {
+      max-width: 80%;
+      margin-top: 1rem;
+    }
+  
+    /* Features Section */
+    .abtus-grid {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .abtus-item {
+      width: 100%;
+    }
+  
+    /* Call to Action Section */
+    .abt-section h2 {
+      font-size: 2rem;
+    }
+  
+    .abt-section p {
+      font-size: 1rem;
+    }
+  
+    .abt-button {
+      padding: 10px 20px;
+    }
+  }
+  
