@@ -98,10 +98,10 @@ function Navbar() {
           </Link>
         </li>
         {!isLoggedIn ? (
+          
           <li>
-            <Link to="/Login" onClick={handleLinkClick}>
-              Login
-            </Link>
+            <Link to="/Makromolekul" onClick={handleLinkClick}>
+            Makromolekul</Link>
           </li>
         ) : (
           <>
