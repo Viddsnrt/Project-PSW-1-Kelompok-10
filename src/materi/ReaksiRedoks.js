@@ -368,6 +368,31 @@ function ReaksiRedoks() {
         </ul>
       </section>
 
+      <h4>3. Menganalisis Pengaruh Perubahan Konsentrasi atau Suhu terhadap Potensi Sel</h4>
+
+      <section className="contoh-soal">
+        <p><strong>Soal:</strong> Bagaimana perubahan konsentrasi ion Cu²⁺ dalam sel Cu-Zn akan mempengaruhi potensi sel? Jelaskan!</p>
+        <p><strong>Bayangkan sel Cu-Zn seperti sebuah perlombaan lari estafet:</strong></p>
+        <ul>
+          <li><b>Elektron:</b> adalah pelari estafet yang membawa energi.</li>
+          <li><b>Elektroda Cu dan Zn:</b> adalah tempat start dan finish.</li>
+          <li><b>Larutan CuSO₄ dan ZnSO₄:</b> adalah lintasan lari yang berisi penonton (ion-ion).</li>
+        </ul><br/>
+        <p><strong>Konsentrasi ion Cu²⁺ itu seperti jumlah penonton di garis finish.</strong></p>
+        <ul>
+          <li>Jika konsentrasi ion Cu²⁺ tinggi, artinya ada banyak banget penonton di garis finish. Para elektron yang sudah capek lari dari elektroda Zn jadi semangat lagi karena melihat banyak penonton. Mereka langsung buru-buru nyebrang ke elektroda Cu. Akibatnya, potensi sel jadi lebih besar.</li>
+          <li>Sebaliknya, kalau konsentrasi ion Cu²⁺ rendah, penonton di garis finish jadi sedikit. Elektron-elektron jadi malas nyebrang karena nggak ada yang menyambut. Akibatnya, potensi sel jadi lebih kecil.</li>
+        </ul>
+        <p><strong>Kenapa bisa begitu?</strong></p>
+        <p>Ini karena elektron itu suka tempat yang sepi. Kalau di tempat tujuan (elektroda Cu) sudah terlalu ramai (konsentrasi ion Cu²⁺ tinggi), mereka jadi nggak semangat buat pindah. Tapi kalau di tempat tujuan masih sepi (konsentrasi ion Cu²⁺ rendah), mereka jadi semangat buat pindah.</p>
+        <p><strong>Intinya:</strong></p>
+        <p>Semakin tinggi konsentrasi ion Cu²⁺, semakin besar potensi sel. Sebaliknya, semakin rendah konsentrasi ion Cu²⁺, semakin kecil potensi sel.</p>
+        <p><strong>Contoh dalam kehidupan sehari-hari:</strong></p>
+        <p>Bayangkan kamu lagi main tarik tambang. Kalau tim lawan (ion Cu²⁺) jumlahnya banyak dan semangat, kamu jadi susah narik. Tapi kalau tim lawan jumlahnya sedikit dan lemas, kamu jadi lebih gampang narik.</p>
+        <p><strong>Kesimpulan:</strong></p>
+        <p>Perubahan konsentrasi ion Cu²⁺ punya pengaruh yang signifikan terhadap potensi sel. Ini karena konsentrasi ion mempengaruhi semangat elektron untuk berpindah dari satu elektroda ke elektroda lainnya.</p>
+      </section>
+
       <section className="kuis-pilihan-ganda">
         <h3>Mini Quiz</h3>
         {!quizCompleted ? (
@@ -377,7 +402,7 @@ function ReaksiRedoks() {
               {questions[currentQuestionIndex].question}
             </p>
 
-            <form className="quiz-form">
+            <div className="quiz-form">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <div key={index} className="quiz-option">
                   <label>
@@ -392,7 +417,7 @@ function ReaksiRedoks() {
                   </label>
                 </div>
               ))}
-            </form>
+            </div>
 
             {showExplanation && (
               <div

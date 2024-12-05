@@ -5,7 +5,6 @@
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
 }
 
@@ -112,7 +111,7 @@ p{
 }
 
 .incorrect-feedback {
-  background-color: #f8d7da; /* Merah muda */
+  background-color: #f8d7da; 
   border: 1px solid #dc3545;
   color: #dc3545;
 }
@@ -126,24 +125,31 @@ p{
 }
 
 .quiz-option {
-  margin: 10px 0;
-  padding-right: 80%;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 5px; 
+  margin: 5px 0; 
+  white-space: nowrap; 
 }
 
 .quiz-option label {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  margin-left: 10px;
-  align-items: left;
+  display: inline-flex; 
+  align-items: center; 
+  cursor: pointer; 
 }
 
-.quiz-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+.quiz-option input[type="radio"] {
+  margin-right: 8px;  
 }
+
+.quiz-form {
+  background: transparent; 
+  padding: 10px; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+}
+
 
 .navigation-buttons {
   display: flex;

@@ -7,6 +7,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
   }
+
+
+  
   
   /* Judul utama */
   .main-title {
@@ -17,6 +20,10 @@
     margin-bottom: 20px;
   }
   
+  .main-title h2 {
+    text-align: left;
+    color: #2c3e50;
+  }
   /* Text pengantar */
   .intro-text {
     font-size: 16px;
@@ -49,6 +56,8 @@
   .image-container {
     text-align: center;
     margin: 20px 0;
+    height: auto;
+    
   }
   
   .benzene-image {

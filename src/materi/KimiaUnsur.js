@@ -11,64 +11,34 @@ function KimiaUnsur() {
 
   const questions = [
     {
-      question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
-      options: ["Zn", "Cu", "Cu²⁺", "Zn²⁺"],
-      correctAnswer: "Zn",
-      explanation: "Zn mengalami oksidasi karena kehilangan elektron dan berubah menjadi Zn²⁺.",
+      question: "Unsur yang termasuk dalam golongan halogen adalah..",
+      options: ["Klorin", "Oksigen", "Sodium", "Kalsium", "Nitrogen"],
+      correctAnswer: "Klorin",
+      explanation: "Klorin merupakan unsur yang termasuk dalam golongan halogen (golongan VIIA) dalam tabel periodik.",
     },
     {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-      correctAnswer: "Hidrogen",
-      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
+      question: "Unsur yang memiliki sifat non-logam dan mudah membentuk ikatan kovalen adalah..",
+      options: ["Silikon", "Karbon", "Natrium", "Kalsium", "Magnesium"],
+      correctAnswer: "Karbon",
+      explanation: "Karbon adalah unsur non-logam yang mudah membentuk ikatan kovalen dengan unsur lainnya, seperti pada senyawa organik.",
     },
     {
-      question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
-      options: ["+1", "-2", "0", "-1"],
-      correctAnswer: "-2",
-      explanation: "Oksigen dalam senyawa biasanya memiliki bilangan oksidasi -2 kecuali dalam senyawa peroksida atau fluorida.",
+      question: "Berikut ini yang merupakan unsur logam transisi adalah..",
+      options: ["Besin (Fe)", "Natrium (Na)", "Klorin (Cl)", "Kalium (K)", "Helium (He)"],
+      correctAnswer: "Besin (Fe)",
+      explanation: "Besin (Fe) adalah salah satu unsur logam transisi yang terletak di blok d tabel periodik.",
     },
     {
-      question: "Reaksi antara seng dan asam klorida menghasilkan gas hidrogen. Reaksi tersebut adalah contoh dari reaksi redoks. Manakah yang mengalami reduksi dalam reaksi tersebut?",
-      options: ["Seng (Zn)", "Ion hidrogen (H⁺)", "Klorida (Cl⁻)", "Gas hidrogen (H₂)"],
-      correctAnswer: "Ion hidrogen (H⁺)",
-      explanation: "Ion H⁺ menerima elektron dan berubah menjadi gas hidrogen (H₂), sehingga mengalami reduksi.",
+      question: "Unsur dengan konfigurasi elektron [Kr] 5s² 4d¹⁰ 5p² adalah..",
+      options: ["Stronsium", "Zirkonium", "Selenium", "Germanium", "Arsenik"],
+      correctAnswer: "Germanium",
+      explanation: "Germanium memiliki konfigurasi elektron [Kr] 5s² 4d¹⁰ 5p², yang menunjukkan bahwa ia berada di golongan IV.",
     },
     {
-      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-      options: ["-1", "0", "+1", "+2"],
-      correctAnswer: "-1",
-      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
-    },
-    {
-      question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
-      options: ["Oksidator", "Reduktor", "Katalisator", "Elektrolit"],
-      correctAnswer: "Reduktor",
-      explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya.",
-    },
-    {
-      question: "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena",
-      options: ["Perpindahan elektron antara logam dan elektrolit", "Perubahan suhu yang sangat tinggi", "Pembentukan senyawa kompleks", "Reaksi endergonik"],
-      correctAnswer: "Perpindahan elektron antara logam dan elektrolit",
-      explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit.",
-    },
-    {
-      question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
-      options: ["Magnesium mengalami reduksi", "Magnesium mengalami oksidasi", "Oksigen mengalami oksidasi", "Tidak ada perubahan"],
-      correctAnswer: "Magnesium mengalami oksidasi",
-      explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
-    },
-    {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
-      options: ["Oksigen", "Hidrogen", "Nitrogen", "Karbon dioksida"],
-      correctAnswer: "Hidrogen",
-      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron.",
-    },
-    {
-      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
-      options: ["-1", "0", "+1", "+2"],
-      correctAnswer: "-1",
-      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na.",
+      question: "Unsur yang memiliki 7 elektron valensi dan termasuk golongan VIIA adalah..",
+      options: ["Fluorin", "Klorin", "Bromin", "Iodin", "Semua benar"],
+      correctAnswer: "Semua benar",
+      explanation: "Fluorin, klorin, bromin, dan iodin semuanya adalah unsur golongan VIIA (halogen) yang memiliki 7 elektron valensi.",
     },
   ];
 
@@ -117,7 +87,13 @@ function KimiaUnsur() {
         Kimia unsur adalah cabang kimia yang mempelajari sifat, keberadaan,
         reaksi, dan kegunaan unsur-unsur kimia dalam tabel periodik. Pembahasan
         mencakup unsur golongan utama, golongan transisi, hingga unsur langka.
-      </p>
+      </p><br/>
+
+      <img 
+            src="https://cdn.slidesharecdn.com/ss_thumbnails/kimiaunsur-141130181218-conversion-gate02-thumbnail-4.jpg?cb=1417371221" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
 
       {/* Sections with content */}
       <section className="material-section">
@@ -129,47 +105,121 @@ function KimiaUnsur() {
           periodik. Dalam kimia unsur, kita mempelajari sifat fisik dan kimia,
           reaksi kimia, serta kegunaan unsur-unsur tersebut dalam kehidupan
           sehari-hari.
-        </p>
+        </p><br/>
       </section>
 
       <section className="material-section">
-        <h3>B. Golongan dan Periode Unsur</h3>
+        <h3>B. Tabel Periodik Unsur</h3>
+        <ul>
+          <li><b>Struktur Tabel Periodik:</b> Tabel periodik merupakan alat yang sangat berguna untuk mengorganisasi dan memahami sifat-sifat unsur. Unsur-unsur disusun berdasarkan nomor atom yang meningkat, dan sifat-sifatnya menunjukkan tren periodik.</li>
+          <li><b>Golongan:</b> Kolom vertikal dalam tabel periodik disebut golongan. Unsur-unsur dalam satu golongan memiliki konfigurasi elektron valensi yang serupa, sehingga memiliki sifat kimia yang mirip. Contohnya, golongan alkali (Li, Na, K) sangat reaktif dengan air.</li>
+          <li><b>Periode:</b> Baris horizontal dalam tabel periodik disebut periode. Semakin ke bawah suatu periode, jari-jari atom semakin besar dan energi ionisasi semakin kecil.</li>
+          <li><b>Blok Unsur:</b> Tabel periodik dibagi menjadi beberapa blok berdasarkan subkulit yang terisi terakhir dalam konfigurasi elektron. Blok s, p, d, dan f masing-masing memiliki karakteristik yang berbeda.</li>
+        </ul><br/>
+        <img 
+            src="https://th.bing.com/th/id/OIP.P5MJZJ58qAWKisFWzbH5wwHaEK?rs=1&pid=ImgDetMain" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
+      </section>
+
+      <section className="material-section">
+        <h3>C. Golongan dan Periode Unsur</h3>
         <p>
           Unsur-unsur kimia dalam tabel periodik dibagi dalam golongan dan
           periode. Golongan mengelompokkan unsur-unsur berdasarkan sifat-sifat
           kimia yang serupa, sedangkan periode mengelompokkan unsur berdasarkan
           nomor atomnya. Unsur golongan utama adalah unsur-unsur yang memiliki
           sifat kimia yang lebih stabil dan mudah bereaksi.
-        </p>
+        </p><br/>
+        <img 
+            src="https://3.bp.blogspot.com/-_nsnSVMK1bQ/Wizcf4GYwaI/AAAAAAAAAWg/aYHIhe4UoD8N_o5v9hmRoWVEjzQoC9WgwCLcBGAs/s1600/Golongan%2Bdan%2BPeriode.jpg" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
       </section>
 
       <section className="material-section">
-        <h3>C. Reaksi-reaksi dalam Kimia Unsur</h3>
+        <h3>D. Reaksi-reaksi dalam Kimia Unsur</h3>
         <p>
           Reaksi kimia dalam kimia unsur melibatkan perubahan dalam struktur
           atom dan pembentukan senyawa baru. Reaksi redoks adalah salah satu
           jenis reaksi yang terjadi pada unsur-unsur, di mana terjadi
           perpindahan elektron antara dua zat.
-        </p>
+        </p><br/>
+        <ul>
+          <li><b>Reaksi Redoks:</b> Reaksi redoks adalah reaksi yang melibatkan perpindahan elektron. Oksidasi adalah proses kehilangan elektron, sedangkan reduksi adalah proses penerimaan elektron.</li>
+          <li><b>Reaksi Pengendapan:</b> Reaksi pengendapan terjadi ketika dua larutan ionik bercampur dan membentuk endapan yang tidak larut.</li>
+          <li><b>Reaksi Asam-Basa:</b> Reaksi asam-basa melibatkan transfer ion hidrogen (H⁺) antara asam dan basa.</li>
+          <li><b>eaksi Penggantian Tunggal:</b>R Reaksi penggantian tunggal terjadi ketika suatu unsur bebas menggantikan unsur lain dalam suatu senyawa.</li>
+          <li><b>Reaksi Penggantian Ganda:</b> Reaksi penggantian ganda melibatkan pertukaran kation dan anion antara dua senyawa ionik.</li>
+        </ul>
+        <br/>
       </section>
 
       <section className="material-section">
-        <h3>D. Sifat Fisik dan Kimia Unsur</h3>
+        <h3>E. Sifat Fisik dan Kimia Unsur</h3>
         <p>
           Setiap unsur memiliki sifat fisik dan kimia yang unik. Sifat fisik
           meliputi titik leleh, titik didih, dan kerapatan, sementara sifat kimia
           meliputi kecenderungan unsur untuk bereaksi dengan unsur lain.
-        </p>
+        </p><br/>
+        <ul>
+          <li><b>Sifat Fisik:</b> Selain titik leleh, titik didih, dan kerapatan, sifat fisik lainnya yang penting adalah konduktivitas listrik, konduktivitas termal, kelarutan, dan kekerasan.</li>
+          <li><b>Sifat Kimia:</b> Sifat kimia menggambarkan bagaimana suatu unsur berinteraksi dengan unsur lain. Contohnya, elektronegativitas, energi ionisasi, afinitas elektron, dan ukuran atom.</li>
+        </ul><br/>
       </section>
 
       <section className="material-section">
-        <h3>E. Kegunaan Unsur dalam Kehidupan Sehari-hari</h3>
+        <h3>F. Kegunaan Unsur dalam Kehidupan Sehari-hari</h3>
         <p>
           Unsur-unsur kimia digunakan dalam berbagai bidang, termasuk
           industri, pertanian, dan teknologi. Contohnya, unsur karbon digunakan
           dalam bentuk grafit untuk pensil, sementara unsur logam seperti
           tembaga digunakan dalam kabel listrik.
-        </p>
+        </p><br/>
+        <ul>
+          <li><b>Industri:</b> Unsur-unsur seperti besi, aluminium, dan tembaga digunakan dalam produksi berbagai macam barang, mulai dari bangunan hingga peralatan elektronik.</li>
+          <li><b>Pertanian:</b> Unsur-unsur seperti nitrogen, fosfor, dan kalium sangat penting untuk pertumbuhan tanaman.</li>
+          <li><b>Teknologi:</b> Unsur-unsur langka seperti silikon digunakan dalam pembuatan semikonduktor, sedangkan unsur-unsur radioaktif digunakan dalam bidang medis dan energi nuklir.</li>
+          <li><b>Kedokteran:</b> Banyak unsur memiliki peran penting dalam tubuh manusia, seperti kalsium untuk tulang dan besi untuk hemoglobin.</li>
+        </ul>
+        <br/>
+      </section>
+
+      <section className="material-section">
+        <h3>G. Unsur-unsur Khusus</h3>
+        <ul>
+          <li><b>Unsur Golongan Utama:</b> Unsur-unsur golongan utama memiliki sifat yang bervariasi, mulai dari logam alkali yang sangat reaktif hingga gas mulia yang sangat stabil.</li>
+          <li><b>Unsur Transisi:</b> Unsur transisi memiliki sifat-sifat yang kompleks dan sering digunakan sebagai katalis dalam berbagai reaksi kimia.</li>
+          <li><b>Unsur Lantanida dan Aktinida:</b> Unsur-unsur ini memiliki konfigurasi elektron yang unik dan banyak digunakan dalam teknologi nuklir.</li>
+        </ul>
+        <br/>
+      </section>
+
+      <section className="material-section">
+        <h3>H. Kimia Nuklir</h3>
+        <ul>
+          <li><b>Radioaktivitas:</b> Beberapa unsur bersifat radioaktif, yaitu memancarkan radiasi. Radiasi ini dapat digunakan dalam berbagai bidang, seperti kedokteran dan energi nuklir. </li>
+          <li><b>Fisi Nuklir:</b> Proses pembelahan inti atom menjadi inti yang lebih kecil.</li>
+          <li><b>Fusi Nuklir:</b> Proses penggabungan dua inti atom menjadi satu inti yang lebih besar.</li>
+        </ul>
+        <br/>
+        <img 
+            src="https://image2.slideserve.com/5179450/slide1-l.jpg" 
+            alt="Molaritas dan Molalitas" 
+            className="colligative-img" 
+        /><br/>
+      </section>
+
+      <section className="material-section">
+        <h3>I. Aplikasi Kimia Unsur dalam Kehidupan Modern</h3>
+        <ul>
+          <li><b>Material Baru:</b> Kimia unsur berperan penting dalam pengembangan material baru dengan sifat yang unik, seperti superkonduktor dan nanomaterial.</li>
+          <li><b>Energi:</b> Unsur-unsur seperti hidrogen dan uranium digunakan dalam pengembangan sumber energi alternatif.</li>
+          <li><b>Lingkungan:</b> Kimia unsur membantu kita memahami proses-proses alami di lingkungan dan mengatasi masalah pencemaran.</li>
+        </ul>
+        <br/>
       </section>
 
       {/* Mini Quiz */}
@@ -182,7 +232,7 @@ function KimiaUnsur() {
               {questions[currentQuestionIndex].question}
             </p>
 
-            <form className="quiz-form">
+            <div className="quiz-form">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <div key={index} className="quiz-option">
                   <input
@@ -196,7 +246,7 @@ function KimiaUnsur() {
                   <label htmlFor={option}>{option}</label>
                 </div>
               ))}
-            </form>
+            </div>
 
             {showExplanation && (
               <div
@@ -214,10 +264,10 @@ function KimiaUnsur() {
                 onClick={handlePreviousQuestion}
                 disabled={currentQuestionIndex === 0}
               >
-                Sebelumnya
+                Previous
               </button>
               <button type="button" onClick={handleNextQuestion}>
-                Selanjutnya
+                Next
               </button>
             </div>
           </>

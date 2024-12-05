@@ -23,8 +23,10 @@ function Forum() {
     },
   ]);
 
+  const [showMessage, setShowMessage] = useState(false);
+
   const handleNewDiscussion = () => {
-    alert("Feature to create a new discussion coming soon!");
+    setShowMessage(true); // Set state to true when the button is clicked
   };
 
   return (
@@ -34,9 +36,17 @@ function Forum() {
         <p>
           Join the conversation and enhance your understanding of chemistry!
         </p>
-        <button className="new-discussion-button" onClick={handleNewDiscussion}>
+        <button
+          className="new-discussion-button"
+          onClick={handleNewDiscussion}
+        >
           Start New Discussion
         </button>
+        {showMessage && (
+          <p className="coming-soon-message">
+            Feature to create a new discussion coming soon!
+          </p>
+        )}
       </header>
       <section className="discussion-list">
         {discussions.map((discussion) => (

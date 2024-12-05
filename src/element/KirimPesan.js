@@ -16,10 +16,9 @@ function KirimPesan() {
 
     setSuccess(true);
     setError('');
-    alert(`Pesan Anda: "${pesan}" telah dikirim`);
     setPesan('');
     setEmail('');
-    setTimeout(() => setSuccess(false), 5000); // Hide success message after 5 seconds
+    setTimeout(() => setSuccess(false), 2000); 
   };
 
   return (
