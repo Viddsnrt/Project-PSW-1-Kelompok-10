@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import ProgramPembelajaran from "../element/ProgramPembelajaran";
-
+import ChimiLearn1 from './ChimiLearn1.png';
 function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -61,7 +61,10 @@ function Navbar() {
         isSticky ? "sticky" : ""
       }`}
     >
-      <h2 className="navbar-brand">ChimiLearn</h2>
+      <div className="navbar-brand">
+        <img src={ChimiLearn1} alt="ChimiLearn Logo" className="navbar-logo" />
+        <h2>ChimiLearn</h2>
+      </div>
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
           <Link to="/" onClick={handleLinkClick}>

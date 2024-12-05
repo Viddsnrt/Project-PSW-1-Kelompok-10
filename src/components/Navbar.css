@@ -20,19 +20,25 @@
   background: rgba(203, 179, 128, 0.9); /* Perubahan warna saat hover */
 }
 
-.navbar-logo {
-  width: 50px;
-  height: auto;
-  margin-right: 1rem;
+.navbar-brand {
+  display: flex; /* Pastikan logo dan teks berada di satu baris */
+  align-items: center; /* Rata tengah secara vertikal */
+  gap: 1rem; /* Jarak antara logo dan teks */
+  text-decoration: none;
+  color: #f0efee;
 }
 
-.navbar-brand {
-  color: #f0efee;
-  font-size: 1.8rem;
+.navbar-logo {
+  width: 100px; /* Ukuran logo lebih besar */
+  height: auto; /* Menjaga proporsi */
+}
+
+.navbar-brand h2 {
+  font-size: 2rem; /* Ukuran teks lebih besar */
   font-weight: bold;
-  letter-spacing: 1px;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #f0efee; /* Warna teks sesuai tema */
+  margin: 0; /* Hilangkan margin default */
+  font-family: Arial, sans-serif;
 }
 
 .navbar-menu {

@@ -15,8 +15,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-
-
 h2, h3 {
   text-align: center;
   color: #2c3e50;
@@ -58,7 +56,7 @@ ul li {
   border-radius: 4px;
 }
 
-.contoh-soal-ionisasi{
+.contoh-soal-ionisasi {
   font-family: 'Courier New', monospace;
   background-color: #ecf0f1;
   padding: 10px;
@@ -88,16 +86,16 @@ ul li {
   margin-top: 10px;
   border-left: 5px solid #28a745;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0,)
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .image-container {
-  text-align: center;  
-  margin-bottom: 20px;  
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .colligative-img {
-  max-width: 100%;  
+  max-width: 100%;
   height: auto;
 }
 
@@ -105,7 +103,7 @@ ul li {
   color: maroon;
 }
 
-.peningkatan-titik-didih h4{
+.peningkatan-titik-didih h4 {
   color: maroon;
 }
 
@@ -119,10 +117,70 @@ ul li {
   padding-left: 20px;
 }
 
-.penurunan-titik-beku h4{
+.penurunan-titik-beku h4 {
   color: maroon;
 }
 
-.efek-ionisasi h4{
+.efek-ionisasi h4 {
   color: maroon;
+}
+
+/* Mini Quiz Section */
+.mini-quiz-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-quiz-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mini-quiz-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.mini-quiz-question {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+.mini-quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mini-quiz-options button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mini-quiz-options button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.mini-quiz-result {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #27ae60;
+  display: none; /* Default hidden until triggered */
 }
