@@ -82,7 +82,7 @@ function SenyawaKarbon() {
   
   return (
     <><div className="senyawa-karbon-container">
-        <h1>Bab 4: Senyawa Karbon dan Turunan Alkana</h1>
+        <h2>Bab 4: Senyawa Karbon dan Turunan Alkana</h2>
       <p className="intro-text">
         Alkana (juga disebut dengan <em>parafin</em>) adalah senyawa kimia hidrokarbon jenuh asiklis. Alkana termasuk senyawa alifatik. Dengan kata lain, alkana adalah sebuah rantai karbon panjang dengan ikatan-ikatan tunggal. Rumus umum untuk alkana adalah C<sub>n</sub>H<sub>2n+2</sub>.
       </p>
@@ -91,8 +91,8 @@ function SenyawaKarbon() {
         src="https://i.pinimg.com/736x/33/32/8c/33328c9611df6b132fb62c5db72ecaa1.jpg"
         alt="Senyawa turunan Alkana" />
       <section>
-        <h2>1. Alkohol</h2>
-        <h3>A. Sifat-sifat Alkohol</h3>
+        <h3>1. Alkohol</h3>
+        <h4>A. Sifat-sifat Alkohol</h4>
         <ul>
           <li>Alkohol mempunyai ikatan hidrogen.</li>
           <li>Semakin besar massa molekul alkohol, titik didihnya semakin tinggi.</li>
@@ -120,14 +120,14 @@ function SenyawaKarbon() {
           <li>Mengalami reaksi dehidrasi (memanaskan alkohol dengan asam kuat menghasilkan alkena dan air).</li>
           <li>Bereaksi dengan hidrogen halida menghasilkan haloalkana dan air.</li>
         </ul>
-        <h3>B. Pembuatan Alkohol</h3>
+        <h4>B. Pembuatan Alkohol</h4>
         <ul>
           <li>Hidrasi alkena dengan katalis asam menghasilkan etanol.</li>
           <li>Metanol dibuat dari gas alam (metana) dengan H<sub>2</sub>O dan gas H<sub>2</sub>.</li>
           <li>Fermentasi karbohidrat dengan bantuan ragi menghasilkan etanol.</li>
           <li>Mengalami pereaksi Grignard.</li>
         </ul>
-        <h3>C. Kegunaan Alkohol</h3>
+        <h4>C. Kegunaan Alkohol</h4>
         <h4>1. Metanol</h4>
         <ul>
           <li>Pelarut</li>
@@ -137,14 +137,14 @@ function SenyawaKarbon() {
           <li>Sumber industri</li>
         </ul>
         <section>
-          <h3>Etanol</h3>
+          <h4>Etanol</h4>
           <ul>
             <li>Pembersih luka dan antiseptik</li>
             <li>Spirit (minuman keras) bermetil yang diproduksi dalam skala industri</li>
             <li>Bahan bakar: Gasohol (bensin dengan 10-20% etanol)</li>
             <li>Pelarut dalam parfum dan kosmetik</li>
           </ul>
-          <h3>Contoh Etanol</h3>
+          <h4>Contoh Etanol</h4>
           <h4>1. Etilen Glikol</h4>
           <ul>
             <li>Zat anti beku pada radiator</li>
@@ -163,8 +163,8 @@ function SenyawaKarbon() {
           </ul>
         </section>
         <section>
-          <h2>2. Eter</h2>
-          <h3>A. Sifat-sifat Eter</h3>
+          <h3>2. Eter</h3>
+          <h4>A. Sifat-sifat Eter</h4>
           <ul>
             <li>Cairan yang mudah menguap dan mudah terbakar.</li>
             <li>Titik didih rendah, lebih rendah daripada alkohol dengan massa molekul yang sama.</li>
@@ -173,7 +173,7 @@ function SenyawaKarbon() {
             <li>Bersifat anestetik.</li>
             <li>Tidak reaktif, tidak dapat dioksidasi, direduksi, dieleminasi, atau direaksikan dengan basa, tetapi dapat disubstitusikan dengan asam kuat.</li>
           </ul>
-          <h3>B. Pembuatan Eter</h3>
+          <h4>B. Pembuatan Eter</h4>
           <h4>1. Reaksi dengan Asam Sulfat dan Etanol</h4>
           <p>Reaksi ini menghasilkan dietil eter dan etil hidrogen sulfat sebagai zat antara.</p>
           <img
@@ -184,7 +184,7 @@ function SenyawaKarbon() {
           <img
             src="https://soalkimia.com/wp-content/uploads/2020/01/eter-2.jpg"
             alt="Sintesis Williamson" />
-          <h3>C. Kegunaan Eter</h3>
+          <h4>C. Kegunaan Eter</h4>
           <ul>
             <li>Digunakan sebagai pelarut dan obat anestesi</li>
             <li>Etil eter yang diberikan melalui pernapasan sebagai obat bius</li>
@@ -196,8 +196,8 @@ function SenyawaKarbon() {
             src="https://soalkimia.com/wp-content/uploads/2020/01/eter-3.jpg"
             alt="Kegunaan Eter" />
         </section>
-        <h2>3. Aldehid</h2>
-        <h3>A. Sifat-Sifat Aldehid</h3>
+        <h3>3. Aldehid</h3>
+        <h4>A. Sifat-Sifat Aldehid</h4>
         <ul>
           <li>Merupakan senyawa polar</li>
           <li>Mudah larut dalam air</li>
@@ -205,7 +205,7 @@ function SenyawaKarbon() {
           <li>Tidak mempunyai ikatan hidrogen</li>
           <li>Titik didihnya lebih tinggi dibandingkan dengan senyawa karbon yang massa relatifnya hampir sama</li>
         </ul>
-        <h3>B. Reaksi-reaksi Aldehid</h3>
+        <h4>B. Reaksi-reaksi Aldehid</h4>
         <div>
           <ul>
             <li>Hidrogenasi
@@ -260,8 +260,8 @@ function SenyawaKarbon() {
         <p>Aldehid yang banyak digunakan yaitu formaldehid. Formaldehid digunakan untuk membuat formalin. Formalin digunakan untuk pengawet mayat dan spesimen biologi, serta untuk pembuatan plastik tahan panas.</p>
       </section>
       <section>
-        <h2>4. KETON</h2>
-        <h3>A. Sifat - Sifat Keton</h3>
+        <h3>4. KETON</h3>
+        <h4>A. Sifat - Sifat Keton</h4>
         <ul>
           <li>Merupakan senyawa polar</li>
           <li>Larut dalam air</li>
@@ -274,7 +274,7 @@ function SenyawaKarbon() {
           <li>Adisi HCN, menghasilkan sianohidral.</li>
           <li>Halogenasi.</li>
         </ul>
-        <h3>B. Pembuatan Keton</h3>
+        <h4>B. Pembuatan Keton</h4>
         <p>Dari oksidasi alkohol sekunder</p>
         <div>
           <h4>Oksidasi Alkohol Sekunder</h4>
@@ -283,12 +283,12 @@ function SenyawaKarbon() {
             alt="Oksidasi Alkohol Sekunder Image" />
           <p>Distilasi kering garam alkali atau alkali tanah karboksilat</p>
         </div>
-        <h3>C. Kegunaan Keton</h3>
+        <h4>C. Kegunaan Keton</h4>
         <p>Paling banyak digunakan yaitu aseton atau propanon, digunakan sebagai pelarut senyawa-senyawa nonpolar.</p>
       </section>
       <section>
-        <h2>5. Asam Karboksilat</h2>
-        <h3>A. Sifat-sifat Asam Karboksilat</h3>
+        <h3>5. Asam Karboksilat</h3>
+        <h4>A. Sifat-sifat Asam Karboksilat</h4>
         <ul>
           <li>Merupakan senyawa polar.</li>
           <li>Senyawa dengan atom C<sub>1</sub> – C<sub>4</sub> mudah larut dalam air, semakin banyak cabang kelarutannya dalam air berkurang.</li>
@@ -302,7 +302,7 @@ function SenyawaKarbon() {
         <img
           src="https://soalkimia.com/wp-content/uploads/2020/01/asam-karboksilat-1.jpg"
           alt="Reaksi Esterifikasi Asam Karboksilat" />
-        <h3>B. Pembuatan Asam Karboksilat</h3>
+        <h4>B. Pembuatan Asam Karboksilat</h4>
         <ul>
           <li>Oksidasi alkohol primer.</li>
           <img
@@ -326,8 +326,8 @@ function SenyawaKarbon() {
         </ul>
       </section>
       <section>
-        <h2>6. Ester</h2>
-        <h3>A. Sifat-sifat Ester</h3>
+        <h3>6. Ester</h3>
+        <h4>A. Sifat-sifat Ester</h4>
         <ul>
           <li>Mudah menguap.</li>
           <li>Sedikit larut dalam air.</li>
@@ -341,12 +341,12 @@ function SenyawaKarbon() {
           <li>Dapat direduksi menghasilkan alkohol.</li>
           <li>Bereaksi dengan pereaksi Grignard menghasilkan alkohol.</li>
         </ul>
-        <h3>B. Pembuatan Ester</h3>
+        <h4>B. Pembuatan Ester</h4>
         <p>Ester dibuat dari reaksi antara asam karboksilat dengan alkohol, reaksi ini disebut esterifikasi.</p>
         <img
           src="https://soalkimia.com/wp-content/uploads/2020/01/esterifikasi-1.jpg"
           alt="Pembuatan Ester" />
-        <h3>C. Kegunaan Ester</h3>
+        <h4>C. Kegunaan Ester</h4>
         <p>Senyawa-senyawa ester banyak digunakan sebagai esens karena mempunyai aroma khas, antara lain:</p>
         <table>
           <thead>
@@ -396,16 +396,16 @@ function SenyawaKarbon() {
         </table>
       </section>
       <section>
-        <h2>7. HaloAlkana</h2>
-        <h3>A. Kloroform (CHCl<sub>3</sub>)</h3>
+        <h3>7. HaloAlkana</h3>
+        <h4>A. Kloroform (CHCl<sub>3</sub>)</h4>
         <p>Kloroform diperoleh dengan mereaksikan etanol dengan Cl<sub>2</sub> dan KOH atau kapur klor. Cl<sub>2</sub> berfungsi untuk mengoksidasi etanol menjadi etanal. Etanal dengan Cl<sub>2</sub> membentuk trikloro etanal (kloral). Dalam basa, kloral diubah menjadi kalium metanoat dan kloroform.</p>
         <p>Kloroform bersifat anestesi sehingga dimanfaatkan dalam bidang kedokteran sebagai obat bius. Kloroform sebagai obat bius dinyatakan tidak aman karena mengganggu fungsi hati, sehingga diganti dengan senyawa 2-bromo-2-kloro-1,1,1-trifluoro etana atau disebut senyawa haloetana.</p>
         <img
           src="https://soalkimia.com/wp-content/uploads/2020/01/esterifikasi-2.jpg"
           alt="Rumus Struktur Kloroform" />
-        <h3>B. Iodoform (CHI<sub>3</sub>)</h3>
+        <h4>B. Iodoform (CHI<sub>3</sub>)</h4>
         <p>Merupakan kristal padat berwarna kuning dan berbau khas, digunakan di bidang kedokteran sebagai antiseptik.</p>
-        <h3>C. Karbon Tetraklorida (CCl<sub>4</sub>)</h3>
+        <h4>C. Karbon Tetraklorida (CCl<sub>4</sub>)</h4>
         <p>Merupakan zat cair yang tidak berwarna dan lebih berat dari air. Uap CCl<sub>4</sub> tidak mudah terbakar dan non eksplosif. Senyawa CCl<sub>4</sub> dibuat dengan mereaksikan kloroform (CHCl<sub>3</sub>) dengan Cl<sub>2</sub>.</p>
         <p>Dalam rumah tangga, CCl<sub>4</sub> digunakan untuk menghilangkan noda-noda minyak atau lemak pada pakaian, digunakan juga sebagai bahan pemadam kebakaran dan pelarut lemak, lilin, damar, dan protein.</p>
         <img
@@ -472,7 +472,7 @@ function SenyawaKarbon() {
              <strong>Soal {currentQuestionIndex + 1}:</strong>{" "}
              {questions[currentQuestionIndex].question}
             </p>
-            <form className="quiz-form">
+            <div className="quiz-form">
              {questions[currentQuestionIndex].options.map((option, index) => (
               <div key={index} className="quiz-option">
               <label>
@@ -486,7 +486,7 @@ function SenyawaKarbon() {
               </label>
             </div>
           ))}
-        </form>
+        </div>
 
         {showExplanation && (
           <div

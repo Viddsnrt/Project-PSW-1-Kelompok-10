@@ -82,7 +82,7 @@ function Benzena() {
 
   return (
     <div className="benzena-container">
-      <h1 className="main-title">Bab 5: Benzena dan Turunannya</h1>
+      <h2 >Bab 5: Benzena dan Turunannya</h2>
       <p className="intro-text">
         Benzena adalah senyawa aromatik dengan rumus molekul C<sub>6</sub>H<sub>6</sub>. Senyawa ini memiliki struktur cincin enam karbon dengan delokalisasi elektron pi, yang memberikan stabilitas unik. Benzena merupakan bahan dasar penting untuk banyak senyawa kimia lainnya.
       </p>
@@ -103,8 +103,8 @@ function Benzena() {
       </section>
 
       <section>
-        <h1 className="section-title">Sifat Kimia Benzena</h1>
-        <h2>Pengertian Benzena</h2>
+        <h2 className="section-title">Sifat Kimia Benzena</h2>
+        <h3>Pengertian Benzena</h3>
         <p>
           Benzena dan turunannya adalah salah satu materi Kimia yang akan kamu pelajari di kelas 12 SMA. Lalu, apa itu benzena?
         </p>
@@ -119,12 +119,12 @@ function Benzena() {
         </p>
       </section>
 
-      <h2>Senyawa Turunan Benzena</h2>
+      <h3>Senyawa Turunan Benzena</h3>
       <p>
         Benzena dikenal sebagai senyawa yang banyak menghasilkan berbagai turunan karena pergantian satu atau lebih atom hidrogen pada benzena dapat menghasilkan berbagai senyawa baru. Berikut adalah beberapa senyawa turunan benzena.
       </p>
 
-      <h3>Klorobenzena</h3>
+      <h4>Klorobenzena</h4>
       <p>
         Klorobenzena atau fenil klorida adalah salah satu sen yawa turunan benzena. Senyawa yang memiliki rumus C6H5Cl ini memiliki ciri-ciri berupa berwujud cair, tidak berwarna, berbau menyengat, dan tidak mudah larut dalam air, tetapi mudah larut dalam benzena, kloroform, dan eter.
       </p>
@@ -132,7 +132,7 @@ function Benzena() {
         Klorobenzena biasanya digunakan dalam pembuatan fenol, anilin, DDT, pelarut cat, dan media pemindah panas.
       </p>
 
-      <h3>Anilin</h3>
+      <h4>Anilin</h4>
       <p>
         Anilin atau aminobenzena (C6H5NH2) adalah turunan benzena yang memiliki sifat basa lemah, tidak berwarna, dan dapat berubah menjadi kuning, coklat, ataupun hitam jika terkena cahaya dan udara karena teroksidasi.
       </p>
@@ -140,7 +140,7 @@ function Benzena() {
         Dalam kehidupan sehari-hari, anilin digunakan sebagai bahan dasar pembuatan warna dan obat-obatan, serta bahan peledak.
       </p>
 
-      <h3>Fenol</h3>
+      <h4>Fenol</h4>
       <p>
         Senyawa turunan benzena selanjutnya adalah fenol. Senyawa ini termasuk senyawa aromatik yang mengandung satu atau lebih gugus hidroksil yang terikat langsung dengan cincin benzena.
       </p>
@@ -151,7 +151,7 @@ function Benzena() {
         Senyawa turunan benzena ini sangat beracun, bahkan dapat melepuhkan kulit jika terjadi kontak langsung dengan kulit. Biasanya, fenol digunakan untuk desinfektan, pembuatan obat-obatan, bahan peledak, dan plastik.
       </p>
 
-      <h3>Aspirin</h3>
+      <h4>Aspirin</h4>
       <p>
         Apakah kamu sering mengkonsumsi aspirin ketika sedang pusing, demam, atau mengalami peradangan? Aspirin yang kamu minum ini ternyata termasuk salah satu turunan benzena, lho.
       </p>
@@ -159,7 +159,7 @@ function Benzena() {
         Aspirin atau asam asetilsalisilat sering digunakan untuk meredakan nyeri dan menurunkan panas karena bersifat analgesik, antipiretik, antiradang, dan antikoagulan. Itulah mengapa, aspirin sering digunakan sebagai obat pusing dan obat sakit gigi.
       </p>
 
-      <h3>Asam Salisilat</h3>
+      <h4>Asam Salisilat</h4>
       <p>
         Asam salisilat merupakan turunan benzena yang tergolong asam karboksilat sehingga memiliki gugus karboksil (-COOH).
       </p>
@@ -167,7 +167,7 @@ function Benzena() {
         Asam salisilat memiliki sifat beracun jika digunakan dalam jumlah besar. Namun, dalam jumlah kecil, turunan benzena ini dapat digunakan sebagai pengawet makanan dan antiseptik pada pasta gigi.
       </p>
 
-      <h3>TNT (Trinitrotoluene)</h3>
+      <h4>TNT (Trinitrotoluene)</h4>
       <p>
         TNT merupakan senyawa turunan benzena yang banyak digunakan sebagai bahan peledak karena sifatnya yang mudah meledak. Itulah mengapa, senyawa ini tidak boleh digunakan secara sembarangan.
       </p>
@@ -175,7 +175,7 @@ function Benzena() {
         Biasanya, TNT sering digunakan untuk kepentingan militer dan pertambangan. Penggunaan TNT secara sembarangan dan tidak bertanggung jawab dapat menyebabkan kerusakan lingkungan, bahkan mengancam nyawa.
       </p>
 
-      <h3>Nitrobenzena</h3>
+      <h4>Nitrobenzena</h4>
       <p>
         Memiliki rumus kimia C6H5NO2, turunan benzena yang satu ini juga dikenal dengan nama lain, yaitu nitrobenzol atau minyak mirbane. Nitrobenzena memiliki aroma seperti kacang almond dan bersifat beracun.
       </p>
@@ -183,22 +183,22 @@ function Benzena() {
         Biasanya, turunan benzena ini digunakan sebagai pelarut dan bahan baku pembuatan anilina, serta digunakan dalam produk semir dan senyawa insulator.
       </p>
 
-      <h3>Parasetamol</h3>
+      <h4>Parasetamol</h4>
       <p>
         Sama seperti aspirin, parasetamol juga termasuk salah satu turunan benzena yang sering digunakan untuk mengobati pusing dan sakit kepala. Senyawa ini memiliki sifat analgesik dan antipiretik, serta mudah larut dalam etanol.
       </p>
 
-      <h4>Tata Nama Senyawa Turunan Benzena</h4>
+      <p>Tata Nama Senyawa Turunan Benzena</p>
       <p>
         Tata nama senyawa turunan benzena sangat sederhana, yaitu gabungan nama substituen (pengganti atom H dari benzena) sebagai awalan dan diikuti kata benzena sebagai akhiran. Berikut adalah penulisan tata nama senyawa turunan benzena berdasarkan jumlah substituennya.
       </p>
 
-      <h4>Nama Turunan Benzena Satu Substituen</h4>
+      <p>Nama Turunan Benzena Satu Substituen</p>
       <p>
         Untuk menulis tata nama senyawa turunan benzena dengan satu substituen yang terikat pada cincin benzena, kamu bisa langsung menyebutkan nama substituennya, lalu diikuti kata -benzena di bagian akhirnya. Contoh, jika substituen yang terikat pada cincin benzena adalah bromin (Br), maka penulisan tata nama senyawa turunan benzenanya adalah bromobenzena.
       </p>
 
-      <h4>Nama Turunan Benzena Dua Substituen</h4>
+      <p>Nama Turunan Benzena Dua Substituen</p>
       <p>
         Untuk dua substituen posisinya dapat diberi awalan orto (o) untuk posisi 1 dan 2, meta (m) untuk posisi 1 dan 3 dan para (p) untuk posisi 1 dan 4.
       </p>
@@ -232,7 +232,7 @@ function Benzena() {
         src="https://www.quipper.com/id/blog/wp-content/uploads/2023/04/tata-nama-senyawa-tiga-substituen.webp"
         alt="Turunan-3benzana" />
 
-      <h1>Kegunaan dan Bahaya Senyawa Turunan Benzena</h1>
+      <h3>Kegunaan dan Bahaya Senyawa Turunan Benzena</h3>
       <p>
         Benzena maupun senyawa turunan benzena banyak dimanfaatkan dalam berbagai bidang, seperti farmasi, makanan, dan kemiliteran. Contohnya, aspirin yang merupakan senyawa turunan benzena yang dapat digunakan sebagai obat pereda nyeri, asam benzoat digunakan sebagai bahan pengawet makanan, dan asam salisilat yang dapat digunakan sebagai bahan pembuatan minyak wangi, salep antijamur, sampo, dan bedak.
       </p>
@@ -251,7 +251,7 @@ function Benzena() {
               {questions[currentQuestionIndex].question}
             </p>
 
-            <form className="quiz-form">
+            <div className="quiz-form">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <div key={index} className="quiz-option">
                   <label>
@@ -266,7 +266,7 @@ function Benzena() {
                   </label>
                 </div>
               ))}
-            </form>
+            </div>
 
             {showExplanation && (
               <div

@@ -232,7 +232,7 @@ function KimiaUnsur() {
               {questions[currentQuestionIndex].question}
             </p>
 
-            <form className="quiz-form">
+            <div className="quiz-form">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <div key={index} className="quiz-option">
                   <input
@@ -246,7 +246,7 @@ function KimiaUnsur() {
                   <label htmlFor={option}>{option}</label>
                 </div>
               ))}
-            </form>
+            </div>
 
             {showExplanation && (
               <div
@@ -264,10 +264,10 @@ function KimiaUnsur() {
                 onClick={handlePreviousQuestion}
                 disabled={currentQuestionIndex === 0}
               >
-                Sebelumnya
+                Previous
               </button>
               <button type="button" onClick={handleNextQuestion}>
-                Selanjutnya
+                Next
               </button>
             </div>
           </>

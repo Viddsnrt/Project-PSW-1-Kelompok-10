@@ -402,7 +402,7 @@ function ReaksiRedoks() {
               {questions[currentQuestionIndex].question}
             </p>
 
-            <form className="quiz-form">
+            <div className="quiz-form">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <div key={index} className="quiz-option">
                   <label>
@@ -417,7 +417,7 @@ function ReaksiRedoks() {
                   </label>
                 </div>
               ))}
-            </form>
+            </div>
 
             {showExplanation && (
               <div
