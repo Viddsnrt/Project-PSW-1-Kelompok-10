@@ -42,7 +42,7 @@ const Register = () => {
 
     return (
         <div className="register-container">
-            <h2>Register</h2>
+            <h2>Daftar</h2>
             {error && <p className="error">{error}</p>}
             <form onSubmit={handleSubmit}>
                 <div>
