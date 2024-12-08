@@ -211,12 +211,12 @@ function Quiz() {
 
   return (
     <div className="quiz-container">
-      <h2>Quiz</h2>
+      <h2>Kuis</h2>
 
       {!quizStarted ? (
         <div className="start-container">
           <p>Quiz ini untuk melatih pemahaman kamu tentang materi kimia kelas 12</p>
-          <button onClick={handleStartQuiz}>Attempt</button>
+          <button onClick={handleStartQuiz}>Mulai</button>
         </div>
       ) : quizCompleted ? (
         <div className="quiz-complete">

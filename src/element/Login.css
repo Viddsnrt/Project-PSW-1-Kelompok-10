@@ -1,3 +1,4 @@
+/* Container */
 .login-container {
     max-width: 400px;
     margin: 50px auto;
@@ -6,17 +7,31 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
 }
 
+/* Heading */
 .login-container h2 {
     margin: 0 0 20px 0;
     padding: 0;
     color: #894400;
-    text-align: center;
     background-color: transparent;
 }
 
+/* Form */
+.login-container form {
+    margin: 0;
+    padding: 0;
+}
+
+.login-container form div {
+    margin-bottom: 10px; /* Memastikan jarak antar elemen */
+}
+
+/* Inputs */
 .login-container input {
     width: 100%;
     padding: 10px;
@@ -26,25 +41,36 @@
     box-sizing: border-box;
 }
 
+/* Button */
 .login-container button {
     padding: 10px 20px;
     background-color: #713901;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px; /* Menyesuaikan margin */
 }
 
 .login-container button:hover {
     background-color: #7d5324;
 }
 
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Paragraph */
 .login-container p {
     margin-top: 15px;
-    margin-bottom: 0;  /* Ensure no bottom margin */
+    margin-bottom: 0;
     padding: 0;
 }
 
+/* Anchor links */
 .login-container a {
     color: #6b3e00;
     text-decoration: none;
@@ -54,7 +80,7 @@
     text-decoration: underline;
 }
 
-/* Clear any default styling for inputs */
+/* Mengatur ulang styling default untuk input */
 input[type="email"],
 input[type="password"] {
     margin: 0;
