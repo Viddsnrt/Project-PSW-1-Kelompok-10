@@ -68,7 +68,7 @@ function Navbar() {
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
           <Link to="/" onClick={handleLinkClick}>
-            Home
+            Beranda
           </Link>
         </li>
         <li
@@ -87,7 +87,7 @@ function Navbar() {
         </li>
         <li>
           <Link to="/Quiz" onClick={handleLinkClick}>
-            Quiz
+            Kuis
           </Link>
         </li>
         <li>
@@ -104,7 +104,7 @@ function Navbar() {
           <>
             <li>
               <Link to="/Login" onClick={handleLinkClick}>
-                Login
+                Masuk
               </Link>
             </li>
           </>
@@ -112,7 +112,7 @@ function Navbar() {
           <>
             <li className="user-name">{userName}</li>
             <li className="logout-button" onClick={handleLogout}>
-              Logout
+              Keluar
             </li>
           </>
         )}

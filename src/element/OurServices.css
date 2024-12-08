@@ -89,48 +89,6 @@
     font-weight: 600;
     color: #f2f2f2;
 }
-.card:nth-child(1):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(2):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(3):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(4):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(5):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(6):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
 
 @media(max-width: 991px)
 {
@@ -174,59 +132,7 @@
     color: #6c757d;
     text-align: center;
 }
-/* .card:hover {
 
-} */
-.card:hover i
-.card:hover p {
-    color: #fff;
-}
-.card:hover h2 {
-    font-weight: 600;
-    color: #f2f2f2;
-}
-.card:nth-child(1):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(2):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(3):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(4):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(5):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
-.card:nth-child(6):hover {
-    background: linear-gradient(45deg,
-                                rgba(255,28,8,0.7) 0%,
-                                rgba(255, 0, 82, 0.7) 100%),
-                                url(https://pin.it/7MgocEJ7t);
-    background-size: cover;
-}
 
 @media(max-width: 991px)
 {
