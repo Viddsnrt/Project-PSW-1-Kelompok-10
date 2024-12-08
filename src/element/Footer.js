@@ -6,22 +6,22 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-about">
-          <h4>About ChimiLearn</h4>
-          <p>Web belajar kimia yang membantu kamu memahami kimia lebih baik!</p>
+          <h4>Tentang ChimiLearn</h4>
+          <p>Website pembelajaran kimia yang membantu kamu memahami kimia dengan lebih baik!</p>
         </div>
         <div className="footer-links">
-          <h4>Quick Links</h4>
+          <h4>Menu Cepat</h4>
           <ul>
             <li>
-              <a href="/aboutus">About Us</a>
+              <a href="/aboutus">Tentang Kami</a>
             </li>
             <li>
-              <a href="/OurServices">Services</a>
+              <a href="/OurServices">Layanan Kami</a>
             </li>
           </ul>
         </div>
         <div className="footer-social">
-          <h4>Follow Us</h4>
+          <h4>Ikuti Kami</h4>
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
               <i className="fab fa-facebook"></i>

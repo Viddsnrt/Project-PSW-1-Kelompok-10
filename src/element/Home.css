@@ -115,7 +115,7 @@ body {
 
 .cta-button:hover {
   background-color: #ffeb3b;
-  color: #ff4500;
+ 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -226,7 +226,7 @@ body {
 
 .cta-section .cta-button:hover {
   background-color: #ffeb3b;
-  color: #ff4500;
+  
   transform: translateY(-3px); /* Efek hover animasi */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan pada hover */
 }

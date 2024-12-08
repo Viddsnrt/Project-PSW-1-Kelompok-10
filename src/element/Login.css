@@ -6,12 +6,15 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
 }
 
 .login-container h2 {
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    padding: 0;
     color: #894400;
     text-align: center;
+    background-color: transparent;
 }
 
 .login-container input {
@@ -20,6 +23,7 @@
     margin: 10px 0;
     border: 1px solid #ffbb00;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .login-container button {
@@ -37,6 +41,8 @@
 
 .login-container p {
     margin-top: 15px;
+    margin-bottom: 0;  /* Ensure no bottom margin */
+    padding: 0;
 }
 
 .login-container a {
@@ -46,4 +52,15 @@
 
 .login-container a:hover {
     text-decoration: underline;
+}
+
+/* Clear any default styling for inputs */
+input[type="email"],
+input[type="password"] {
+    margin: 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ffbb00;
+    border-radius: 5px;
+    box-sizing: border-box;
 }

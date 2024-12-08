@@ -7,8 +7,8 @@ function Registernow() {
   const { state } = location;
 
   // Tetapkan nilai default jika data tidak tersedia
-  const title = state?.title || "Exclusive Webinar";
-  const date = state?.date || "23 December 2024";
+  const title = state?.title || "Webinar Eksklusif";
+  const date = state?.date || "23 Desember 2024";
   const speaker = state?.speaker || "Prof. John";
 
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -20,44 +20,44 @@ function Registernow() {
 
   return (
     <div className="register-page">
-      <h1>Register for Our Exclusive Webinar</h1>
+      <h1>Daftar untuk Webinar Eksklusif Kami</h1>
       <h2>{title}</h2>
-      <p>Date: <strong>{date}</strong></p>
-      <p>Speaker: <strong>{speaker}</strong></p>
+      <p>Tanggal: <strong>{date}</strong></p>
+      <p>Pembicara: <strong>{speaker}</strong></p>
 
       {!formSubmitted ? (
         <form onSubmit={handleSubmit} className="register-form">
           <div className="form-group">
-            <label htmlFor="name">Full Name</label>
-            <input type="text" id="name" placeholder="Enter your full name" required />
+            <label htmlFor="name">Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Masukkan nama lengkap Anda" required />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email address" required />
+            <label htmlFor="email">Alamat Email</label>
+            <input type="email" id="email" placeholder="Masukkan alamat email Anda" required />
           </div>
           <div className="form-group">
-            <label htmlFor="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="Enter your phone number" required />
+            <label htmlFor="phone">Nomor Telepon</label>
+            <input type="tel" id="phone" placeholder="Masukkan nomor telepon Anda" required />
           </div>
           <div className="form-group">
-            <label htmlFor="organization">Organization/Institution</label>
+            <label htmlFor="organization">Organisasi/Institusi</label>
             <input
               type="text"
               id="organization"
-              placeholder="Enter your organization/institution (optional)"
+              placeholder="Masukkan organisasi/institusi Anda (opsional)"
             />
           </div>
           <div className="form-group">
             <label>
-              <input type="checkbox" required /> I agree to the terms and conditions.
+              <input type="checkbox" required /> Saya setuju dengan syarat dan ketentuan.
             </label>
           </div>
-          <button type="submit" className="submit-button">Register Now</button>
+          <button type="submit" className="submit-button">Daftar Sekarang</button>
         </form>
       ) : (
         <div className="success-message">
-          <h3>Thank You for Registering!</h3>
-          <p>Check your email for the webinar details.</p>
+          <h3>Terima Kasih Telah Mendaftar!</h3>
+          <p>Periksa email Anda untuk detail webinar.</p>
         </div>
       )}
     </div>

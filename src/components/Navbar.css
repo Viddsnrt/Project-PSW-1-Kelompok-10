@@ -12,13 +12,9 @@
   transition: background-color 0.3s ease;
 }
 
-.navbar.sticky {
-  background: rgba(203, 179, 128, 0.9); /* Perubahan warna saat scroll */
-}
 
-.navbar:hover {
-  background: rgba(203, 179, 128, 0.9); /* Perubahan warna saat hover */
-}
+
+
 
 .navbar-brand {
   display: flex; /* Pastikan logo dan teks berada di satu baris */

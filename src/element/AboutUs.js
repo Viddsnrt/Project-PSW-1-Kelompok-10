@@ -1,43 +1,41 @@
-
 import React from "react";
 import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
     <div className="about-us-container">
-      {/* Hero Section */}
+      {/* Bagian Hero */}
       <section className="about-section">
         <div className="about-content">
-          <h1 className="about-title">About Us</h1>
+          <h1 className="about-title">Tentang Kami</h1>
           <p className="about-text">
-            We are a passionate team dedicated to creating web learning for students. Our mission is to make a difference in the education.
+            Kami adalah tim yang berdedikasi untuk menciptakan pembelajaran berbasis web bagi siswa. Misi kami adalah memberikan dampak nyata dalam dunia pendidikan.
           </p>
         </div>
         <div className="about-image">
-          <img src="https://i.pinimg.com/736x/52/df/7c/52df7c76097ef62c560c80a15e899cf7.jpg" alt="About Us" />
+          <img src="https://i.pinimg.com/736x/52/df/7c/52df7c76097ef62c560c80a15e899cf7.jpg" alt="Tentang Kami" />
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Bagian Kontak dan Komunitas */}
       <section className="abtus-section">
-        <h2 className="abtus-title">Our Contacts & Community</h2>
+        <h2 className="abtus-title">Kontak & Komunitas Kami</h2>
         <div className="abtus-grid">
           <div className="abtus-item">
             <i className="fas fa-heart"></i>
-            <h3>Our Instagram</h3>
+            <h3>Instagram Kami</h3>
             <p>
-                 <a href="https://instagram.com" target="_blank" rel="noreferrer">@chimilearn</a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">@chimilearn</a>
             </p>
-
           </div>
           <div className="abtus-item">
             <i className="fas fa-users"></i>
-            <h3>Our Community</h3>
-            <p>Join to our community now <a href="./community" target="_blank" rel="noreferrer">chimicommunity</a> </p>
+            <h3>Komunitas Kami</h3>
+            <p>Bergabung dengan komunitas kami sekarang <a href="./community" target="_blank" rel="noreferrer">chimicommunity</a></p>
           </div>
           <div className="abtus-item">
             <i className="fas fa-lightbulb"></i>
-            <h3>Our Address</h3>
+            <h3>Alamat Kami</h3>
             <p>Depan gerbang Institut Teknologi Del, Sitoluama, Kec. Balige, Toba, Sumatera Utara 22381</p>
           </div>
         </div>

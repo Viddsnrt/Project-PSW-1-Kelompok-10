@@ -5,46 +5,46 @@ function Forum() {
   const [discussions, setDiscussions] = useState([
     {
       id: 1,
-      title: "What are the differences between covalent and ionic bonds?",
+      title: "Apa perbedaan antara ikatan kovalen dan ionik?",
       author: "John Doe",
-      date: "November 29, 2024",
+      date: "29 November 2024",
     },
     {
       id: 2,
-      title: "Tips for understanding redox reactions?",
+      title: "Tips memahami reaksi redoks?",
       author: "Jane Smith",
-      date: "November 28, 2024",
+      date: "28 November 2024",
     },
     {
       id: 3,
-      title: "Can someone explain the properties of benzene?",
+      title: "Bisakah seseorang menjelaskan sifat-sifat benzena?",
       author: "Alan Walker",
-      date: "November 27, 2024",
+      date: "27 November 2024",
     },
   ]);
 
   const [showMessage, setShowMessage] = useState(false);
 
   const handleNewDiscussion = () => {
-    setShowMessage(true); // Set state to true when the button is clicked
+    setShowMessage(true); // Set state ke true ketika tombol diklik
   };
 
   return (
     <div className="forum-container">
       <header className="forum-header">
-        <h1>Discussion Forum</h1>
+        <h1>Forum Diskusi</h1>
         <p>
-          Join the conversation and enhance your understanding of chemistry!
+          Bergabunglah dalam diskusi dan tingkatkan pemahamanmu tentang kimia!
         </p>
         <button
           className="new-discussion-button"
           onClick={handleNewDiscussion}
         >
-          Start New Discussion
+          Mulai Diskusi Baru
         </button>
         {showMessage && (
           <p className="coming-soon-message">
-            Feature to create a new discussion coming soon!
+            Fitur untuk membuat diskusi baru segera hadir!
           </p>
         )}
       </header>
@@ -53,7 +53,7 @@ function Forum() {
           <div key={discussion.id} className="discussion-item">
             <h3 className="discussion-title">{discussion.title}</h3>
             <p className="discussion-meta">
-              By {discussion.author} on {discussion.date}
+              Oleh {discussion.author} pada {discussion.date}
             </p>
           </div>
         ))}
