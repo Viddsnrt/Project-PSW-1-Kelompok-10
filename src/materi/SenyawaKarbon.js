@@ -508,7 +508,7 @@ function SenyawaKarbon() {
             <button
               type="button"
               className="quiz-button"
-              onClick={handlePreviousQuestion}
+              onClick={handlePreviousQuestion}  
               disabled={currentQuestionIndex === 0}
             >
               Previous
