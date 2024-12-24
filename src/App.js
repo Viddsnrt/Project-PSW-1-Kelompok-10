@@ -18,7 +18,7 @@ import ResetPassword from './element/ResetPassword';
 import Register from './element/Register';
 import Quiz from './materi/Quiz';
 import SimulasiLaboratorium from './materi/SimulasiLaboratorium';
-import Community from './element/Community';
+import Community from './element/community';
 import Makromolekul from './materi/Makromolekul';
 import Webinars from './element/Webinars';
 import Registernow from './element/Registernow';
